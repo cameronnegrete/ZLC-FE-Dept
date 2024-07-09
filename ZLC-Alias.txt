@@ -1,0 +1,3 @@
+.FeUseOnly This line is here for Facility Engineer automation systems. This must be the first line of the alias file and should not be edited.
+
+# The rest of your alias file goes here to include the "#_EVERYTHING ELSE.txt" and "#_AIRPORT_SPECIFIC_ISR.txt" data that will now be combined into this single file.
