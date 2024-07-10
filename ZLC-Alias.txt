@@ -96,7 +96,7 @@
 #        BWW AIRPORT 
 #        BYG AIRPORT 
 #        BYI AIRPORT 
-#        BZN AIRPORT 
+#         AIRPORT 
 #        CDC AIRPORT 
 #        CII AIRPORT 
 #        COD AIRPORT 
@@ -4067,41 +4067,95 @@
 ; BZN RNAV (GPS) Y RWY 30
 .BZNRY30F .FF RATLL LEVER GARNT TIGRH XTRAA HAZYL STAMS XUJVO THESE
 
-; BZN BZN
-.BZNBZNDEL .MSG ZLC_ISR *** BZN 6 ::: PilotNav ::: RWY 12, 30 :::  ::: Maint 16K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 118.975
-.BZNBZNGND .MSG ZLC_ISR *** BZN 6 ::: RWY 12, 30 :::  
-.BZNBZNTWR .MSG ZLC_ISR *** BZN 6 ::: PilotNav ::: (Immediate turn to the southwest) ::: DEP FREQ 118.975
-.BZNBZNDEP .MSG ZLC_ISR *** BZN 6 ::: PilotNav ::: Maint 16K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
-.BZNBZNCTR .MSG ZLC_ISR *** BZN 6 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
-.TCRAFTBZNBZN Cleared to $arr, Depart via the BZN6 Obstacle Departure Procedure. $route. Maintain 16K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. .  
-.TCRAFTBZNBZNU Cleared to $arr, Depart via the BZN6 Obstacle Departure Procedure. $route. Maintain 16K. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk. .  
+ 
+ ------------- 
+; BZN AIRPORT 
+ ------------- 
+ 
+;BZN TEERX - delete
+;SLC LEEHY - sample only; can be removed
+ 
+;BZN HIA - no change
+;BZN BZN 6 - no change
 
-; BZN BOBKT
-.BZNBOBKTDEL .MSG ZLC_ISR *** BOBKT 4 ::: RNAV-PilotNav ::: RWY 12, 30 ::: BIL_BOY ::: CVS   ::: CRZ-10min(Listed) ::: DEP FREQ 118.975
-.BZNBOBKTGND .MSG ZLC_ISR *** BOBKT 4 ::: RWY 12, 30 :::  
-.BZNBOBKTTWR .MSG ZLC_ISR *** BOBKT 4 ::: RNAV-PilotNav ::: (South departure then turn to the east) ::: DEP FREQ 118.975
-.BZNBOBKTDEP .MSG ZLC_ISR *** BOBKT 4 ::: RNAV-PilotNav ::: CVS   issued by DEL ::: CRZ-10min(Listed) ::: TopAlt 16K :::  
-.BZNBOBKTCTR .MSG ZLC_ISR *** BOBKT 4 ::: CRZ-10min(Listed) ::: TopAlt 16K 
-.TCRAFTBZNBOBKT Cleared to $arr, $route. Climb Via SID  . Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk. .  
-.TCRAFTBZNBOBKTU Cleared to $arr, $route. Climb Via SID  . Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk. .  
+;BZN BOBKT 5 - updated 
+ 
+.BZNBOBKT .FD BZN_BOBKT 
+.BZNBOBKTDEL .MSG ZLC_ISR ***BOBKT 5 ::: RNAV-PilotNav ::: RWY 12 ::: BOY_BIL ::: CVS Exct Maint 16k ::: CRZ-10min(Listed) ::: DEP FREQ 118.975 
+.BZNBOBKTGND .MSG ZLC_ISR ***BOBKT 5 ::: RWY 12 :::  
+.BZNBOBKTTWR .MSG ZLC_ISR ***BOBKT 5 ::: RNAV-PilotNav ::: (RH w/ turn E) ::: DEP FREQ 118.975 
+.BZNBOBKTDEP .MSG ZLC_ISR ***BOBKT 5 ::: RNAV-PilotNav ::: CVS Exct Maint 16k issued by DEL ::: CRZ-10min(Listed) ::: TopAlt Published :::  
+.BZNBOBKTCTR .MSG ZLC_ISR ***BOBKT 5 ::: CRZ-10min(Listed) ::: TopAlt Published 
+.TCRAFTBZNBOBKT Cleared to $arr.  $route. Climb Via SID Except Maintain 16k. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk . 
+.TCRAFTBZNBOBKTU Cleared to $arr.  $route. Climb Via SID Except Maintain 16k. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk . 
 
-; BZN TEERX
-.BZNTEERXDEL .MSG ZLC_ISR *** TEERX 4 ::: RNAV-PilotNav ::: RWY 12, 30 ::: DBS_HIA ::: CVS   ::: CRZ-10min(Listed) ::: DEP FREQ 118.975
-.BZNTEERXGND .MSG ZLC_ISR *** TEERX 4 ::: RWY 12, 30 :::  
-.BZNTEERXTWR .MSG ZLC_ISR *** TEERX 4 ::: RNAV-PilotNav ::: (Southwest turn) ::: DEP FREQ 118.975
-.BZNTEERXDEP .MSG ZLC_ISR *** TEERX 4 ::: RNAV-PilotNav ::: CVS   issued by DEL ::: CRZ-10min(Listed) ::: TopAlt 16K :::  
-.BZNTEERXCTR .MSG ZLC_ISR *** TEERX 4 ::: CRZ-10min(Listed) ::: TopAlt 16K 
-.TCRAFTBZNTEERX Cleared to $arr, $route. Climb Via SID  . Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk. .  
-.TCRAFTBZNTEERXU Cleared to $arr, $route. Climb Via SID  . Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk. .  
 
-; BZN HIA
-.BZNHIADEL .MSG ZLC_ISR *** HIA 5 ::: PilotNav ::: RWY 12, 30 ::: Maint 16K ::: CRZ-5min(Not-Listed) ::: DEP FREQ
-.BZNHIAGND .MSG ZLC_ISR *** HIA 5 ::: RWY 12, 30 :::  
-.BZNHIATWR .MSG ZLC_ISR *** HIA 5 ::: PilotNav ::: (Immediate southwest turn) ::: DEP FREQ 118.975
-.BZNHIADEP .MSG ZLC_ISR *** HIA 5 ::: PilotNav ::: Maint 16K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt 16K :::  
-.BZNHIACTR .MSG ZLC_ISR *** HIA 5 ::: CRZ-5min(Not-Listed) ::: TopAlt 16K 
-.TCRAFTBZNHIA Cleared to $arr, $route. Maintain 16K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. .  
-.TCRAFTBZNHIAU Cleared to $arr, $route. Maintain 16K. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk. .  
+;BZN BGSKY 1 
+ 
+.BZNBGSKY .FD BZN_BGSKY 
+.BZNBGSKYDEL .MSG ZLC_ISR ***BGSKY 1 ::: RNAV-PilotNav ::: RWY 12 ::: DBS_UPLOW_HIA ::: CVS Exct Maint 16k ::: CRZ-10min(Listed) ::: DEP FREQ 118.975 
+.BZNBGSKYGND .MSG ZLC_ISR ***BGSKY 1 ::: RWY 12 :::  
+.BZNBGSKYTWR .MSG ZLC_ISR ***BGSKY 1 ::: RNAV-PilotNav ::: (RH w/ turn E) ::: DEP FREQ 118.975 
+.BZNBGSKYDEP .MSG ZLC_ISR ***BGSKY 1 ::: RNAV-PilotNav ::: CVS Exct Maint 16k issued by DEL ::: CRZ-10min(Listed) ::: TopAlt Published :::  
+.BZNBGSKYCTR .MSG ZLC_ISR ***BGSKY 1 ::: CRZ-10min(Listed) ::: TopAlt Published 
+.TCRAFTBZNBGSKY Cleared to $arr.  $route. Climb Via SID Except Maintain 16k. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk . 
+.TCRAFTBZNBGSKYU Cleared to $arr.  $route. Climb Via SID Except Maintain 16k. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk . 
+
+
+;BZN MEADO 1 
+ 
+.BZNMEADO .FD BZN_MEADO
+.BZNMEADODEL .MSG ZLC_ISR ***MEADO 1 ::: RNAV-PilotNav ::: RWY 30 ::: CREEK_DBS_TOOLS_UPLOW_HIA ::: CVS Exct Maint 16k ::: CRZ-10min(Listed) ::: DEP FREQ 118.975 
+.BZNMEADOGND .MSG ZLC_ISR ***MEADO 1 ::: RWY 30 :::  
+.BZNMEADOTWR .MSG ZLC_ISR ***MEADO 1 ::: RNAV-PilotNav ::: (RH w/ turn SW,W,NE and then SE,E) ::: DEP FREQ 118.975 
+.BZNMEADODEP .MSG ZLC_ISR ***MEADO 1 ::: RNAV-PilotNav ::: CVS Exct Maint 16k issued by DEL ::: CRZ-10min(Listed) ::: TopAlt Published :::  
+.BZNMEADOCTR .MSG ZLC_ISR ***MEADO 1 ::: CRZ-10min(Listed) ::: TopAlt Published 
+.TCRAFTBZNMEADO Cleared to $arr.  $route. Climb Via SID Except Maintain 16k. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk . 
+.TCRAFTBZNMEADOU Cleared to $arr.  $route. Climb Via SID Except Maintain 16k. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk . 
+
+; SLC LEEHY
+;.SLCLEEHYCTR .MSG ZLC_ISR *** LEEHY 5 ::: RNAV ::: [SOUTH OPS] SPANE @ FL190(J) ::: [NORTH OPS] SPANE @ 16k(J). ::: A$altim(KSLC) 
+;.SLCLEEHYAPP .MSG ZLC_ISR *** LEEHY 5 ::: RNAV ::: [SOUTH OPS] Descend via/Expt 16R (210kts midfield prior to HO to Final) [NORTH OPS] Descend via/@ PLAGE Clrd ILS 34R ::: A$altim(KSLC) 
+;.TSLCLEEHYCTRS Cross SPANE @ and maintain FL190. SLC Landing South. Altimeter A$altim(KSLC) 
+;.TSLCLEEHYAPPS Descend via the LEEHY5 arrival. Expect 16R. Altimeter A$altim(KSLC) 
+;.TSLCLEEHYCTRN Cross SPANE @ and maintain 16k. SLC Landing North. Altimeter A$altim(KSLC) 
+;.TSLCLEEHYAPPN Descend via the LEEHY5 Arrival. @ PLAGE, cleared ILS 34R approach. Altimeter A$altim(KSLC) 
+
+; BZN SUBKY
+.BZNSUBKYCTR .MSG ZLC_ISR *** SUBK 1 ::: RNAV ::: [EAST OPS] BIL >FL180 ::: . ::: A$altim(KBZN) 
+.BZNSUBKYAPP .MSG ZLC_ISR *** SUBK 1 ::: RNAV ::: [EAST OPS] Descend via/Expt vectors for rwy30  ::: A$altim(KBZN) 
+.TBZNSUBKYCTRE Cross BIL above FL180, decend via SUBK1 arrival. Altimeter A$altim(KBZN) 
+.TBZNSUBKYAPPE Descend via the SUBK1 arrival. Expect vectos for rwy30. Altimeter A$altim(KBZN) 
+
+; BZN POWDA
+.BZNPOWDACTR .MSG ZLC_ISR *** SUBK 1 ::: RNAV ::: [WEST OPS] CREKK >FL180 ::: . ::: A$altim(KBZN) 
+.BZNPOWDAAPP .MSG ZLC_ISR *** SUBK 1 ::: RNAV ::: [WEST OPS] Descend via/Expt vectors for rwy12  ::: A$altim(KBZN) 
+.TBZNPOWDACTRW Cross CREKK above FL180, decend via POWDA1 arrival. Altimeter A$altim(KBZN) 
+.TBZNPOWDAAPPW Descend via the POWDS1 arrival. Expect vectos for rwy30. Altimeter A$altim(KBZN) 
+
+; BZN LOSST
+.BZNLOSSTCTR .MSG ZLC_ISR *** LOSST 1 ::: RNAV ::: [WEST/EAST OPS] LOSST @17k/<250kts. ::: A$altim(KBZN) 
+.BZNLOSSTAPP .MSG ZLC_ISR *** LOSST 1 ::: RNAV ::: [WEST OPS] Descend via/@ GARNT cleared RNAV (RNP) Z RWY 30 - [EAST OPS] Descend via/@ HERAH cleared RNAV (RNP) Z RWY 12  ::: A$altim(KBZN) 
+.TBZNLOSSTCTRE .MSG ZLC_ISR *** LOSST 1 ::: RNAV ::: Cross LOSST @17k. BZN landing EAST ::: A$altim(KBZN) 
+.TBZNLOSSTAPPE .MSG ZLC_ISR *** LOSST 1 ::: RNAV ::: Descend via/@HERAH cleared RNAV (RNP) Z RWY 12  ::: A$altim(KBZN) 
+.TBZNLOSSTCTRW .MSG ZLC_ISR *** LOSST 1 ::: RNAV ::: Cross LOSST @17k. BZN landing WEST ::: A$altim(KBZN) 
+.TBZNLOSSTAPPW .MSG ZLC_ISR *** LOSST 1 ::: RNAV ::: Descend via/@GARNT cleared RNAV (RNP) Z RWY 30  ::: A$altim(KBZN) 
+
+; BZN BGMAN
+.BZNBGMANCTR .MSG ZLC_ISR *** BGMAN 1 ::: RNAV ::: [WEST/EAST OPS] BGMAN @17k/<250kts. ::: A$altim(KBZN) 
+.BZNBGMANAPP .MSG ZLC_ISR *** BGMAN 1 ::: RNAV ::: [WEST OPS] Descend via/@ FAVRE cleared RNAV (RNP) Z RWY 30 - [EAST OPS] Descend via/@ JAZMN cleared RNAV (RNP) Z RWY 12  ::: A$altim(KBZN) 
+.TBZNBGMANCTRE .MSG ZLC_ISR *** BGMAN 1 ::: RNAV ::: Cross BGMAN @17k. BZN landing EAST ::: A$altim(KBZN) 
+.TBZNBGMANAPPE .MSG ZLC_ISR *** BGMAN 1 ::: RNAV ::: Descend via/@ FAVRE cleared RNAV (RNP) Z RWY 12  ::: A$altim(KBZN) 
+.TBZNBGMANCTRW .MSG ZLC_ISR *** BGMAN 1 ::: RNAV ::: Cross LOSST @17k. BZN landing WEST ::: A$altim(KBZN) 
+.TBZNBGMANAPPW .MSG ZLC_ISR *** BGMAN 1 ::: RNAV ::: Descend via/@ JAZMN cleared RNAV (RNP) Z RWY 30  ::: A$altim(KBZN)
+
+; BZN EATZZ
+.BZNEATZZCTR .MSG ZLC_ISR *** BGMAN 1 ::: RNAV ::: [WEST/EAST OPS] EATZZ @17k/<250kts. ::: A$altim(KBZN) 
+.BZNEATZZAPP .MSG ZLC_ISR *** BGMAN 1 ::: RNAV ::: [WEST OPS] Descend via/@ BEARY cleared RNAV (RNP) Z RWY 30 - [EAST OPS] Descend via/@ THESE cleared RNAV (RNP) Z RWY 12  ::: A$altim(KBZN) 
+.TBZNEATZZCTRE .MSG ZLC_ISR *** BGMAN 1 ::: RNAV ::: Cross EATZZ @17k/<250kts. BZN landing EAST ::: A$altim(KBZN) 
+.TBZNEATZZAPPE .MSG ZLC_ISR *** BGMAN 1 ::: RNAV ::: Descend via/@ THESE cleared RNAV (RNP) Z RWY 12  ::: A$altim(KBZN) 
+.TBZNEATZZCTRW .MSG ZLC_ISR *** BGMAN 1 ::: RNAV ::: Cross LOSST @17k/<250kts. BZN landing WEST ::: A$altim(KBZN) 
+.TBZNEATZZAPPW .MSG ZLC_ISR *** BGMAN 1 ::: RNAV ::: Descend via/@ BEARY cleared RNAV (RNP) Z RWY 30  ::: A$altim(KBZN)
  ------------- 
 
 ; CDC AIRPORT 
