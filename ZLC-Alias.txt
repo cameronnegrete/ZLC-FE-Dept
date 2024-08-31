@@ -194,7 +194,7 @@
 #######################################################################
 #######################################################################
 
-.VERSION .MSG ZLC_ISR *** You are currently using 11JUL2024 data.
+#.VERSION .MSG ZLC_ISR *** You are currently using 11JUL2024 data.
 
 
 # SLC CPDLC Commands
@@ -206,6 +206,14 @@
 
 .cpdlcsg .msg $aircraft CPDLC MESSAGE START... ISSUED $time FOR $aircraft | CDM ROUTE IS NOW ACTIVE FOR YOUR FLIGHT | NEW ROUTING: ***AMENDED*** $route ***AMENDED*** | CLEARANCE LIMIT: $arr | MAINTAIN 9,000 | EXPECT $cruise 10 MINUTES AFTER DEPARTURE | DEPARTURE FREQUENCY: $freq($1) | SQUAWK: $squawk | EXPECTED RUNWAY $2 | GATE HOLD IN EFFECT. CONTACT CLEARANCE FOR EDCT | TO ACKNOWLEDGE AND ACCEPT, REPLY WITH 'W' (WILCO). IF UNABLE, REPLY 'U' (UNABLE) AND VERBALLY CONTACT CLEARANCE DELIVERY ...CPDLC MESSAGE END
 
+#######################################################################
+#######################################################################
+#######################################################################
+#                     TWF NON-RADAR HO
+#######################################################################
+#######################################################################
+#######################################################################
+.twfho $aircraft $1 $ftime($2) # input should be .twfho <FIX> <TIME TO FIX>
 
 #######################################################################
 #######################################################################
