@@ -4918,11 +4918,11 @@
 .TCRAFTJACALPIN Cleared to $arr.  $route. Climb Via SID Except Maintain 15. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk.
 .TCRAFTJACALPINU Cleared to $arr.  $route. Climb Via SID Except Maintain 15. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk.
 
-.JACDIVYDDEL .MSG ZLC_ISR ***DIVYD 1 ::: RNAV-PilotNav ::: RWY 1 ::: BOY_DNW_HUKET_LAVAH ::: CVS Exct Maint 15k ::: CRZ-10min(Listed) ::: DEP FREQ 133.25 
-.JACDIVYDGND .MSG ZLC_ISR ***DIVYD 1 ::: RWY 1 :::  
-.JACDIVYDTWR .MSG ZLC_ISR ***DIVYD 1 ::: RNAV-PilotNav ::: (Straight Out to GIYER) ::: DEP FREQ 133.25 
-.JACDIVYDDEP .MSG ZLC_ISR ***DIVYD 1 ::: RNAV-PilotNav ::: CVS Exct Maint 15k issued by DEL ::: CRZ-10min(Listed) ::: TopAlt Not Published :::  
-.JACDIVYDCTR .MSG ZLC_ISR ***DIVYD 1 ::: CRZ-10min(Listed) ::: TopAlt Not Published 
+.JACDIVYDDEL .MSG ZLC_ISR ***DIVYD 2 ::: RNAV-PilotNav ::: RWY 1 ::: BOY_DNW_HUKET_JEDHY ::: CVS Exct Maint 15k ::: CRZ-10min(Listed) ::: DEP FREQ 133.25 
+.JACDIVYDGND .MSG ZLC_ISR ***DIVYD 2 ::: RWY 1 :::  
+.JACDIVYDTWR .MSG ZLC_ISR ***DIVYD 2 ::: RNAV-PilotNav ::: (Straight Out to GIYER) ::: DEP FREQ 133.25 
+.JACDIVYDDEP .MSG ZLC_ISR ***DIVYD 2 ::: RNAV-PilotNav ::: CVS Exct Maint 15k issued by DEL ::: CRZ-10min(Listed) ::: TopAlt Not Published :::  
+.JACDIVYDCTR .MSG ZLC_ISR ***DIVYD 2 ::: CRZ-10min(Listed) ::: TopAlt Not Published 
 .TCRAFTJACDIVYD Cleared to $arr.  $route. Climb Via SID Except Maintain 15k. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk . 
 .TCRAFTJACDIVYDU Cleared to $arr.  $route. Climb Via SID Except Maintain 15k. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk . 
 
