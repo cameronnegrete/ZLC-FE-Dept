@@ -5748,11 +5748,11 @@
 .TSLCLHOCTRN Cross CARTR @ and maintain FL190 if you are a jet. Cross at 17k if not a jet.. SLC Landing North. Altimeter A$altim(KSLC) 
 .TSLCLHOAPPN Descend and maintain 11k. Then reduce speed to 210kts. Expect 34L. Altimeter A$altim(KSLC) 
 
-; SLC DELTA
-.SLCDELTACTR .MSG ZLC_ISR *** DELTA 6 ::: RNAV ::: JAMMN @ 17k(J) ::: A$altim(KSLC) 
-.SLCDELTAAPP .MSG ZLC_ISR *** DELTA 6 ::: RNAV ::: Descend via/Expt 16R (210kts midfield prior to HO to Final) ::: A$altim(KSLC) 
-.TSLCDELTACTRS Cross JAMMN @ and maintain 17k.. SLC Landing South. Altimeter A$altim(KSLC) 
-.TSLCDELTAAPPS Descend via the DELTA5 arrival. Expect 16R.. Altimeter A$altim(KSLC) 
+; SLC JAZZZ
+.SLCDELTACTR .MSG ZLC_ISR *** JAZZZ 1 ::: RNAV ::: SPANE @ 15k(J) ::: A$altim(KSLC) 
+.SLCDELTAAPP .MSG ZLC_ISR *** JAZZZ 1 ::: RNAV ::: Descend via/Expt vects 34L/R or 35 ::: A$altim(KSLC) 
+.TSLCDELTACTRN Cross SPANE @ and maintain 15k.. SLC Landing North. Altimeter A$altim(KSLC) 
+.TSLCDELTAAPPN Descend via the JAZZZ1 arrival. Expect 34R.. Altimeter A$altim(KSLC) 
 
 ; SLC JAMMN
 .SLCJAMMNCTR .MSG ZLC_ISR *** JAMMN 5 ::: Non-RNAV ::: JAMMN 17k(J) __ 15k(Other) ::: A$altim(KSLC) 
@@ -5760,51 +5760,49 @@
 .TSLCJAMMNCTRS Cross JAMMN @ and maintain 17k if you are a jet. Cross at 15k if you are not a jet.. SLC Landing South. Altimeter A$altim(KSLC) 
 .TSLCJAMMNAPPS Descend and maintain 13k. Expect 16R.. Altimeter A$altim(KSLC) 
 
-; SLC LEEHY
-.SLCLEEHYCTR .MSG ZLC_ISR *** LEEHY 5 ::: RNAV ::: [SOUTH OPS] SPANE @ FL190(J) ::: [NORTH OPS] SPANE @ 16k(J). ::: A$altim(KSLC) 
-.SLCLEEHYAPP .MSG ZLC_ISR *** LEEHY 5 ::: RNAV ::: [SOUTH OPS] Descend via/Expt 16R (210kts midfield prior to HO to Final) [NORTH OPS] Descend via/@ PLAGE Clrd ILS 34R ::: A$altim(KSLC) 
-.TSLCLEEHYCTRS Cross SPANE @ and maintain FL190. SLC Landing South. Altimeter A$altim(KSLC) 
-.TSLCLEEHYAPPS Descend via the LEEHY5 arrival. Expect 16R. Altimeter A$altim(KSLC) 
-.TSLCLEEHYCTRN Cross SPANE @ and maintain 16k. SLC Landing North. Altimeter A$altim(KSLC) 
-.TSLCLEEHYAPPN Descend via the LEEHY5 Arrival. @ PLAGE, cleared ILS 34R approach. Altimeter A$altim(KSLC) 
+; SLC PITTT
+.SLCPITTTCTR .MSG ZLC_ISR *** PITTT 1 ::: RNAV ::: [SOUTH OPS] SPANE @ FL190(J) ::: A$altim(KSLC) 
+.SLCPITTTAPP .MSG ZLC_ISR *** PITTT 1 ::: RNAV ::: [SOUTH OPS] Descend via/Expt vectrs 16R/L or 17 (210kts midfield prior to HO to Final) ::: A$altim(KSLC) 
+.TSLCPITTTCTRS (MLF/BCE Trans)-Cross JAMMN @ and maintain 17K; (HELPR/MTU/EKR Trans)-Cross SPANE @ and maintain 19k. SLC Landing South. Altimeter A$altim(KSLC) 
+.TSLCPITTTAPPS Descend via the PITTT1 arrival. Expect 16R. Altimeter A$altim(KSLC) 
 
-; SLC NORDK
-.SLCNORDKCTR .MSG ZLC_ISR *** NORDK 6 ::: RNAV ::: [SOUTH OPS] CARTR @ 15k [NORTH OPS] CARTR @ FL190 ::: A$altim(KSLC) 
-.SLCNORDKAPP .MSG ZLC_ISR *** NORDK 6 ::: RNAV ::: [SOUTH OPS] Descend via/@ WEBER Clrd ILS 16L. [NORTH OPS] Descend Via/Expt 34L ::: A$altim(KSLC) 
-.TSLCNORDKCTRS Cross CARTR @ and maintain 15k. SLC Landing South. Altimeter A$altim(KSLC) 
-.TSLCNORDKAPPS Descend via the NORDK6 arrival. @ WEBER, cleared ILS 16L approach. Altimeter A$altim(KSLC) 
-.TSLCNORDKCTRN Cross CARTR @ and maintain FL190. SLC Landing North. Altimeter A$altim(KSLC) 
-.TSLCNORDKAPPN Descend via the NORDK6 arrival. Expect 34L.. Altimeter A$altim(KSLC) 
+; SLC CARTR
+.SLCCARTRCTR .MSG ZLC_ISR *** CARTR 1 ::: RNAV ::: [SOUTH OPS] CARTR @ 15k [NORTH OPS] CARTR @ FL190 ::: A$altim(KSLC) 
+.SLCCARTRAPP .MSG ZLC_ISR *** CARTR 1 ::: RNAV ::: [SOUTH OPS] Descend via/@ WEBER expct vectors 16L/R or 17. [NORTH OPS] Descend Via/Expt 34L ::: A$altim(KSLC) 
+.TSLCCARTRCTRS Cross CARTR @ and maintain 15k. SLC Landing South. Altimeter A$altim(KSLC) 
+.TSLCCARTRAPPS Descend via the CARTR1 arrival. @ WEBER, cleared ILS 16L approach. Altimeter A$altim(KSLC) 
+.TSLCCARTRCTRN Cross CARTR @ and maintain FL190. SLC Landing North. Altimeter A$altim(KSLC) 
+.TSLCCARTRAPPN Descend via the CARTR1 arrival. Expect 34L.. Altimeter A$altim(KSLC) 
 
 ; SLC QWENN
-.SLCQWENNCTR .MSG ZLC_ISR *** QWENN 5 ::: RNAV ::: FRNZY or NEEBO @15k ::: A$altim(KSLC) 
-.SLCQWENNAPP .MSG ZLC_ISR *** QWENN 5 ::: RNAV ::: Descend Via/@ PLAGE Clrd ILS 34R ::: A$altim(KSLC) 
-.TSLCQWENNCTRN (MLF Trans)-Cross FRNZY... (BCE Trans)-Cross NEEBO... @ and maintain 15k. SLC Landing North. Altimeter A$altim(KSLC) 
-.TSLCQWENNAPPN Descend via the QWENN5 arrival. @ PLAGE cleared ILS 34R approach. Altimeter A$altim(KSLC) 
+.SLCQWENNCTR .MSG ZLC_ISR *** QWENN 6 ::: RNAV ::: FRNZY or NEEBO @14k ::: A$altim(KSLC) 
+.SLCQWENNAPP .MSG ZLC_ISR *** QWENN 6 ::: RNAV ::: Descend Via/@ QWENN Clrd ILS 34R ::: A$altim(KSLC) 
+.TSLCQWENNCTRN (MLF Trans)-Cross FRNZY... (BCE Trans)-Cross NEEBO... @ and maintain 14k. SLC Landing North. Altimeter A$altim(KSLC) 
+.TSLCQWENNAPPN Descend via the QWENN6 arrival. @ QWENN cleared ILS 34R approach. Altimeter A$altim(KSLC) 
 
 ; SLC SKEES
-.SLCSKEESCTR .MSG ZLC_ISR *** SKEES 5 ::: RNAV ::: [SOUTH OPS] BEARR @ 16k ::: [NORTH OPS] BEARR @ 17k ::: A$altim(KSLC) 
-.SLCSKEESAPP .MSG ZLC_ISR *** SKEES 5 ::: RNAV ::: [SOUTH OPS] Descend via/@ IRRON Clrd ILS 16L [NORTH OPS] Descend via/Expt 34L ::: A$altim(KSLC) 
+.SLCSKEESCTR .MSG ZLC_ISR *** SKEES 6 ::: RNAV ::: [SOUTH OPS] BEARR @ 16k ::: [NORTH OPS] BEARR @ 17k ::: A$altim(KSLC) 
+.SLCSKEESAPP .MSG ZLC_ISR *** SKEES 6 ::: RNAV ::: [SOUTH OPS] Descend via/@ EKKHO expct vectors 16R/L or 17 app [NORTH OPS] Descend via/Expt 34L/R or 35 ::: A$altim(KSLC) 
 .TSLCSKEESCTRS Cross BEARR @ and maintain 16k. SLC Landing South. Altimeter A$altim(KSLC) 
-.TSLCSKEESAPPS Descend via the SKEES5 arrival. @ IRRON cleared ILS 16L approach. Altimeter A$altim(KSLC) 
+.TSLCSKEESAPPS Descend via the SKEES6 arrival. @ EKKHO cleared 16R approach. Altimeter A$altim(KSLC) 
 .TSLCSKEESCTRN Cross BEARR @ and maintain 17k. SLC Landing North. Altimeter A$altim(KSLC) 
-.TSLCSKEESAPPN Descend via the SKEES5 arrival. Expect 34L approach. Altimeter A$altim(KSLC) 
+.TSLCSKEESAPPN Descend via the SKEES6 arrival. Expect 34L approach. Altimeter A$altim(KSLC) 
 
 ; SLC SPANE
-.SLCSPANECTR .MSG ZLC_ISR *** SPANE 7 ::: Non-RNAV ::: [SOUTH OPS] SPANE FL190(J) __ 17k(Other) ::: [NORTH OPS] SPANE 16k ::: A$altim(KSLC) 
-.SLCSPANEAPP .MSG ZLC_ISR *** SPANE 7 ::: Non-RNAV ::: [SOUTH OPS] D/m 11k. Then 210kts. Expt 16R [NORTH OPS] Cross FFU AOA 11k. Clrd ILS 34R ::: A$altim(KSLC) 
+.SLCSPANECTR .MSG ZLC_ISR *** SPANE 8 ::: Non-RNAV ::: [SOUTH OPS] SPANE FL190(J) __ 17k(Other) ::: [NORTH OPS] SPANE 16k ::: A$altim(KSLC) 
+.SLCSPANEAPP .MSG ZLC_ISR *** SPANE 8 ::: Non-RNAV ::: [SOUTH OPS] D/m 11k. Then 210kts. Expt 16R [NORTH OPS] Cross FFU AOA 11k. Clrd ILS 34R ::: A$altim(KSLC) 
 .TSLCSPANECTRS Cross SPANE @ and maintain FL190 if you are a jet. Cross at 17k if you are not a jet.. SLC Landing South. Altimeter A$altim(KSLC) 
-.TSLCSPANEAPPS Descend and maintain 11k. Then reduce speed to 210kts. Expect 16L. Altimeter A$altim(KSLC) 
+.TSLCSPANEAPPS Descend and maintain 11k. Then reduce speed to 210kts. Expect 16R. Altimeter A$altim(KSLC) 
 .TSLCSPANECTRN Cross SPANE @ and maintain 16k. SLC Landing North. Altimeter A$altim(KSLC) 
 .TSLCSPANEAPPN Cross FFU at or above 11k. Then cleared ILS 34R approach.. Altimeter A$altim(KSLC) 
 
-; SLC WAATS
-.SLCWAATSCTR .MSG ZLC_ISR *** WAATS 5 ::: RNAV ::: KNOLE @17k ::: A$altim(KSLC) 
-.SLCWAATSAPP .MSG ZLC_ISR *** WAATS 5 ::: RNAV ::: [SOUTH OPS] Descend via/Expt 16R. [NORTH OPS] Descend via/Expt 34L ::: A$altim(KSLC) 
-.TSLCWAATSCTRS Cross KNOLE @ and maintain 17K. SLC Landing South. Altimeter A$altim(KSLC) 
-.TSLCWAATSAPPS Descend via the WAATS5 arrival. Expect 16R. Altimeter A$altim(KSLC) 
-.TSLCWAATSCTRN Cross KNOLE @ and maintain 17k. SLC Landing North. Altimeter A$altim(KSLC) 
-.TSLCWAATSAPPN Descend via the WAATS5 arrival. Expect 34L. Altimeter A$altim(KSLC) 
+; SLC YUTES
+.SLCYUTESCTR .MSG ZLC_ISR *** YUTES 1 ::: RNAV ::: KNOLE @17k ::: A$altim(KSLC) 
+.SLCYUTESAPP .MSG ZLC_ISR *** YUTES 1 ::: RNAV ::: [SOUTH OPS] Descend via/Expt 16R. [NORTH OPS] Descend via/Expt 34L ::: A$altim(KSLC) 
+.TSLCYUTESCTRS Cross KNOLE @ and maintain 17K. SLC Landing South. Altimeter A$altim(KSLC) 
+.TSLCYUTESAPPS Descend via the YUTES1 arrival. Expect 16R. Altimeter A$altim(KSLC) 
+.TSLCYUTESCTRN Cross KNOLE @ and maintain 17k. SLC Landing North. Altimeter A$altim(KSLC) 
+.TSLCYUTESAPPN Descend via the YUTES1 arrival. Expect 34L. Altimeter A$altim(KSLC) 
  ------------- 
 
 ; SMN AIRPORT   240717 - .FF cmds removed
