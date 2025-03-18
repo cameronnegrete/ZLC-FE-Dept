@@ -4078,11 +4078,11 @@
 .TCRAFTBZNHIA Cleared to $arr, $route. Maintain 16K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. .  
 .TCRAFTBZNHIAU Cleared to $arr, $route. Maintain 16K. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk. .  
 
-; BZN BZN
-.BZNBZNDEL .MSG ZLC_ISR *** BZN 6 ::: PilotNav ::: RWY 12, 30 :::  ::: Maint 16K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 118.975
+; BZN BZN 6
+.BZNBZNDEL .MSG ZLC_ISR *** BZN 6 ::: ODP ::: RWY 12, 30 :::  ::: Maint 16K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 118.975
 .BZNBZNGND .MSG ZLC_ISR *** BZN 6 ::: RWY 12, 30 :::  
-.BZNBZNTWR .MSG ZLC_ISR *** BZN 6 ::: PilotNav ::: (Immediate southwest turn) ::: DEP FREQ 118.975
-.BZNBZNDEP .MSG ZLC_ISR *** BZN 6 ::: PilotNav ::: Maint 16K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
+.BZNBZNTWR .MSG ZLC_ISR *** BZN 6 ::: ODP ::: (Immediate southwest turn) ::: DEP FREQ 118.975
+.BZNBZNDEP .MSG ZLC_ISR *** BZN 6 ::: ODP ::: Maint 16K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
 .BZNBZNCTR .MSG ZLC_ISR *** BZN 6 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFTBZNBZN Cleared to $arr, Depart via the BZN6 Obstacle Departure Procedure. $route. Maintain 16K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. .  
 .TCRAFTBZNBZNU Cleared to $arr, Depart via the BZN6 Obstacle Departure Procedure. $route. Maintain 16K. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk. .  
@@ -4097,7 +4097,7 @@
 .TCRAFTBZNBOBKT Cleared to $arr.  $route. Climb Via SID Except Maintain 16k. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk . 
 .TCRAFTBZNBOBKTU Cleared to $arr.  $route. Climb Via SID Except Maintain 16k. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk . 
 
-;BZN BGSKY 1 
+;BZN BGSKY 2 
 .BZNBGSKY .FD BZN_BGSKY 
 .BZNBGSKYDEL .MSG ZLC_ISR ***BGSKY 2 ::: RNAV-PilotNav ::: RWY 12 ::: DBS_UPLOW_HIA ::: CVS Exct Maint 16k ::: CRZ-10min(Listed) ::: DEP FREQ 118.975 
 .BZNBGSKYGND .MSG ZLC_ISR ***BGSKY 2 ::: RWY 12 :::  
