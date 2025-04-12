@@ -4060,7 +4060,7 @@
 ; .BYIOAF .FF SHONE ZIVEN HAZZL BYI TWF
  ------------- 
  
-; BZN AIRPORT 
+; BZN AIRPORT - 2413: MEADO update
  ------------- 
  
 ;BZN TEERX - deleted
@@ -4107,13 +4107,13 @@
 .TCRAFTBZNBGSKY Cleared to $arr.  $route. Climb Via SID Except Maintain 16k. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk . 
 .TCRAFTBZNBGSKYU Cleared to $arr.  $route. Climb Via SID Except Maintain 16k. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk . 
 
-;BZN MEADO 1 
+;BZN MEADO 2 
 .BZNMEADO .FD BZN_MEADO
-.BZNMEADODEL .MSG ZLC_ISR ***MEADO 1 ::: RNAV-PilotNav ::: RWY 30 ::: CREEK_DBS_TOOLS_UPLOW_HIA ::: CVS Exct Maint 16k ::: CRZ-10min(Listed) ::: DEP FREQ 118.975 
-.BZNMEADOGND .MSG ZLC_ISR ***MEADO 1 ::: RWY 30 :::  
-.BZNMEADOTWR .MSG ZLC_ISR ***MEADO 1 ::: RNAV-PilotNav ::: (RH w/ turn SW then W or S, NE and then SE or E) ::: DEP FREQ 118.975 
-.BZNMEADODEP .MSG ZLC_ISR ***MEADO 1 ::: RNAV-PilotNav ::: CVS Exct Maint 16k issued by DEL ::: CRZ-10min(Listed) ::: TopAlt Published :::  
-.BZNMEADOCTR .MSG ZLC_ISR ***MEADO 1 ::: CRZ-10min(Listed) ::: TopAlt Published 
+.BZNMEADODEL .MSG ZLC_ISR ***MEADO 2 ::: RNAV-PilotNav ::: RWY 30 ::: CREKK_DBS_TOOLS_UPLOW_HIA ::: CVS Exct Maint 16k ::: CRZ-10min(Listed) ::: DEP FREQ 118.975 
+.BZNMEADOGND .MSG ZLC_ISR ***MEADO 2 ::: RWY 30 :::  
+.BZNMEADOTWR .MSG ZLC_ISR ***MEADO 2 ::: RNAV-PilotNav ::: (RH w/ turn SW then W or S, NE and then SE or E) ::: DEP FREQ 118.975 
+.BZNMEADODEP .MSG ZLC_ISR ***MEADO 2 ::: RNAV-PilotNav ::: CVS Exct Maint 16k issued by DEL ::: CRZ-10min(Listed) ::: TopAlt Published :::  
+.BZNMEADOCTR .MSG ZLC_ISR ***MEADO 2 ::: CRZ-10min(Listed) ::: TopAlt Published 
 .TCRAFTBZNMEADO Cleared to $arr.  $route. Climb Via SID Except Maintain 16k. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk . 
 .TCRAFTBZNMEADOU Cleared to $arr.  $route. Climb Via SID Except Maintain 16k. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk . 
 
@@ -5566,9 +5566,8 @@
 ; .SHRO15F .FF PARBE COBSI SHR
  ------------- 
 
-; SLC AIRPORT    240717 - .FF cmds removed
+; SLC AIRPORT    240717 - .FF cmds removed; 2501 - new STARS added
  ------------- 
-
 
 
 ; SLC ILS RWY 16L 
@@ -5851,9 +5850,8 @@
 .TCRAFTSPKSPK Cleared to $arr. Depart via the SPK1 Obstacle Departure Procedure. $route. Maintain 9K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. Hold For Release 
  ------------- 
 
-; SUN AIRPORT   240717 - .FF cmds removed
+; SUN AIRPORT   240717 - .FF cmds removed; 2504 - YAWNI, FLIYN added
  ------------- 
-
 
 
 ; SUN RNAV (GPS) X RWY 31 
@@ -5873,6 +5871,34 @@
 .SUNAURELCTR .MSG ZLC_ISR *** AUREL 3 ::: CRZ-5min(Not-Listed) ::: TopAlt 10K 
 .TCRAFTSUNAUREL Cleared to $arr, $route. Climb Via SID Exct Maint 10K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. .  
 .TCRAFTSUNAURELU Cleared to $arr, $route. Climb Via SID Exct Maint 10K. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk. .  
+
+; SUN FLIYN 1
+.SUNFLIYNDEL .MSG ZLC_ISR *** FLIYN 1 ::: RNAV-PilotNav ::: RWY 13 ::: JETZZ_KOURT_LINNZ_GDWIN ::: CVS Exct Maint 10K. ::: CRZ-10min(Listed) ::: DEP FREQ 118.05 
+.SUNFLIYNGND .MSG ZLC_ISR *** FLIYN 1 ::: RWY 13 ::: 13 
+.SUNFLIYNTWR .MSG ZLC_ISR *** FLIYN 1 ::: RNAV-PilotNav ::: (Straight out then turn to the south) ::: DEP FREQ 118.05 
+.SUNFLIYNCTR .MSG ZLC_ISR *** FLIYN 1 ::: CRZ-10min(Listed) ::: TopAlt 10K 
+.TCRAFTSUNFLIYN Cleared to $arr, $route. Climb Via SID Exct Maint 10K. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk. .  
+.TCRAFTSUNFLIYNU Cleared to $arr, $route. Climb Via SID Exct Maint 10K. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk. .  
+
+; SUN YAWNY 1
+.SUNYAWNYCTR .MSG ZLC_ISR *** YAWNY 1 ::: RNAV ::: YAWNY @10k+ ::: A$altim(KSUN) 
+.TSUNYAWNYCTR Descend via the YAWNY1 arrival. Cross YAWNY @ 10k+. Expect rwy 31. Altimeter A$altim(KSUN) 
+ -------------  
+
+; SVR (was U42) AIRPORT    240717 - .FF cmds removed; 2504 - name change to SVR
+ ------------- 
+
+
+; U42 RNAV (GPS) RWY 34 
+; .U42R34F .FF KOCEN LODME ACIPO HOKIT DUYDE KITBE STACO FFU
+
+; SVR SVALY 2
+.SVRSVALYDEL .MSG ZLC_ISR *** SVALY 2 ::: RNAV-PilotNav ::: RWY ALL :::  ::: Maint 9K ::: CRZ-10min(Listed) ::: DEP FREQ 128.6 ::: Clear to FFU, not destination.
+.SVRSVALYGND .MSG ZLC_ISR *** SVALY 2 ::: RWY ALL ::: Airport is not provided Ground Control Services 
+.SVRSVALYTWR .MSG ZLC_ISR *** SVALY 2 ::: RNAV-PilotNav ::: Airport is not provided Local (TWR) Control Services ::: DEP FREQ 128.6 
+.SVRSVALYDEP .MSG ZLC_ISR *** SVALY 2 ::: RNAV-PilotNav ::: Maint 9K issued by DEL ::: CRZ-10min(Listed) ::: TopAlt 9K ::: Clear to $arr via route. 
+.SVRSVALYCTR .MSG ZLC_ISR *** SVALY 2 ::: CRZ-5min(Not-Listed) ::: TopAlt 9K 
+.TCRAFTSVRSVALY Cleared to FFU. SVALY2 Departure. Hold as published. Maintain 9K. Expect further clearance within 10min after departure. Departure frequency $freq($1), squawk $squawk. Hold For Release 
  ------------- 
 
 ; TVY AIRPORT   240717 - .FF cmds removed
@@ -5899,7 +5925,6 @@
 
 ; TWF AIRPORT   240717 - .FF cmds removed
  ------------- 
-
 
 
 ; TWF ILS RW 26 
@@ -5980,22 +6005,6 @@
 .U14U14DEP .MSG ZLC_ISR *** U14 2 ::: RNAV-ODP ::: Maint 11K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
 .U14U14CTR .MSG ZLC_ISR *** U14 2 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFTU14U14 Cleared to $arr. Depart via the U142 Obstacle Departure Procedure. $route. Maintain 11K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
- ------------- 
-
-; U42 AIRPORT    240717 - .FF cmds removed
- ------------- 
-
-
-; U42 RNAV (GPS) RWY 34 
-; .U42R34F .FF KOCEN LODME ACIPO HOKIT DUYDE KITBE STACO FFU
-
-; U42 SVALY
-.U42SVALYDEL .MSG ZLC_ISR *** SVALY 1 ::: RNAV-PilotNav ::: RWY ALL :::  ::: Maint 9K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 128.6 ::: Clear to FFU, not destination.
-.U42SVALYGND .MSG ZLC_ISR *** SVALY 1 ::: RWY ALL ::: Airport is not provided Ground Control Services 
-.U42SVALYTWR .MSG ZLC_ISR *** SVALY 1 ::: RNAV-PilotNav ::: Airport is not provided Local (TWR) Control Services ::: DEP FREQ 128.6 
-.U42SVALYDEP .MSG ZLC_ISR *** SVALY 1 ::: RNAV-PilotNav ::: Maint 9K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt 9K ::: Clear to $arr via route. 
-.U42SVALYCTR .MSG ZLC_ISR *** SVALY 1 ::: CRZ-5min(Not-Listed) ::: TopAlt 9K 
-.TCRAFTU42SVALY Cleared to FFU. SVALY1 Departure. Hold as published. Maintain 9K. Expect further clearance within 10min after departure. Departure frequency $freq($1), squawk $squawk. Hold For Release 
  ------------- 
 
 ; U52 AIRPORT   240717 - .FF cmds removed
