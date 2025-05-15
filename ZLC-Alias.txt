@@ -3309,6 +3309,14 @@
 .TPDC? The message you got via private message is a way of simulating a real world system called Controller Pilot Data Link Communications (CPDLC). At certain airports in the real world, your departure clearance is provided via this system without the need for any voice communications. If you don't have any questions concerning the clearance, just prepare your aircraft with that information and report to Ground Control when ready for taxi, squawking your assigned code.
 .TNnumber .msg $aircraft Your callsign seems to be not valid. This link assists you format your callsign per USA regulation. Thank you for the help! https://www.faa.gov/licenses_certificates/aircraft_certification/aircraft_registry/forming_nnumber/
 
+# Voice/Receive Only/Text COMMUNICATIONS CAPABILITIES
+# "Communication capabilities… Ideally, we’d like you to use Full Voice (V), where you both transmit and receive by voice—this makes our job much 
+# easier. If Full Voice isn’t possible, Receiving (R) by voice and replying via text is the next best option. The least preferred method is using 
+# Full Text (T) where you both transmit and receive via text, this is discouraged as this makes our job significantly more difficult. 
+# Please let me know what your maximum communication capability is… V, R, or T?"
+
+.Tvrt? .msg $aircraft Communication capabilities… Ideally, we’d like you to use Full Voice (V), where you both transmit and receive by voice—this makes our job much easier. If Full Voice isn’t possible, Receiving (R) by voice and replying via text is the next best option. The least preferred method is using Full Text (T) where you both transmit and receive via text, this is discouraged as this makes our job significantly more difficult. Please let me know what your maximum communication capability is… V, R, or T?
+
 # Clearance Delivery
 .trbc Read Back Correct.
 
