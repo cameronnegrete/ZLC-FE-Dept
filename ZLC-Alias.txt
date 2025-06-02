@@ -219,8 +219,8 @@
 .twfait .msg TWF_APP $aircraft $1 $ftime($2)
 .twfdmait .msg $atccallsign(SectorID) TWF Departure $callsign
 .hlnait .msg HLN_APP $aircraft $1 $ftime($2)
-.hlndmait .msg $atccallsign(SectorID) HLN Departure $callsign
-.nrait .msg $atccallsign(SectorID) $aircraft $1 $ftime($2)
+.hlndmait .msg $atccallsign($1) HLN Departure $callsign
+.nrait .msg $atccallsign($1) $aircraft $ftime($2)
 
 #######################################################################
 #######################################################################
