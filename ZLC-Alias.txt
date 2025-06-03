@@ -216,12 +216,9 @@
 #######################################################################
 #######################################################################
 #######################################################################
-.twfait .msg TWF_APP $aircraft $1 $ftime($2)
-.twfdmait .msg $atccallsign(SectorID) TWF Departure $callsign
-.hlnait .msg HLN_APP $aircraft $1 $ftime($2)
+.twfdmait .msg $atccallsign($1) TWF Departure $callsign
 .hlndmait .msg $atccallsign($1) HLN Departure $callsign
 .nrait .msg $atccallsign($1) $aircraft $ftime($2)
-
 #######################################################################
 #######################################################################
 #######################################################################
