@@ -252,7 +252,7 @@
 
 
 # Quick Reference Pages
-
+.callsign .OPENURL https://123atc.com/call-sign/$1
 .COMMANDS .OPENURL https://cdn.zlcartcc.org/uploads/67-alias-command-reference.pdf
 .FEEDBACK .OPENURL https://zlcartcc.org/feedback
 #.CHANGELOG .OPENURL https://zlcartcc.com/index.php/change-log/
