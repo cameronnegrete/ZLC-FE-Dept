@@ -5765,13 +5765,13 @@
 .TSLCJAZZZAPP Descend via the JAZZZ1 arrival. Expect 34R.. Altimeter A$altim(KSLC) 
 
 ; SLC JAMMN 5
-.SLCJAMMNCTR .MSG ZLC_ISR *** JAMMN 5 ::: Non-RNAV ::: JAMMN 17k(J) __ 15k(Other) ::: A$altim(KSLC) 
+.SLCJAMMNCTR .MSG ZLC_ISR *** JAMMN 5 ::: Non-RNAV ::: JAMMN FL170(J) __ FL150(Other) ::: A$altim(KSLC) 
 .SLCJAMMNAPP .MSG ZLC_ISR *** JAMMN 5 ::: Non-RNAV ::: (Descend via MVA) Expt 16R. (11k/210kts prior midfield HO to Final) ::: A$altim(KSLC) 
 .TSLCJAMMNCTR Cross JAMMN @ and maintain 17k if you are a jet. Cross at 15k if you are not a jet.. SLC Landing South. Altimeter A$altim(KSLC) 
 .TSLCJAMMNAPP Descend and maintain 13k. Expect 16R.. Altimeter A$altim(KSLC) 
 
 ; SLC PITTT 1
-.SLCPITTTCTR .MSG ZLC_ISR *** PITTT 1 ::: RNAV ::: [SOUTH OPS] SPANE @ FL190(J) ::: A$altim(KSLC) 
+.SLCPITTTCTR .MSG ZLC_ISR *** PITTT 1 ::: RNAV ::: [SOUTH OPS] SPANE @ FL190(J) _ FL170(other) or JAMMN FL170(J) _ FL150(other) ::: A$altim(KSLC)
 .SLCPITTTAPP .MSG ZLC_ISR *** PITTT 1 ::: RNAV ::: [SOUTH OPS] Descend via/Expt vectrs 16R/L or 17 (210kts midfield prior to HO to Final) ::: A$altim(KSLC) 
 .TSLCPITTTCTR (MLF/BCE Trans)-Cross JAMMN @ and maintain 17K; (HELPR/MTU/EKR Trans)-Cross SPANE @ and maintain 19k. SLC Landing South. Altimeter A$altim(KSLC) 
 .TSLCPITTTAPP Descend via the PITTT1 arrival. Expect 16R. Altimeter A$altim(KSLC) 
