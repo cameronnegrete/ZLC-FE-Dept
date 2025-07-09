@@ -11,6 +11,7 @@
 # Updated website links - commented out QuickReferenceLinks
 # Updated links to SOP, LOA, etc - added MUO
 # Removed .FW cmds (VRC)
+# Reverted seed to 230kts (per SOP); updated CVS instructions for consistency - 09JUL2025 - arh
 
 # ALIAS FILE TABLE OF CONTENTS:
 #    SPECIAL EVENT
@@ -201,11 +202,11 @@
 
 
 # SLC CPDLC Commands
-.cpdlc .msg $aircraft CPDLC MESSAGE START... ISSUED $time FOR $aircraft | CDM ROUTE IS NOW ACTIVE FOR YOUR FLIGHT | NEW ROUTING: ***AMENDED*** $route ***AMENDED*** | CLEARANCE LIMIT: $arr | MAINTAIN 9,000 | EXPECT $cruise 10 MINUTES AFTER DEPARTURE | MAINTAIN 240 KTS UNTIL ADVISED | DEPARTURE FREQUENCY: $freq($1) | SQUAWK: $squawk | EXPECT RUNWAY $2 | CALL AT APPROPRIATE END OF RAMP FOR TAXI WITH ATIS | TO ACKNOWLEDGE AND ACCEPT, REPLY WITH 'W' (WILCO). IF UNABLE, REPLY 'U' (UNABLE) AND VERBALLY CONTACT CLEARANCE DELIVERY ...CPDLC MESSAGE END
+.cpdlc .msg $aircraft CPDLC MESSAGE START... ISSUED $time FOR $aircraft | CDM ROUTE IS NOW ACTIVE FOR YOUR FLIGHT | NEW ROUTING: ***AMENDED*** $route ***AMENDED*** | CLEARANCE LIMIT: $arr | MAINTAIN 9,000 | EXPECT $cruise 10 MINUTES AFTER DEPARTURE | MAINTAIN 230 KTS UNTIL ADVISED | DEPARTURE FREQUENCY: $freq($1) | SQUAWK: $squawk | EXPECT RUNWAY $2 | CALL AT APPROPRIATE END OF RAMP FOR TAXI WITH ATIS | TO ACKNOWLEDGE AND ACCEPT, REPLY WITH 'W' (WILCO). IF UNABLE, REPLY 'U' (UNABLE) AND VERBALLY CONTACT CLEARANCE DELIVERY ...CPDLC MESSAGE END
 
 .cpdlcs .msg $aircraft CPDLC MESSAGE START... ISSUED $time FOR $aircraft | CDM ROUTE IS NOW ACTIVE FOR YOUR FLIGHT | NEW ROUTING: ***AMENDED*** $route ***AMENDED*** | CLEARANCE LIMIT: $arr | MAINTAIN 9,000 | EXPECT $cruise 10 MINUTES AFTER DEPARTURE | DEPARTURE FREQUENCY: $freq($1) | SQUAWK: $squawk | EXPECTED RUNWAY $2 | CALL AT APPROPRIATE END OF RAMP FOR TAXI WITH ATIS | TO ACKNOWLEDGE AND ACCEPT, REPLY WITH 'W' (WILCO). IF UNABLE, REPLY 'U' (UNABLE) AND VERBALLY CONTACT CLEARANCE DELIVERY ...CPDLC MESSAGE END
 
-.cpdlcg .msg $aircraft CPDLC MESSAGE START... ISSUED $time FOR $aircraft | CDM ROUTE IS NOW ACTIVE FOR YOUR FLIGHT | NEW ROUTING: ***AMENDED*** $route ***AMENDED*** | CLEARANCE LIMIT: $arr | MAINTAIN 9,000 | EXPECT $cruise 10 MINUTES AFTER DEPARTURE | MAINTAIN 240 KTS UNTIL ADVISED | DEPARTURE FREQUENCY: $freq($1) | SQUAWK: $squawk | EXPECTED RUNWAY $2 | GATE HOLD IN EFFECT. CONTACT CLEARANCE FOR EDCT | TO ACKNOWLEDGE AND ACCEPT, REPLY WITH 'W' (WILCO). IF UNABLE, REPLY 'U' (UNABLE) AND VERBALLY CONTACT CLEARANCE DELIVERY ...CPDLC MESSAGE END
+.cpdlcg .msg $aircraft CPDLC MESSAGE START... ISSUED $time FOR $aircraft | CDM ROUTE IS NOW ACTIVE FOR YOUR FLIGHT | NEW ROUTING: ***AMENDED*** $route ***AMENDED*** | CLEARANCE LIMIT: $arr | MAINTAIN 9,000 | EXPECT $cruise 10 MINUTES AFTER DEPARTURE | MAINTAIN 230 KTS UNTIL ADVISED | DEPARTURE FREQUENCY: $freq($1) | SQUAWK: $squawk | EXPECTED RUNWAY $2 | GATE HOLD IN EFFECT. CONTACT CLEARANCE FOR EDCT | TO ACKNOWLEDGE AND ACCEPT, REPLY WITH 'W' (WILCO). IF UNABLE, REPLY 'U' (UNABLE) AND VERBALLY CONTACT CLEARANCE DELIVERY ...CPDLC MESSAGE END
 
 .cpdlcsg .msg $aircraft CPDLC MESSAGE START... ISSUED $time FOR $aircraft | CDM ROUTE IS NOW ACTIVE FOR YOUR FLIGHT | NEW ROUTING: ***AMENDED*** $route ***AMENDED*** | CLEARANCE LIMIT: $arr | MAINTAIN 9,000 | EXPECT $cruise 10 MINUTES AFTER DEPARTURE | DEPARTURE FREQUENCY: $freq($1) | SQUAWK: $squawk | EXPECTED RUNWAY $2 | GATE HOLD IN EFFECT. CONTACT CLEARANCE FOR EDCT | TO ACKNOWLEDGE AND ACCEPT, REPLY WITH 'W' (WILCO). IF UNABLE, REPLY 'U' (UNABLE) AND VERBALLY CONTACT CLEARANCE DELIVERY ...CPDLC MESSAGE END
 
@@ -3808,13 +3809,13 @@
 ; .BILE8RF .FF POCOV NELWN SUDSE YEGUL MUSTY WYLED LATDI BIL
 
 ; BIL BIL
-.BILBILDEL .MSG ZLC_ISR *** BIL 5 ::: Vectored ::: RWY 7, 10L, 25, 28L/R ::: Maint 15K ::: CRZ-10min(Listed) ::: DEP FREQ 120.5 
+.BILBILDEL .MSG ZLC_ISR *** BIL 5 ::: Vectored ::: RWY 7, 10L, 25, 28L/R ::: Maint 7K ::: CRZ-10min(Listed) ::: DEP FREQ 120.5 
 .BILBILGND .MSG ZLC_ISR *** BIL 5 ::: RWY 7, 10L, 25, 28L/R :::  
-.BILBILTWR .MSG ZLC_ISR *** BIL 5 ::: Vectored ::: (RWY 7, 28L/R, 25) Fly heading 280 __ (RWY 10L)-(H102) ::: DEP FREQ 120.5 
-.BILBILDEP .MSG ZLC_ISR *** BIL 5 ::: Vectored ::: Maint 15K issued by DEL ::: CRZ-10min(Listed) ::: TopAlt 15K ::: Vector on course 
+.BILBILTWR .MSG ZLC_ISR *** BIL 5 ::: Vectored ::: (RWY 7, 28L/R, 25) FH 280 __ (RWY 10L) FH 100 ::: DEP FREQ 120.5 
+.BILBILDEP .MSG ZLC_ISR *** BIL 5 ::: Vectored ::: Maint 7K issued by DEL ::: CRZ-10min(Listed) ::: TopAlt 15K ::: Vector on course 
 .BILBILCTR .MSG ZLC_ISR *** BIL 5 ::: CRZ-10min(Listed) ::: TopAlt 15K 
-.TCRAFTBILBIL Cleared to $arr.  $route. Maintain 15K. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk. .   
-.TCRAFTBILBILU Cleared to $arr.  $route. Maintain 15K. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk. .  
+.TCRAFTBILBIL Cleared to $arr.  $route. Maintain 7K. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk. .   
+.TCRAFTBILBILU Cleared to $arr.  $route. Maintain 7K. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk. .  
 
 ; BIL BGHRN
 .BILBGHRNCTR .MSG ZLC_ISR *** BGHRN 3 ::: RNAV ::: Descend via... Landing (E/W) ::: A$altim(KBIL) 
@@ -3955,17 +3956,17 @@
 .TPDCBOIGOWENUCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 16K | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
 
 ; BOI BOI
-.BOIBOIDEL .MSG ZLC_ISR *** BOI 3 ::: Vectored ::: RWY ALL :::  ::: Maint 16K ::: CRZ-10min(Listed) ::: DEP FREQ (NORTH) 126.9 __ (SAGE) 119.6 
+.BOIBOIDEL .MSG ZLC_ISR *** BOI 3 ::: Vectored ::: RWY ALL :::  ::: Fly Runway Heading, Maint 16K ::: CRZ-10min(Listed) ::: DEP FREQ (NORTH) 126.9 __ (SAGE) 119.6 
 .BOIBOIGND .MSG ZLC_ISR *** BOI 3 ::: RWY ALL :::  
-.BOIBOITWR .MSG ZLC_ISR *** BOI 3 ::: Vectored ::: (RWY 10L/R)-(Intcpt BOI-098R) __ (RWY 28L/R)-(Intcpt BOI-278R) ::: DEP FREQ (NORTH) 126.9 __ (SAGE) 119.6 
-.BOIBOIDEP .MSG ZLC_ISR *** BOI 3 ::: Vectored ::: Maint 16K issued by DEL ::: CRZ-10min(Listed) ::: TopAlt 16K ::: Vector on course 
+.BOIBOITWR .MSG ZLC_ISR *** BOI 3 ::: Vectored ::: Fly Runway Heading ::: DEP FREQ (NORTH) 126.9 __ (SAGE) 119.6 
+.BOIBOIDEP .MSG ZLC_ISR *** BOI 3 ::: Vectored ::: Maint 16K issued by DEL ::: CRZ-10min(Listed) ::: TopAlt 16K ::: Vector on course: (HYVAL, SAILL, OLAAH, VALYY, FETHR, ROARR, BARNR)
 .BOIBOICTR .MSG ZLC_ISR *** BOI 3 ::: CRZ-10min(Listed) ::: TopAlt 16K 
 .TCRAFTBOIBOI Cleared to $arr, $route. Maintain 16K. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk. .  
 .TCRAFTBOIBOIU Cleared to $arr, $route. Maintain 16K. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk. . 
-.TPDCBOIBOI .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 16K | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
-.TPDCBOIBOICHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 16K | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
-.TPDCBOIBOIU .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 16K | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
-.TPDCBOIBOIUCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 16K | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TPDCBOIBOI .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Fly Runway Heading, Maintain 16K | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TPDCBOIBOICHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Fly Runway Heading, Maintain 16K | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TPDCBOIBOIU .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Fly Runway Heading, Maintain 16K | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TPDCBOIBOIUCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Fly Runway Heading, Maintain 16K | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
 
 ; BOI BEWTE
 .BOIBEWTECTR .MSG ZLC_ISR ***BEWTE 4 ::: RNAV ::: [EAST and WEST OPS] Descend via/BOI Landing (East or West) ::: A$altim(KBOI) 
@@ -4098,33 +4099,33 @@
 
 ;BZN BOBKT 5 - updated 
 .BZNBOBKT .FD BZN_BOBKT 
-.BZNBOBKTDEL .MSG ZLC_ISR ***BOBKT 5 ::: RNAV-PilotNav ::: RWY 12 ::: BOY_BIL ::: CVS Exct Maint 16k ::: CRZ-10min(Listed) ::: DEP FREQ 118.975 
+.BZNBOBKTDEL .MSG ZLC_ISR ***BOBKT 5 ::: RNAV-PilotNav ::: RWY 12 ::: BOY_BIL ::: CVS ::: CRZ-10min(Listed) ::: DEP FREQ 118.975 
 .BZNBOBKTGND .MSG ZLC_ISR ***BOBKT 5 ::: RWY 12 :::  
 .BZNBOBKTTWR .MSG ZLC_ISR ***BOBKT 5 ::: RNAV-PilotNav ::: (RH w/ turn E) ::: DEP FREQ 118.975 
-.BZNBOBKTDEP .MSG ZLC_ISR ***BOBKT 5 ::: RNAV-PilotNav ::: CVS Exct Maint 16k issued by DEL ::: CRZ-10min(Listed) ::: TopAlt Published :::  
+.BZNBOBKTDEP .MSG ZLC_ISR ***BOBKT 5 ::: RNAV-PilotNav ::: CVS ::: CRZ-10min(Listed) ::: TopAlt Published 
 .BZNBOBKTCTR .MSG ZLC_ISR ***BOBKT 5 ::: CRZ-10min(Listed) ::: TopAlt Published 
-.TCRAFTBZNBOBKT Cleared to $arr.  $route. Climb Via SID Except Maintain 16k. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk . 
-.TCRAFTBZNBOBKTU Cleared to $arr.  $route. Climb Via SID Except Maintain 16k. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk . 
+.TCRAFTBZNBOBKT Cleared to $arr.  $route. Climb Via SID. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk . 
+.TCRAFTBZNBOBKTU Cleared to $arr.  $route. Climb Via SID. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk . 
 
 ;BZN BGSKY 2 
 .BZNBGSKY .FD BZN_BGSKY 
-.BZNBGSKYDEL .MSG ZLC_ISR ***BGSKY 2 ::: RNAV-PilotNav ::: RWY 12 ::: DBS_UPLOW_HIA ::: CVS Exct Maint 16k ::: CRZ-10min(Listed) ::: DEP FREQ 118.975 
+.BZNBGSKYDEL .MSG ZLC_ISR ***BGSKY 2 ::: RNAV-PilotNav ::: RWY 12 ::: DBS_UPLOW_HIA ::: CVS ::: CRZ-10min(Listed) ::: DEP FREQ 118.975 
 .BZNBGSKYGND .MSG ZLC_ISR ***BGSKY 2 ::: RWY 12 :::  
 .BZNBGSKYTWR .MSG ZLC_ISR ***BGSKY 2 ::: RNAV-PilotNav ::: (RH w/ turn SE) ::: DEP FREQ 118.975 
-.BZNBGSKYDEP .MSG ZLC_ISR ***BGSKY 2 ::: RNAV-PilotNav ::: CVS Exct Maint 16k issued by DEL ::: CRZ-10min(Listed) ::: TopAlt Published :::  
-.BZNBGSKYCTR .MSG ZLC_ISR ***BGSKY 2 ::: CRZ-10min(Listed) ::: TopAlt Published 
-.TCRAFTBZNBGSKY Cleared to $arr.  $route. Climb Via SID Except Maintain 16k. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk . 
-.TCRAFTBZNBGSKYU Cleared to $arr.  $route. Climb Via SID Except Maintain 16k. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk . 
+.BZNBGSKYDEP .MSG ZLC_ISR ***BGSKY 2 ::: RNAV-PilotNav ::: CVS ::: CRZ-10min(Listed) ::: TopAlt Published :::
+.BZNBGSKYCTR .MSG ZLC_ISR ***BGSKY 2 ::: CRZ-10min(Listed) ::: TopAlt Published :::
+.TCRAFTBZNBGSKY Cleared to $arr.  $route. Climb Via SID. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk . 
+.TCRAFTBZNBGSKYU Cleared to $arr.  $route. Climb Via SID. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk . 
 
 ;BZN MEADO 2 
 .BZNMEADO .FD BZN_MEADO
-.BZNMEADODEL .MSG ZLC_ISR ***MEADO 2 ::: RNAV-PilotNav ::: RWY 30 ::: CREKK_DBS_TOOLS_UPLOW_HIA ::: CVS Exct Maint 16k ::: CRZ-10min(Listed) ::: DEP FREQ 118.975 
+.BZNMEADODEL .MSG ZLC_ISR ***MEADO 2 ::: RNAV-PilotNav ::: RWY 30 ::: CREKK_DBS_TOOLS_UPLOW_HIA ::: CVS ::: CRZ-10min(Listed) ::: DEP FREQ 118.975
 .BZNMEADOGND .MSG ZLC_ISR ***MEADO 2 ::: RWY 30 :::  
 .BZNMEADOTWR .MSG ZLC_ISR ***MEADO 2 ::: RNAV-PilotNav ::: (RH w/ turn SW then W or S, NE and then SE or E) ::: DEP FREQ 118.975 
-.BZNMEADODEP .MSG ZLC_ISR ***MEADO 2 ::: RNAV-PilotNav ::: CVS Exct Maint 16k issued by DEL ::: CRZ-10min(Listed) ::: TopAlt Published :::  
-.BZNMEADOCTR .MSG ZLC_ISR ***MEADO 2 ::: CRZ-10min(Listed) ::: TopAlt Published 
-.TCRAFTBZNMEADO Cleared to $arr.  $route. Climb Via SID Except Maintain 16k. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk . 
-.TCRAFTBZNMEADOU Cleared to $arr.  $route. Climb Via SID Except Maintain 16k. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk . 
+.BZNMEADODEP .MSG ZLC_ISR ***MEADO 2 ::: RNAV-PilotNav ::: CVS ::: CRZ-10min(Listed) ::: TopAlt Published :::  
+.BZNMEADOCTR .MSG ZLC_ISR ***MEADO 2 ::: CRZ-10min(Listed) ::: TopAlt Published ::: 
+.TCRAFTBZNMEADO Cleared to $arr.  $route. Climb Via SID. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk . 
+.TCRAFTBZNMEADOU Cleared to $arr.  $route. Climb Via SID. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk . 
 
 ; BZN SUBKY 1
 .BZNSUBKYCTR .MSG ZLC_ISR *** SUBK 1 ::: RNAV ::: [WEST OPS] BIL >FL180 ::: . ::: A$altim(KBZN) 
@@ -4228,12 +4229,12 @@
 ; .CTBO32F .FF HEKIT HOMGO WELUR CTB
 
 ; CTB MRIAS
-.CTBMRIASDEL .MSG ZLC_ISR *** MRIAS 3 ::: RNAV-PilotNav ::: RWY ALL ::: BRADZ_PENRY ::: [PENRY] CVS Exct Maint 10k __ [BRADZ] Maint 10k ::: CRZ-5min(Not-Listed) ::: DEP FREQ 133.4 
+.CTBMRIASDEL .MSG ZLC_ISR *** MRIAS 3 ::: RNAV-PilotNav ::: RWY ALL ::: BRADZ_PENRY ::: [PENRY] CVS Except Maint 10k __ [BRADZ] Maint 10k ::: CRZ-5min(Not-Listed) ::: DEP FREQ 133.4 ::: TopAlt Not Published :::
 .CTBMRIASGND .MSG ZLC_ISR *** MRIAS 3 ::: RWY ALL ::: Airport is not provided Ground Control Services 
 .CTBMRIASTWR .MSG ZLC_ISR *** MRIAS 3 ::: RNAV-PilotNav ::: Airport is not provided Local (TWR) Control Services ::: DEP FREQ 133.4 
-.CTBMRIASDEP .MSG ZLC_ISR *** MRIAS 3 ::: RNAV-PilotNav ::: [PENRY] CVS Exct Maint 10k __ [BRADZ] Maint 10k issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
-.CTBMRIASCTR .MSG ZLC_ISR *** MRIAS 3 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
-.TCRAFTCTBMRIAS Cleared to $arr, $route. [IF PENRY Transition] CVS Exct Maint 10k __ [IF BRADZ Transition] Maint 10k. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. Hold for release.
+.CTBMRIASDEP .MSG ZLC_ISR *** MRIAS 3 ::: RNAV-PilotNav ::: [PENRY] CVS Except Maint 10K __ [BRADZ] Maint 10k issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
+.CTBMRIASCTR .MSG ZLC_ISR *** MRIAS 3 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::
+.TCRAFTCTBMRIAS Cleared to $arr, $route. [IF PENRY Transition] CVS Except Maint 10K __ [IF BRADZ Transition] Maint 10k. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. Hold for release.
  ------------- 
 
 ; D50 AIRPORT   240717 - .FF cmds removed
@@ -4457,7 +4458,7 @@
 
 ;EVW FBR 
 .EVWFBR .FD EVW_FBR 
-.EVWFBRDEL .MSG ZLC_ISR ***FBR 1 ::: ODP ::: RWY ALL :::  ::: Maint 10k ::: CRZ-5min(Not-Listed) ::: DEP FREQ 127.70 
+.EVWFBRDEL .MSG ZLC_ISR ***FBR 1 ::: ODP ::: RWY ALL :::  ::: Maint 10K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 127.70 
 .EVWFBRGND .MSG ZLC_ISR ***FBR 1 ::: RWY ALL ::: Airport is not provided Ground Control Services 
 .EVWFBRTWR .MSG ZLC_ISR ***FBR 1 ::: ODP ::: Airport is not provided Local (TWR) Control Services ::: DEP FREQ 127.70 
 .EVWFBRDEP .MSG ZLC_ISR ***FBR 1 ::: ODP ::: Maint 10k issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
@@ -4580,17 +4581,17 @@
 .GPISKOTTDEL .MSG ZLC_ISR *** SKOTT 2 ::: ODP ::: RWY ALL :::  ::: Maint 12K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 133.4 
 .GPISKOTTGND .MSG ZLC_ISR *** SKOTT 2 ::: RWY ALL :::  
 .GPISKOTTTWR .MSG ZLC_ISR *** SKOTT 2 ::: ODP ::: (South departure) ::: DEP FREQ 133.4 
-.GPISKOTTDEP .MSG ZLC_ISR *** SKOTT 2 ::: ODP ::: Maint 12K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt 12K :::  
-.GPISKOTTCTR .MSG ZLC_ISR *** SKOTT 2 ::: CRZ-5min(Not-Listed) ::: TopAlt 12K 
+.GPISKOTTDEP .MSG ZLC_ISR *** SKOTT 2 ::: ODP ::: Maint 12K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
+.GPISKOTTCTR .MSG ZLC_ISR *** SKOTT 2 ::: CRZ-5min(Not-Listed) ::: TopAlt 12K (not published) :::
 .TCRAFTGPISKOTT Cleared to $arr. Depart via the SKOTT2 Obstacle Departure Procedure. $route. Maintain 12K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. .  
 .TCRAFTGPISKOTTU Cleared to $arr. Depart via the SKOTT2 Obstacle Departure Procedure. $route. Maintain 12K. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk. .  
 
 ; GPI GPI
-.GPIGPIDEL .MSG ZLC_ISR *** GPI 1 ::: RNAV-PilotNav ::: RWY 20 ::: CHOTE_SKOTT ::: CVS Exct Maint 12K ::: CRZ-5min(Listed) ::: DEP FREQ 133.4 
+.GPIGPIDEL .MSG ZLC_ISR *** GPI 1 ::: RNAV-PilotNav ::: RWY 20 ::: CHOTE_SKOTT ::: CVS Except Maint 12K ::: CRZ-5min(Listed) ::: DEP FREQ 133.4 
 .GPIGPIGND .MSG ZLC_ISR *** GPI 1 ::: RWY 20 :::  
 .GPIGPITWR .MSG ZLC_ISR *** GPI 1 ::: RNAV-PilotNav ::: (Staightout) ::: DEP FREQ 133.4 
-.GPIGPIDEP .MSG ZLC_ISR *** GPI 1 ::: RNAV-PilotNav ::: CVS Exct Maint 12K issued by DEL ::: CRZ-5min(Listed) ::: TopAlt Not Published :::  
-.GPIGPICTR .MSG ZLC_ISR *** GPI 1 ::: CRZ-5min(Listed) ::: TopAlt Not Published 
+.GPIGPIDEP .MSG ZLC_ISR *** GPI 1 ::: RNAV-PilotNav ::: CVS Except Maint 12K issued by DEL ::: CRZ-5min(Listed) ::: TopAlt Not Published :::  
+.GPIGPICTR .MSG ZLC_ISR *** GPI 1 ::: CRZ-5min(Listed) ::: TopAlt Not Published :::
 .TCRAFTGPIGPI Cleared to $arr.  $route. Climb Via SID Except Maintain 12K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. .  
 .TCRAFTGPIGPIU Cleared to $arr.  $route. Climb Via SID Except Maintain 12K. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk. .  
 
@@ -4598,7 +4599,7 @@
 .GPIRIDDGDEL .MSG ZLC_ISR ***RIDDG 1 ::: RNAV-PilotNav ::: RWY 20, 02 ::: MSO_MLP_SKOTT ::: CVS Exct Maint 12k ::: CRZ-5min(Listed) ::: DEP FREQ 127.075 
 .GPIRIDDGGND .MSG ZLC_ISR ***RIDDG 1 ::: RWY 20, 02 :::  
 .GPIRIDDGTWR .MSG ZLC_ISR ***RIDDG 1 ::: RNAV-PilotNav ::: (ALL RWYS)-(RH w/ turn to W) ::: DEP FREQ 127.075 
-.GPIRIDDGDEP .MSG ZLC_ISR ***RIDDG 1 ::: RNAV-PilotNav ::: CVS Exct Maint 12k issued by DEL ::: CRZ-5min(Listed) ::: TopAlt Not Published :::  
+.GPIRIDDGDEP .MSG ZLC_ISR ***RIDDG 1 ::: RNAV-PilotNav ::: CVS Except Maint 12K issued by DEL ::: CRZ-5min(Listed) ::: TopAlt Not Published :::  
 .GPIRIDDGCTR .MSG ZLC_ISR ***RIDDG 1 ::: CRZ-5min(Listed) ::: TopAlt Not Published :::
 .TCRAFTGPIRIDDG Cleared to $arr.  $route. Climb Via SID Except Maintain 12k. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk . 
 .TCRAFTGPIRIDDGU Cleared to $arr.  $route. Climb Via SID Except Maintain 12k. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk .
@@ -4903,39 +4904,39 @@
 ; .JACO19F .FF MOSSS NACIT MEPLE LAGIC KARCE KICNE JAC DNW
 
 ; JAC GEYSR
-.JACGEYSRDEL .MSG ZLC_ISR *** GEYSR 6 ::: ODP ::: RWY 1 :::  ::: Maint 13K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 133.25 :::
+.JACGEYSRDEL .MSG ZLC_ISR *** GEYSR 6 ::: ODP ::: RWY 1 :::  ::: Maint 12.4K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 133.25 
 .JACGEYSRGND .MSG ZLC_ISR *** GEYSR 6 ::: RWY 1 :::  
 .JACGEYSRTWR .MSG ZLC_ISR *** GEYSR 6 ::: ODP ::: (Straight out) ::: DEP FREQ 133.25 ::: VCOA Avail.
-.JACGEYSRDEP .MSG ZLC_ISR *** GEYSR 6 ::: ODP ::: Maint 13K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::
-.JACGEYSRCTR .MSG ZLC_ISR *** GEYSR 6 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
-.TCRAFTJACGEYSR Cleared to $arr. Depart via the GEYSR6 Obstacle Departure Procedure. $route. Maintain 13K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.
-.TCRAFTJACGEYSRU Cleared to $arr. Depart via the GEYSR6 Obstacle Departure Procedure. $route. Maintain 13K. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk.
+.JACGEYSRDEP .MSG ZLC_ISR *** GEYSR 6 ::: ODP ::: Maint 12.4K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::
+.JACGEYSRCTR .MSG ZLC_ISR *** GEYSR 6 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::
+.TCRAFTJACGEYSR Cleared to $arr. Depart via the GEYSR6 Obstacle Departure Procedure. $route. Maintain 12.4K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.
+.TCRAFTJACGEYSRU Cleared to $arr. Depart via the GEYSR6 Obstacle Departure Procedure. $route. Maintain 12.4K. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk.
 
 ; JAC TETON
-.JACTETONDEL .MSG ZLC_ISR *** TETON 3 ::: ODP ::: RWY 19 :::  ::: Maint 14K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 133.25 ::: VCOA Avail.
+.JACTETONDEL .MSG ZLC_ISR *** TETON 3 ::: ODP ::: RWY 19 :::  ::: Maint 14K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 133.25 ::: VCOA Avail. 
 .JACTETONGND .MSG ZLC_ISR *** TETON 3 ::: RWY 19 :::  
 .JACTETONTWR .MSG ZLC_ISR *** TETON 3 ::: ODP ::: (Straight out) ::: DEP FREQ 133.25 ::: VCOA Avail.
 .JACTETONDEP .MSG ZLC_ISR *** TETON 3 ::: ODP ::: Maint 14K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
-.JACTETONCTR .MSG ZLC_ISR *** TETON 3 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
+.JACTETONCTR .MSG ZLC_ISR *** TETON 3 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::
 .TCRAFTJACTETON Cleared to $arr. Depart via the TETON3 Obstacle Departure Procedure. $route. Maintain 14K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.
 .TCRAFTJACTETONU Cleared to $arr. Depart via the TETON3 Obstacle Departure Procedure. $route. Maintain 14K. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk.
 
 ; JAC ALPIN
-.JACALPINDEL .MSG ZLC_ISR *** ALPIN 4 ::: PilotNav ::: RWY 19 ::: IDA_BPI ::: CVS Exct Maint 15K ::: CRZ-10min(Listed) ::: DEP FREQ 133.25 
+.JACALPINDEL .MSG ZLC_ISR *** ALPIN 4 ::: PilotNav ::: RWY 19 ::: IDA_BPI ::: CVS Except Maint 16K (or 15K) ::: CRZ-10min(Listed) ::: DEP FREQ 133.25 
 .JACALPINGND .MSG ZLC_ISR *** ALPIN 4 ::: RWY 19
 .JACALPINTWR .MSG ZLC_ISR *** ALPIN 4 ::: PilotNav ::: (Straight out) ::: DEP FREQ 133.25 
-.JACALPINDEP .MSG ZLC_ISR *** ALPIN 4 ::: PilotNav ::: CVS Exct Maint 15k issued by DEL ::: CRZ-10min(Listed) ::: TopAlt Not Published :::  
-.JACALPINCTR .MSG ZLC_ISR *** ALPIN 4 ::: CRZ-10min(Listed) ::: TopAlt Not Published
-.TCRAFTJACALPIN Cleared to $arr.  $route. Climb Via SID Except Maintain 15. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk.
-.TCRAFTJACALPINU Cleared to $arr.  $route. Climb Via SID Except Maintain 15. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk.
+.JACALPINDEP .MSG ZLC_ISR *** ALPIN 4 ::: PilotNav ::: CVS Except Maint 16K (or 15K) issued by DEL ::: CRZ-10min(Listed) ::: TopAlt Not Published :::  
+.JACALPINCTR .MSG ZLC_ISR *** ALPIN 4 ::: CRZ-10min(Listed) ::: TopAlt Not Published :::
+.TCRAFTJACALPIN Cleared to $arr.  $route. Climb Via SID Except Maintain 15K. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk.
+.TCRAFTJACALPINU Cleared to $arr.  $route. Climb Via SID Except Maintain 15K. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk.
 
-.JACDIVYDDEL .MSG ZLC_ISR ***DIVYD 2 ::: RNAV-PilotNav ::: RWY 1 ::: BOY_DNW_HUKET_JEDHY ::: CVS Exct Maint 15k ::: CRZ-10min(Listed) ::: DEP FREQ 133.25 
+.JACDIVYDDEL .MSG ZLC_ISR ***DIVYD 2 ::: RNAV-PilotNav ::: RWY 1 ::: BOY_DNW_HUKET_JEDHY ::: CVS Except Maint 16K (or 15K or 14K) ::: CRZ-10min(Listed) ::: DEP FREQ 133.25 
 .JACDIVYDGND .MSG ZLC_ISR ***DIVYD 2 ::: RWY 1 :::  
 .JACDIVYDTWR .MSG ZLC_ISR ***DIVYD 2 ::: RNAV-PilotNav ::: (Straight Out to GIYER) ::: DEP FREQ 133.25 
-.JACDIVYDDEP .MSG ZLC_ISR ***DIVYD 2 ::: RNAV-PilotNav ::: CVS Exct Maint 15k issued by DEL ::: CRZ-10min(Listed) ::: TopAlt Not Published :::  
+.JACDIVYDDEP .MSG ZLC_ISR ***DIVYD 2 ::: RNAV-PilotNav ::: CVS Except Maint 16K (or 15K or 14K) issued by DEL ::: CRZ-10min(Listed) ::: TopAlt Not Published :::  
 .JACDIVYDCTR .MSG ZLC_ISR ***DIVYD 2 ::: CRZ-10min(Listed) ::: TopAlt Not Published 
-.TCRAFTJACDIVYD Cleared to $arr.  $route. Climb Via SID Except Maintain 15k. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk . 
-.TCRAFTJACDIVYDU Cleared to $arr.  $route. Climb Via SID Except Maintain 15k. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk . 
+.TCRAFTJACDIVYD Cleared to $arr.  $route. Climb Via SID Except Maintain 15K. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk . 
+.TCRAFTJACDIVYDU Cleared to $arr.  $route. Climb Via SID Except Maintain 15K. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk . 
 
 
  ------------- 
@@ -5150,11 +5151,11 @@
 ; .MSOOBF .FF OCEDA BAMBE PUNNS DAIRE DMFOX OCFOW JEPSN WURTH STEVI ERRIK MAJOS LIBRE MSO
 
 ; MSO GRZLY
-.MSOGRZLYDEL .MSG ZLC_ISR *** GRZLY 3 ::: ODP ::: RWY 12, 30 :::  ::: Maint 13K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 133.4 
+.MSOGRZLYDEL .MSG ZLC_ISR *** GRZLY 3 ::: ODP ::: RWY 12, 30 :::  ::: Maint 13K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 133.4 ::: TopAlt Not Published :::
 .MSOGRZLYGND .MSG ZLC_ISR *** GRZLY 3 ::: RWY 12, 30 :::  
 .MSOGRZLYTWR .MSG ZLC_ISR *** GRZLY 3 ::: ODP ::: (Straight out and then turn south) ::: DEP FREQ 133.4 
 .MSOGRZLYDEP .MSG ZLC_ISR *** GRZLY 3 ::: ODP ::: Maint 13K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
-.MSOGRZLYCTR .MSG ZLC_ISR *** GRZLY 3 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
+.MSOGRZLYCTR .MSG ZLC_ISR *** GRZLY 3 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::
 .TCRAFTMSOGRZLY Cleared to $arr. Depart via the GRZLY3 Obstacle Departure Procedure. $route. Maintain 13K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. .  
 .TCRAFTMSOGRZLYU Cleared to $arr. Depart via the GRZLY3 Obstacle Departure Procedure. $route. Maintain 13K. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk. .  
 
@@ -5163,7 +5164,7 @@
 .MSODIDLYGND .MSG ZLC_ISR *** DIDLY 5 ::: RWY 30 :::  
 .MSODIDLYTWR .MSG ZLC_ISR *** DIDLY 5 ::: PilotNav ::: (Straight out with a possible turn back in a climb) ::: DEP FREQ 133.4 
 .MSODIDLYDEP .MSG ZLC_ISR *** DIDLY 5 ::: PilotNav ::: CVS issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt 14K :::  
-.MSODIDLYCTR .MSG ZLC_ISR *** DIDLY 5 ::: CRZ-5min(Not-Listed) ::: TopAlt 14K 
+.MSODIDLYCTR .MSG ZLC_ISR *** DIDLY 5 ::: CRZ-5min(Not-Listed) ::: TopAlt 14K :::
 .TCRAFTMSODIDLY Cleared to $arr.  $route. Climb Via SID  . Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. .  
 .TCRAFTMSODIDLYU Cleared to $arr.  $route. Climb Via SID  . Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk. .  
 
@@ -5177,13 +5178,13 @@
 .TCRAFTMSOMZULAU Cleared to $arr.  $route. Climb Via SID. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk. .  
 
 ;MSO VICTO 
-.MSOVICTODEL .MSG ZLC_ISR ***VICTO 1 ::: RNAV-PilotNav ::: RWY 12 ::: HLN_MLP_LKT_SKOTT ::: CVS Exct Maint 13k ::: CRZ-10min(Listed) ::: DEP FREQ 124.9 
+.MSOVICTODEL .MSG ZLC_ISR ***VICTO 1 ::: RNAV-PilotNav ::: RWY 12 ::: HLN_MLP_LKT_SKOTT ::: CVS Except Maint 13K ::: CRZ-10min(Listed) ::: DEP FREQ 124.9 
 .MSOVICTOGND .MSG ZLC_ISR ***VICTO 1 ::: RWY 12 :::  
 .MSOVICTOTWR .MSG ZLC_ISR ***VICTO 1 ::: RNAV-PilotNav ::: (RH w/ turn S) ::: DEP FREQ 124.9 
-.MSOVICTODEP .MSG ZLC_ISR ***VICTO 1 ::: RNAV-PilotNav ::: CVS Exct Maint 13k issued by DEL ::: CRZ-10min(Listed) ::: TopAlt Not Published :::  
+.MSOVICTODEP .MSG ZLC_ISR ***VICTO 1 ::: RNAV-PilotNav ::: CVS Except Maint 13K issued by DEL ::: CRZ-10min(Listed) ::: TopAlt Not Published :::  
 .MSOVICTOCTR .MSG ZLC_ISR ***VICTO 1 ::: CRZ-10min(Listed) ::: TopAlt Not Published :::
-.TCRAFTMSOVICTO Cleared to $arr.  $route. Climb Via SID Except Maintain 13k. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk . 
-.TCRAFTMSOVICTOU Cleared to $arr.  $route. Climb Via SID Except Maintain 13k. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk . 
+.TCRAFTMSOVICTO Cleared to $arr.  $route. Climb Via SID Except Maintain 13K. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk . 
+.TCRAFTMSOVICTOU Cleared to $arr.  $route. Climb Via SID Except Maintain 13K. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk . 
  ------------- 
 
 ; MUO AIRPORT  240717 - .FF cmds removed
@@ -5386,8 +5387,8 @@
 .PVUDITTITWR .MSG ZLC_ISR ***DITTI 1 ::: RNAV-PilotNav ::: (31: RH w/ Turn S; 13: RH w/ turn W) ::: DEP FREQ 118.85
 .PVUDITTIDEP .MSG ZLC_ISR ***DITTI 1 ::: RNAV-PilotNav ::: CVS ::: CRZ-10min(Listed) ::: TopAlt Published
 .PVUDITTICTR .MSG ZLC_ISR ***DITTI 1 ::: CRZ-10min(Listed) ::: TopAlt Published
-.TCRAFTPVUDITTI Cleared to $arr.  $route. Climb Via SID Except Maintain 9k. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk . 
-.TCRAFTPVUDITTIU Cleared to $arr.  $route. Climb Via SID Except Maintain 9k. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk . 
+.TCRAFTPVUDITTI Cleared to $arr.  $route. Climb Via SID. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk . 
+.TCRAFTPVUDITTIU Cleared to $arr.  $route. Climb Via SID. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk . 
 
 ; PVU/SPK TAYTR 1
 .PVUTAYTRCTR .MSG ZLC_ISR *** TAYTR 1 ::: RNAV ::: [ALL OPS] Descend via/Cross TAYTR @11k ::: A$altim(KPVU) 
@@ -5631,108 +5632,108 @@
 ; .SLCD35F .FF BLUPE BOAGY HLMET PEDLE ZEPOG KERNN WEEEL FORXS FFU OGD
 
 ; SLC ARCHZ
-.SLCARCHZDEL .MSG ZLC_ISR *** ARCHZ 1 ::: RNAV-Hybrid ::: RWY 34L/R, 35 ::: KROST_MLF_WINEN ::: Maint 9K/240kts until advised ::: CRZ-10min(Listed) ::: DEP FREQ 128.1 
+.SLCARCHZDEL .MSG ZLC_ISR *** ARCHZ 1 ::: RNAV-Hybrid ::: RWY 34L/R, 35 ::: KROST_MLF_WINEN ::: Maint 9K/230kts until advised ::: CRZ-10min(Listed) ::: DEP FREQ 128.1 
 .SLCARCHZGND .MSG ZLC_ISR *** ARCHZ 1 ::: RWY 34L/R, 35 ::: PREF-34L 
 .SLCARCHZTWR .MSG ZLC_ISR *** ARCHZ 1 ::: RNAV-Hybrid ::: H280 ::: DEP FREQ 128.1 
 .SLCARCHZDEP .MSG ZLC_ISR *** ARCHZ 1 ::: RNAV-Hybrid ::: Maint 9K issued by DEL ::: CRZ-10min(Listed) ::: TopAlt FL230 ::: Vector to SCANT, CVS / "Resume Normal SPD"
 .SLCARCHZCTR .MSG ZLC_ISR *** ARCHZ 1 ::: CRZ-10min(Listed) ::: TopAlt FL230 
-.TCRAFTSLCARCHZ Cleared to $arr.  $route. Maintain 9,000. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk. Maintain 240kts until advised.  
-.TCRAFTSLCARCHZU Cleared to $arr.  $route. Maintain 9,000. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk. Maintain 240kts until advised. 
-.TPDCSLCARCHZ .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Jets must maintain 240kts until advised. | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
-.TPDCSLCARCHZCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Jets must maintain 240kts until advised. | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
-.TPDCSLCARCHZU .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Jets must maintain 240kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
-.TPDCSLCARCHZUCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Jets must maintain 240kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TCRAFTSLCARCHZ Cleared to $arr.  $route. Maintain 9,000. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk. Maintain 230kts until advised.  
+.TCRAFTSLCARCHZU Cleared to $arr.  $route. Maintain 9,000. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk. Maintain 230kts until advised. 
+.TPDCSLCARCHZ .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Jets must maintain 230kts until advised. | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TPDCSLCARCHZCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Jets must maintain 230kts until advised. | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TPDCSLCARCHZU .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Jets must maintain 230kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TPDCSLCARCHZUCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Jets must maintain 230kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
 
 ; SLC CGULL
-.SLCCGULLDEL .MSG ZLC_ISR *** CGULL 1 ::: RNAV-Hybrid ::: RWY All except 14/32 ::: DRYAD_TWF ::: Maint 9K/240kts until advised ::: CRZ-10min(Listed) ::: DEP FREQ 126.25 
+.SLCCGULLDEL .MSG ZLC_ISR *** CGULL 1 ::: RNAV-Hybrid ::: RWY All except 14/32 ::: DRYAD_TWF ::: Maint 9K/230kts until advised ::: CRZ-10min(Listed) ::: DEP FREQ 126.25 
 .SLCCGULLGND .MSG ZLC_ISR *** CGULL 1 ::: RWY All except 14/32 ::: PREF-34L/16R 
 .SLCCGULLTWR .MSG ZLC_ISR *** CGULL 1 ::: RNAV-Hybrid ::: H280 ::: DEP FREQ 126.25 
 .SLCCGULLDEP .MSG ZLC_ISR *** CGULL 1 ::: RNAV-Hybrid ::: Maint 9K issued by DEL ::: CRZ-10min(Listed) ::: TopAlt FL230 ::: Vector to CORVR, CVS / "Resume Normal SPD"
 .SLCCGULLCTR .MSG ZLC_ISR *** CGULL 1 ::: CRZ-10min(Listed) ::: TopAlt FL230 
-.TCRAFTSLCCGULL Cleared to $arr.  $route. Maintain 9,000. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk. Maintian 240kts until advised.  
-.TCRAFTSLCCGULLU Cleared to $arr.  $route. Maintain 9,000. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk. Maintian 240kts until advised.  
-.TPDCSLCCGULL .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Maintain 240kts until advised. | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
-.TPDCSLCCGULLCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Maintain 240kts until advised. | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
-.TPDCSLCCGULLU .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Maintain 240kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
-.TPDCSLCCGULLUCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Maintain 240kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TCRAFTSLCCGULL Cleared to $arr.  $route. Maintain 9,000. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk. Maintian 230kts until advised.  
+.TCRAFTSLCCGULLU Cleared to $arr.  $route. Maintain 9,000. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk. Maintian 230kts until advised.  
+.TPDCSLCCGULL .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Maintain 230kts until advised. | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TPDCSLCCGULLCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Maintain 230kts until advised. | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TPDCSLCCGULLU .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Maintain 230kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TPDCSLCCGULLUCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Maintain 230kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
 
 ; SLC DEZRT
-.SLCDEZRTDEL .MSG ZLC_ISR *** DEZRT 2 ::: RNAV-Hybrid ::: RWY All except 14/32 ::: BAM_MVA ::: Maint 9K/240kts until advised ::: CRZ-10min(Listed) ::: DEP FREQ 126.25 
+.SLCDEZRTDEL .MSG ZLC_ISR *** DEZRT 2 ::: RNAV-Hybrid ::: RWY All except 14/32 ::: BAM_MVA ::: Maint 9K/230kts until advised ::: CRZ-10min(Listed) ::: DEP FREQ 126.25 
 .SLCDEZRTGND .MSG ZLC_ISR *** DEZRT 2 ::: RWY All except 14/32 ::: PREF-16R/34L 
 .SLCDEZRTTWR .MSG ZLC_ISR *** DEZRT 2 ::: RNAV-Hybrid ::: H280 ::: DEP FREQ 126.25 
 .SLCDEZRTDEP .MSG ZLC_ISR *** DEZRT 2 ::: RNAV-Hybrid ::: Maint 9K issued by DEL ::: CRZ-10min(Listed) ::: TopAlt 15K ::: Vector to DURCH, CVS / "Resume Normal SPD"
 .SLCDEZRTCTR .MSG ZLC_ISR *** DEZRT 2 ::: CRZ-10min(Listed) ::: TopAlt 15K 
-.TCRAFTSLCDEZRT Cleared to $arr.  $route. Maintain 9,000. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk. Maintain 240kts until advised.  
-.TCRAFTSLCDEZRTU Cleared to $arr.  $route. Maintain 9,000. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk. Maintain 240kts until advised.  
-.TPDCSLCDEZRT .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Maintain 240kts until advised. | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
-.TPDCSLCDEZRTCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Maintain 240kts until advised. | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
-.TPDCSLCDEZRTU .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Maintain 240kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
-.TPDCSLCDEZRTUCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Maintain 240kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TCRAFTSLCDEZRT Cleared to $arr.  $route. Maintain 9,000. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk. Maintain 230kts until advised.  
+.TCRAFTSLCDEZRTU Cleared to $arr.  $route. Maintain 9,000. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk. Maintain 230kts until advised.  
+.TPDCSLCDEZRT .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Maintain 230kts until advised. | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TPDCSLCDEZRTCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Maintain 230kts until advised. | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TPDCSLCDEZRTU .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Maintain 230kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TPDCSLCDEZRTUCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Maintain 230kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
 
 ; SLC FFU
-.SLCFFUDEL .MSG ZLC_ISR *** FFU 9 ::: Hybrid ::: RWY 16L/R, 17 ::: BCE_OAL_HVE_MLF ::: Maint 9K & IF JET: 240kts until advised ::: CRZ-10 min(Listed) ::: DEP FREQ 128.6 
+.SLCFFUDEL .MSG ZLC_ISR *** FFU 9 ::: Hybrid ::: RWY 16L/R, 17 ::: BCE_OAL_HVE_MLF ::: Maint 9K & IF JET: 230kts until advised ::: CRZ-10 min(Listed) ::: DEP FREQ 128.6 
 .SLCFFUGND .MSG ZLC_ISR *** FFU 9 ::: RWY 16L/R, 17 ::: PREF-16L 
 .SLCFFUTWR .MSG ZLC_ISR *** FFU 9 ::: Hybrid ::: (H160) ::: DEP FREQ 128.6 
 .SLCFFUDEP .MSG ZLC_ISR *** FFU 9 ::: Hybrid ::: Maint 9K issued by DEL ::: CRZ-10min(Listed) ::: TopAlt 10K ::: Vector to FFU / "Resume Normal SPD"
 .SLCFFUCTR .MSG ZLC_ISR *** FFU 9 ::: CRZ-10min(Listed) ::: TopAlt 10K 
-.TCRAFTSLCFFU Cleared to $arr.  $route. Maintain 9,000. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk. IF JET:  Maintain 240kts until advised. 
-.TCRAFTSLCFFUU Cleared to $arr.  $route. Maintain 9,000. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk. IF JET: Maintain 240kts until advised.  
-.TPDCSLCFFU .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Jets must maintain 240kts until advised. | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
-.TPDCSLCFFUCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Jets must maintain 240kts until advised. | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
-.TPDCSLCFFUU .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Jets must maintain 240kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
-.TPDCSLCFFUUCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Jets must maintain 240kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TCRAFTSLCFFU Cleared to $arr.  $route. Maintain 9,000. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk. IF JET:  Maintain 230kts until advised. 
+.TCRAFTSLCFFUU Cleared to $arr.  $route. Maintain 9,000. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk. IF JET: Maintain 230kts until advised.  
+.TPDCSLCFFU .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Jets must maintain 230kts until advised. | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TPDCSLCFFUCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Jets must maintain 230kts until advised. | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TPDCSLCFFUU .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Jets must maintain 230kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TPDCSLCFFUUCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Jets must maintain 230kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
 
 ; SLC RUGGD
-.SLCRUGGDDEL .MSG ZLC_ISR *** RUGGD 3 ::: RNAV-Hybrid ::: RWY All except 14/32 ::: HOLTR_EKR_KIERA_PERTY_OCS ::: Maint 9K/240kts until advised ::: CRZ-10 min(Listed) ::: DEP FREQ 135.5 
+.SLCRUGGDDEL .MSG ZLC_ISR *** RUGGD 3 ::: RNAV-Hybrid ::: RWY All except 14/32 ::: HOLTR_EKR_KIERA_PERTY_OCS ::: Maint 9K/230kts until advised ::: CRZ-10 min(Listed) ::: DEP FREQ 135.5 
 .SLCRUGGDGND .MSG ZLC_ISR *** RUGGD 3 ::: RWY All except 14/32 ::: PREF-16R or 34R
 .SLCRUGGDTWR .MSG ZLC_ISR *** RUGGD 3 ::: RNAV-Hybrid ::: (NORTH)-H340 __ (SOUTH)-H295 ::: DEP FREQ 135.5 
 .SLCRUGGDDEP .MSG ZLC_ISR *** RUGGD 3 ::: RNAV-Hybrid ::: Maint 9K issued by DEL ::: CRZ-10Kmin(Listed) ::: TopAlt FL230 ::: Vector to BUBBY, CVS / "Resume Normal SPD"
 .SLCRUGGDCTR .MSG ZLC_ISR *** RUGGD 3 ::: CRZ-10Kmin(Listed) ::: TopAlt FL230 
-.TCRAFTSLCRUGGD Cleared to $arr.  $route. Maintain 9,000/240kts until advised. Expect $cruise 10Kmin after departure. Departure frequency $freq($1), squawk $squawk.  
-.TCRAFTSLCRUGGDU Cleared to $arr.  $route. Maintain 9,000/240kts until advised. Expect $cruise 10Kmin after departure. Departure OFFLINE, squawk $squawk.  
-.TPDCSLCRUGGD .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000/240kts until advised. | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
-.TPDCSLCRUGGDCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000/240kts until advised. | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
-.TPDCSLCRUGGDU .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000/240kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
-.TPDCSLCRUGGDUCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000/240kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TCRAFTSLCRUGGD Cleared to $arr.  $route. Maintain 9,000/230kts until advised. Expect $cruise 10Kmin after departure. Departure frequency $freq($1), squawk $squawk.  
+.TCRAFTSLCRUGGDU Cleared to $arr.  $route. Maintain 9,000/230kts until advised. Expect $cruise 10Kmin after departure. Departure OFFLINE, squawk $squawk.  
+.TPDCSLCRUGGD .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000/230kts until advised. | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TPDCSLCRUGGDCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000/230kts until advised. | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TPDCSLCRUGGDU .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000/230kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TPDCSLCRUGGDUCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000/230kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
 
 ; SLC SLC
-.SLCSLCDEL .MSG ZLC_ISR *** SLC 4 ::: Vectored ::: RWY ALL ::: Maint 9K & IF JET: 240kts until advised ::: CRZ-10 min(Listed) ::: DEP FREQ 128.6 
+.SLCSLCDEL .MSG ZLC_ISR *** SLC 4 ::: Vectored ::: RWY ALL ::: Maint 9K & IF JET: 230kts until advised ::: CRZ-10 min(Listed) ::: DEP FREQ 128.6 
 .SLCSLCGND .MSG ZLC_ISR *** SLC 4 ::: RWY ALL ::: PREF-16L/34R or 17/35 
 .SLCSLCTWR .MSG ZLC_ISR *** SLC 4 ::: Vectored ::: (NORTH)-(H343) __ (SOUTH)-(H163) ::: DEP FREQ 128.6 
 .SLCSLCDEP .MSG ZLC_ISR *** SLC 4 ::: Vectored ::: Maint 9K issued by DEL ::: CRZ-10min(Listed) ::: TopAlt 10K ::: Vector on course / "Resume Normal SPD"
 .SLCSLCCTR .MSG ZLC_ISR *** SLC 4 ::: CRZ-10min(Listed) ::: TopAlt 10K 
-.TCRAFTSLCSLC Cleared to $arr.  $route. Maintain 9,000 & IF JET: 240kts until advised. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk.  
-.TCRAFTSLCSLCU Cleared to $arr.  $route. Maintain 9,000 & IF JET: 240kts until advised. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk.  
-.TPDCSLCSLC .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000 & IF JET: 240kts until advised. | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
-.TPDCSLCSLCCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000 & IF JET: 240kts until advised. | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
-.TPDCSLCSLCU .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000 & IF JET: 240kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
-.TPDCSLCSLCUCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000 & IF JET: 240kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TCRAFTSLCSLC Cleared to $arr.  $route. Maintain 9,000 & IF JET: 230kts until advised. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk.  
+.TCRAFTSLCSLCU Cleared to $arr.  $route. Maintain 9,000 & IF JET: 230kts until advised. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk.  
+.TPDCSLCSLC .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000 & IF JET: 230kts until advised. | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TPDCSLCSLCCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000 & IF JET: 230kts until advised. | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TPDCSLCSLCU .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000 & IF JET: 230kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TPDCSLCSLCUCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000 & IF JET: 230kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
 
 ; SLC SEVYR
-.SLCSEVYRDEL .MSG ZLC_ISR *** SEVYR 3 ::: Hybrid ::: RWY 32, 34L/R, 35 ::: OAL_MLF ::: Maint 9K & IF JET: 240kts ::: CRZ-10min(Listed) ::: DEP FREQ 128.1 
+.SLCSEVYRDEL .MSG ZLC_ISR *** SEVYR 3 ::: Hybrid ::: RWY 32, 34L/R, 35 ::: OAL_MLF ::: Maint 9K & IF JET: 230kts ::: CRZ-10min(Listed) ::: DEP FREQ 128.1 
 .SLCSEVYRGND .MSG ZLC_ISR *** SEVYR 3 ::: RWY 32, 34L/R, 35 ::: PREF-34L 
 .SLCSEVYRTWR .MSG ZLC_ISR *** SEVYR 3 ::: Hybrid ::: (H263) ::: DEP FREQ 128.1 
 .SLCSEVYRDEP .MSG ZLC_ISR *** SEVYR 3 ::: Hybrid ::: Maint 9K issued by DEL ::: CRZ-10min(Listed) ::: TopAlt 10K ::: Vector to join TCH193R to EDETH / "Resume Normal SPD"
 .SLCSEVYRCTR .MSG ZLC_ISR *** SEVYR 3 ::: CRZ-10min(Listed) ::: TopAlt 10K 
-.TCRAFTSLCSEVYR Cleared to $arr.  $route. Maintain 9,000 & IF JET: 240kts until advised. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk. 
-.TCRAFTSLCSEVYRU Cleared to $arr.  $route. Maintain 9,000 & IF JET: 240kts until advised. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk. 
-.TPDCSLCSEVYR .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000 & IF JET: 240kts until advised. | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
-.TPDCSLCSEVYRCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000 & IF JET: 240kts until advised. | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
-.TPDCSLCSEVYRU .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000 & IF JET: 240kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
-.TPDCSLCSEVYRUCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000 & IF JET: 240kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TCRAFTSLCSEVYR Cleared to $arr.  $route. Maintain 9,000 & IF JET: 230kts until advised. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk. 
+.TCRAFTSLCSEVYRU Cleared to $arr.  $route. Maintain 9,000 & IF JET: 230kts until advised. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk. 
+.TPDCSLCSEVYR .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000 & IF JET: 230kts until advised. | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TPDCSLCSEVYRCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000 & IF JET: 230kts until advised. | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TPDCSLCSEVYRU .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000 & IF JET: 230kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TPDCSLCSEVYRUCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000 & IF JET: 230kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
 
 ; SLC ZIONZ
-.SLCZIONZDEL .MSG ZLC_ISR *** ZIONZ 1 ::: RNAV-Hybrid ::: RWY 16L/R, 17 ::: BCE_EHK_EYELO_KIMMR_KROST ::: Maint 9K/240kts until advised ::: CRZ-10min(Listed) ::: DEP FREQ 128.6 
+.SLCZIONZDEL .MSG ZLC_ISR *** ZIONZ 1 ::: RNAV-Hybrid ::: RWY 16L/R, 17 ::: BCE_EHK_EYELO_KIMMR_KROST ::: Maint 9K/230kts until advised ::: CRZ-10min(Listed) ::: DEP FREQ 128.6 
 .SLCZIONZGND .MSG ZLC_ISR *** ZIONZ 1 ::: RWY 16L/R, 17 ::: PREF 16L, 17 
 .SLCZIONZTWR .MSG ZLC_ISR *** ZIONZ 1 ::: RNAV-Hybrid ::: (H160) ::: DEP FREQ 128.6 
 .SLCZIONZDEP .MSG ZLC_ISR *** ZIONZ 1 ::: RNAV-Hybrid ::: Maint 9K issued by DEL ::: CRZ-10min(Listed) ::: TopAlt FL230 ::: Vector to HOPTO, CVS / "Resume Normal SPD"
 .SLCZIONZCTR .MSG ZLC_ISR *** ZIONZ 1 ::: CRZ-10min(Listed) ::: TopAlt FL230 
-.TCRAFTSLCZIONZ Cleared to $arr.  $route. Maintain 9,000/240kts until advised. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk.   
-.TCRAFTSLCZIONZU Cleared to $arr.  $route. Maintain 9,000/240kts until advised. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk.  
-.TPDCSLCZIONZ .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000/240kts until advised. | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
-.TPDCSLCZIONZCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000/240kts until advised. | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
-.TPDCSLCZIONZU .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000/240kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
-.TPDCSLCZIONZUCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000/240kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TCRAFTSLCZIONZ Cleared to $arr.  $route. Maintain 9,000/230kts until advised. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk.   
+.TCRAFTSLCZIONZU Cleared to $arr.  $route. Maintain 9,000/230kts until advised. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk.  
+.TPDCSLCZIONZ .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000/230kts until advised. | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TPDCSLCZIONZCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000/230kts until advised. | DEP FREQ: $freq($1) | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TPDCSLCZIONZU .msg $aircraft *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000/230kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
+.TPDCSLCZIONZUCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000/230kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
 
 ; SLC BEARR
 .SLCBEARRCTR .MSG ZLC_ISR ***  BEARR 5 ::: Non-RNAV ::: [SOUTH OPS] BEARR @ 17k(J)__16k(Other) ::: [NORTH OPS] BEARR @ 17k(J)__15k(Other) ::: A$altim(KSLC) 
@@ -5792,7 +5793,7 @@
 
 ; SLC SKEES 6
 .SLCSKEESCTR .MSG ZLC_ISR *** SKEES 6 ::: RNAV ::: [SOUTH OPS] BEARR @ 16k ::: [NORTH OPS] BEARR @ 17k ::: A$altim(KSLC) 
-.SLCSKEESAPP .MSG ZLC_ISR *** SKEES 6 ::: RNAV ::: [SOUTH OPS] Descend via/@ EKKHO expct vectors 16R/L or 17 app [NORTH OPS] Descend via/Expt 34L/R or 35 ::: A$altim(KSLC) 
+.SLCSKEESAPP .MSG ZLC_ISR *** SKEES 6 ::: RNAV ::: [SOUTH OPS] Descend via/@ EKKHO expect vectors 16R/L or 17 app [NORTH OPS] Descend via/Expt 34L/R or 35 ::: A$altim(KSLC) 
 .TSLCSKEESCTRS Cross BEARR @ and maintain 16k. SLC Landing South. Altimeter A$altim(KSLC) 
 .TSLCSKEESAPPS Descend via the SKEES6 arrival. @ EKKHO cleared 16R approach. Altimeter A$altim(KSLC) 
 .TSLCSKEESCTRN Cross BEARR @ and maintain 17k. SLC Landing North. Altimeter A$altim(KSLC) 
@@ -5800,7 +5801,7 @@
 
 ; SLC SPANE 8
 .SLCSPANECTR .MSG ZLC_ISR *** SPANE 8 ::: Non-RNAV ::: [SOUTH OPS] SPANE FL190(J) __ 17k(Other) ::: [NORTH OPS] SPANE 16k ::: A$altim(KSLC) 
-.SLCSPANEAPP .MSG ZLC_ISR *** SPANE 8 ::: Non-RNAV ::: [SOUTH OPS] D/m 11k. Then 210kts. Expt 16R [NORTH OPS] Cross FFU AOA 11k. Clrd ILS 34R ::: A$altim(KSLC) 
+.SLCSPANEAPP .MSG ZLC_ISR *** SPANE 8 ::: Non-RNAV ::: [SOUTH OPS] D/M 11k. Then 210kts. Expect 16R [NORTH OPS] Cross FFU AOA 11k. Clrd ILS 34R ::: A$altim(KSLC) 
 .TSLCSPANECTRS Cross SPANE @ and maintain FL190 if you are a jet. Cross at 17k if you are not a jet.. SLC Landing South. Altimeter A$altim(KSLC) 
 .TSLCSPANEAPPS Descend and maintain 11k. Then reduce speed to 210kts. Expect 16R. Altimeter A$altim(KSLC) 
 .TSLCSPANECTRN Cross SPANE @ and maintain 16k. SLC Landing North. Altimeter A$altim(KSLC) 
