@@ -209,6 +209,104 @@
 .cpdlcg .msg $aircraft CPDLC MESSAGE START... ISSUED $time FOR $aircraft | CDM ROUTE IS NOW ACTIVE FOR YOUR FLIGHT | NEW ROUTING: ***AMENDED*** $route ***AMENDED*** | CLEARANCE LIMIT: $arr | MAINTAIN 9,000 | EXPECT $cruise 10 MINUTES AFTER DEPARTURE | MAINTAIN 230 KTS UNTIL ADVISED | DEPARTURE FREQUENCY: $freq($1) | SQUAWK: $squawk | EXPECTED RUNWAY $2 | GATE HOLD IN EFFECT. CONTACT CLEARANCE FOR EDCT | TO ACKNOWLEDGE AND ACCEPT, REPLY WITH 'W' (WILCO). IF UNABLE, REPLY 'U' (UNABLE) AND VERBALLY CONTACT CLEARANCE DELIVERY ...CPDLC MESSAGE END
 
 .cpdlcsg .msg $aircraft CPDLC MESSAGE START... ISSUED $time FOR $aircraft | CDM ROUTE IS NOW ACTIVE FOR YOUR FLIGHT | NEW ROUTING: ***AMENDED*** $route ***AMENDED*** | CLEARANCE LIMIT: $arr | MAINTAIN 9,000 | EXPECT $cruise 10 MINUTES AFTER DEPARTURE | DEPARTURE FREQUENCY: $freq($1) | SQUAWK: $squawk | EXPECTED RUNWAY $2 | GATE HOLD IN EFFECT. CONTACT CLEARANCE FOR EDCT | TO ACKNOWLEDGE AND ACCEPT, REPLY WITH 'W' (WILCO). IF UNABLE, REPLY 'U' (UNABLE) AND VERBALLY CONTACT CLEARANCE DELIVERY ...CPDLC MESSAGE END
+#######################################################################
+#######################################################################
+#######################################################################
+#                     CWT/RECAT
+#######################################################################
+#######################################################################
+#######################################################################
+.AbA .msg INFO *** A BEHIND A - NO WAKE SEP
+.AbB .msg INFO *** A BEHIND B - NO WAKE SEP
+.AbC .msg INFO *** A BEHIND C - NO WAKE SEP
+.AbD .msg INFO *** A BEHIND D - NO WAKE SEP
+.AbE .msg INFO *** A BEHIND E - NO WAKE SEP
+.AbF .msg INFO *** A BEHIND F - NO WAKE SEP
+.AbG .msg INFO *** A BEHIND G - NO WAKE SEP
+.AbH .msg INFO *** A BEHIND H - NO WAKE SEP
+.AbI .msg INFO *** A BEHIND I - NO WAKE SEP
+
+.BbA .msg INFO *** B BEHIND A - 5NM
+.BbB .msg INFO *** B BEHIND B - 3NM
+.BbC .msg INFO *** B BEHIND C - NO WAKE SEP
+.BbD .msg INFO *** B BEHIND D - 3NM
+.BbE .msg INFO *** B BEHIND E - NO WAKE SEP
+.BbF .msg INFO *** B BEHIND F - NO WAKE SEP
+.BbG .msg INFO *** B BEHIND G - NO WAKE SEP
+.BbH .msg INFO *** B BEHIND H - NO WAKE SEP
+.BbI .msg INFO *** B BEHIND I - NO WAKE SEP
+
+.CbA .msg INFO *** C BEHIND A - 6NM
+.CbB .msg INFO *** C BEHIND B - 4NM
+.CbC .msg INFO *** C BEHIND C - NO WAKE SEP
+.CbD .msg INFO *** C BEHIND D - 4NM
+.CbE .msg INFO *** C BEHIND E - NO WAKE SEP
+.CbF .msg INFO *** C BEHIND F - NO WAKE SEP
+.CbG .msg INFO *** C BEHIND G - NO WAKE SEP
+.CbH .msg INFO *** C BEHIND H - NO WAKE SEP
+.CbI .msg INFO *** C BEHIND I - NO WAKE SEP
+
+.DbA .msg INFO *** D BEHIND A - 6NM
+.DbB .msg INFO *** D BEHIND B - 4NM
+.DbC .msg INFO *** D BEHIND C - NO WAKE SEP
+.DbD .msg INFO *** D BEHIND D - 4NM
+.DbE .msg INFO *** D BEHIND E - NO WAKE SEP
+.DbF .msg INFO *** D BEHIND F - NO WAKE SEP
+.DbG .msg INFO *** D BEHIND G - NO WAKE SEP
+.DbH .msg INFO *** D BEHIND H - NO WAKE SEP
+.DbI .msg INFO *** D BEHIND I - NO WAKE SEP
+
+.EbA .msg INFO *** E BEHIND A - 7NM
+.EbB .msg INFO *** E BEHIND B - 5NM
+.EbC .msg INFO *** E BEHIND C - 3.5NM
+.EbD .msg INFO *** E BEHIND D - 5NM
+.EbE .msg INFO *** E BEHIND E - NO WAKE SEP
+.EbF .msg INFO *** E BEHIND F - NO WAKE SEP
+.EbG .msg INFO *** E BEHIND G - NO WAKE SEP
+.EbH .msg INFO *** E BEHIND H - NO WAKE SEP
+.EbI .msg INFO *** E BEHIND I - NO WAKE SEP
+
+.FbA .msg INFO *** F BEHIND A - 7NM
+.FbB .msg INFO *** F BEHIND B - 5NM
+.FbC .msg INFO *** F BEHIND C - 3.5NM
+.FbD .msg INFO *** F BEHIND D - 5NM
+.FbE .msg INFO *** F BEHIND E - NO WAKE SEP
+.FbF .msg INFO *** F BEHIND F - NO WAKE SEP
+.FbG .msg INFO *** F BEHIND G - NO WAKE SEP
+.FbH .msg INFO *** F BEHIND H - NO WAKE SEP
+.FbI .msg INFO *** F BEHIND I - NO WAKE SEP
+
+.GbA .msg INFO *** G BEHIND A - 7NM
+.GbB .msg INFO *** G BEHIND B - 5NM
+.GbC .msg INFO *** G BEHIND C - 3.5NM
+.GbD .msg INFO *** G BEHIND D - 5NM
+.GbE .msg INFO *** G BEHIND E - NO WAKE SEP
+.GbF .msg INFO *** G BEHIND F - NO WAKE SEP
+.GbG .msg INFO *** G BEHIND G - NO WAKE SEP
+.GbH .msg INFO *** G BEHIND H - NO WAKE SEP
+.GbI .msg INFO *** G BEHIND I - NO WAKE SEP
+
+.HbA .msg INFO *** H BEHIND A - 8NM
+.HbB .msg INFO *** H BEHIND B - 5NM
+.HbC .msg INFO *** H BEHIND C - 5NM
+.HbD .msg INFO *** H BEHIND D - 5NM (6NM ON APCH)
+.HbE .msg INFO *** H BEHIND E - NO WAKE SEP
+.HbF .msg INFO *** H BEHIND F - NO WAKE SEP
+.HbG .msg INFO *** H BEHIND G - NO WAKE SEP
+.HbH .msg INFO *** H BEHIND H - NO WAKE SEP
+.HbI .msg INFO *** H BEHIND I - NO WAKE SEP
+
+.IbA .msg INFO *** I BEHIND A - 8NM
+.IbB .msg INFO *** I BEHIND B - 5NM (6NM ON APCH)
+.IbC .msg INFO *** I BEHIND C - 5NM (6NM ON APCH)
+.IbD .msg INFO *** I BEHIND D - 5NM (6NM ON APCH)
+.IbE .msg INFO *** I BEHIND E - 4NM
+.IbF .msg INFO *** I BEHIND F - 4NM ON APCH (OTHERWISE NO WAKE SEP)
+.IbG .msg INFO *** I BEHIND G - NO WAKE SEP
+.IbH .msg INFO *** I BEHIND H - NO WAKE SEP
+.IbI .msg INFO *** I BEHIND I - NO WAKE SEP
+
+
 
 #######################################################################
 #######################################################################
