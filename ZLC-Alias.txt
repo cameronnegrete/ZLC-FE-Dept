@@ -5872,7 +5872,7 @@
 ; SLC PITTT 1
 .SLCPITTTCTR .MSG ZLC_ISR *** PITTT 1 ::: RNAV ::: [SOUTH OPS] SPANE @ FL190(J) _ 17k(other) or JAMMN 17k(J) _ 15k(other) ::: A$altim(KSLC)
 .SLCPITTTAPP .MSG ZLC_ISR *** PITTT 1 ::: RNAV ::: [SOUTH OPS] Descend via/Expt vectrs 16R/L or 17 (210kts midfield prior to HO to Final) ::: A$altim(KSLC) 
-.TSLCPITTTCTR (MLF/BCE Trans)-Cross JAMMN @ and maintain 17K; (HELPR/MTU/EKR Trans)-Cross SPANE @ and maintain 19k. SLC Landing South. Altimeter A$altim(KSLC) 
+.TSLCPITTTCTR (MLF/BCE Trans)-Cross JAMMN @ and maintain 17K; (HELPR/MTU/EKR Trans)-Cross SPANE @ and maintain FL190. SLC Landing South. Altimeter A$altim(KSLC) 
 .TSLCPITTTAPP Descend via the PITTT1 arrival. Expect 16R. Altimeter A$altim(KSLC) 
 
 ; SLC CARTR 1
@@ -5908,7 +5908,7 @@
 ; SLC YUTES 1
 .SLCYUTESCTR .MSG ZLC_ISR *** YUTES 1 ::: RNAV ::: KNOLE @17k ::: A$altim(KSLC) 
 .SLCYUTESAPP .MSG ZLC_ISR *** YUTES 1 ::: RNAV ::: [SOUTH OPS] Descend via/Expt 16R. [NORTH OPS] Descend via/Expt 34L ::: A$altim(KSLC) 
-.TSLCYUTESCTRS Cross KNOLE @ and maintain 17K. SLC Landing South. Altimeter A$altim(KSLC) 
+.TSLCYUTESCTRS Cross KNOLE @ and maintain 17k. SLC Landing South. Altimeter A$altim(KSLC) 
 .TSLCYUTESAPPS Descend via the YUTES1 arrival. Expect 16R. Altimeter A$altim(KSLC) 
 .TSLCYUTESCTRN Cross KNOLE @ and maintain 17k. SLC Landing North. Altimeter A$altim(KSLC) 
 .TSLCYUTESAPPN Descend via the YUTES1 arrival. Expect 34L. Altimeter A$altim(KSLC) 
