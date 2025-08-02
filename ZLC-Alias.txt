@@ -339,8 +339,21 @@
 .EDCT .MSG $aircraft *** ADVISORY *** This route is under a Traffic Management Delay Program from VATUSA. Your assigned departure (takeoff) time is $1. Time now $time. Monitor DEL freq for possible amendments prior to calling GND for taxi. Contact GND 5-7min prior to your departure time, ready for taxi. Advise ATC if unable to meet assigned time or with questions. *** END ***
 
 .MAD .MSG $aircraft *** We understand your frustration with this time restriction. However, the field you are flying to can only support so many arrivals and departures within a certain time and maintain appropriate separation from other aircraft. To help mitigate traffic congestion, VATUSA is establishing more realistic delay programs like this. More specific questions should be directed to VATUSA86 via private message in your pilot client.
-
-
+#######################################################################
+#######################################################################
+#######################################################################
+#                     Jackson Hole Routing
+#######################################################################
+#######################################################################
+#######################################################################
+.jac19a .MSG ZLC_ISR *** ELLKK..MOSSS..KJAC or IPARK..PETTZ..TOCUD..KJAC
+.jac19b .MSG ZLC_ISR *** MOSSS..KJAC or TCH..ELLKK..MOSSS..KJAC
+.jac19c .MSG ZLC_ISR *** TCH..ELLKK..MOSSS..KJAC
+.jac19d .MSG ZLC_ISR *** SKYMM..ELLKK..MOSSS..KJAC or ELLKK..MOSSS..KJAC or IPARK..PETTZ..TOCUD..KJAC
+.jac1a .MSG ZLC_ISR ***  ELLKK..HOMVA..KJAC
+.jac1b .MSG ZLC_ISR *** SOLDR..ELLKK..HOMVA..KJAC or TCH..ELLKK..HOMVA..KJAC
+.jac1c .MSG ZLC_ISR *** CH..ELLKK..HOMVA..KJAC
+.jac1d .MSG ZLC_ISR *** SKYMM..ELLKK..HOMVA..KJAC or ELLKK..HOMVA..KJAC
 #######################################################################
 #######################################################################
 #######################################################################
@@ -6286,4 +6299,5 @@
 
 ; 00U RNAV (GPS) RWY 26 
 ; .00UR26F .FF CONUK ZAGHI CIRDI COGON OVIBY WIMEN JADLO 
+
 
