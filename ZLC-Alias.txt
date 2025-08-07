@@ -4698,17 +4698,17 @@
 .TCRAFTGPISKOTT Cleared to $arr. Depart via the SKOTT2 Obstacle Departure Procedure. $route. Maintain 12K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. .  
 .TCRAFTGPISKOTTU Cleared to $arr. Depart via the SKOTT2 Obstacle Departure Procedure. $route. Maintain 12K. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk. .  
 
-; GPI GPI
-.GPIGPIDEL .MSG ZLC_ISR *** GPI 1 ::: RNAV-PilotNav ::: RWY 20 ::: CHOTE_SKOTT ::: CVS Except Maint 12K ::: CRZ-5min(Listed) ::: DEP FREQ 133.4 
-.GPIGPIGND .MSG ZLC_ISR *** GPI 1 ::: RWY 20 :::  
-.GPIGPITWR .MSG ZLC_ISR *** GPI 1 ::: RNAV-PilotNav ::: (Staightout) ::: DEP FREQ 133.4 
-.GPIGPIDEP .MSG ZLC_ISR *** GPI 1 ::: RNAV-PilotNav ::: CVS Except Maint 12K issued by DEL ::: CRZ-5min(Listed) ::: TopAlt Not Published :::  
-.GPIGPICTR .MSG ZLC_ISR *** GPI 1 ::: CRZ-5min(Listed) ::: TopAlt Not Published :::
-.TCRAFTGPIGPI Cleared to $arr.  $route. Climb Via SID Except Maintain 12K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. .  
-.TCRAFTGPIGPIU Cleared to $arr.  $route. Climb Via SID Except Maintain 12K. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk. .  
+; GPI GPI - removed 2508
+;.GPIGPIDEL .MSG ZLC_ISR *** GPI 1 ::: RNAV-PilotNav ::: RWY 20 ::: CHOTE_SKOTT ::: CVS Except Maint 12K ::: CRZ-5min(Listed) ::: DEP FREQ 133.4 
+;.GPIGPIGND .MSG ZLC_ISR *** GPI 1 ::: RWY 20 :::  
+;.GPIGPITWR .MSG ZLC_ISR *** GPI 1 ::: RNAV-PilotNav ::: (Staightout) ::: DEP FREQ 133.4 
+;.GPIGPIDEP .MSG ZLC_ISR *** GPI 1 ::: RNAV-PilotNav ::: CVS Except Maint 12K issued by DEL ::: CRZ-5min(Listed) ::: TopAlt Not Published :::  
+;.GPIGPICTR .MSG ZLC_ISR *** GPI 1 ::: CRZ-5min(Listed) ::: TopAlt Not Published :::
+;.TCRAFTGPIGPI Cleared to $arr.  $route. Climb Via SID Except Maintain 12K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. .  
+;.TCRAFTGPIGPIU Cleared to $arr.  $route. Climb Via SID Except Maintain 12K. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk. .  
 
 ;GPI RIDDG 
-.GPIRIDDGDEL .MSG ZLC_ISR ***RIDDG 1 ::: RNAV-PilotNav ::: RWY 20, 02 ::: MSO_MLP_SKOTT ::: CVS Exct Maint 12k ::: CRZ-5min(Listed) ::: DEP FREQ 127.075 
+.GPIRIDDGDEL .MSG ZLC_ISR ***RIDDG 2 ::: RNAV-PilotNav ::: RWY 20, 02 ::: MSO_MLP_SKOTT ::: CVS Exct Maint 12k ::: CRZ-5min(Listed) ::: DEP FREQ 127.075 
 .GPIRIDDGGND .MSG ZLC_ISR ***RIDDG 2 ::: RWY 20, 02 :::  
 .GPIRIDDGTWR .MSG ZLC_ISR ***RIDDG 2 ::: RNAV-PilotNav ::: (ALL RWYS)-(RH w/ turn to W) ::: DEP FREQ 127.075 
 .GPIRIDDGDEP .MSG ZLC_ISR ***RIDDG 2 ::: RNAV-PilotNav ::: CVS Except Maint 12K issued by DEL ::: CRZ-5min(Listed) ::: TopAlt Not Published :::  
@@ -6300,6 +6300,7 @@
 
 ; 00U RNAV (GPS) RWY 26 
 ; .00UR26F .FF CONUK ZAGHI CIRDI COGON OVIBY WIMEN JADLO 
+
 
 
 
