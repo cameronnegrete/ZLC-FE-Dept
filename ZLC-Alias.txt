@@ -12,6 +12,7 @@
 # Updated links to SOP, LOA, etc - added MUO
 # Removed .FW cmds (VRC)
 # Reverted seed to 230kts (per SOP); updated CVS instructions for consistency - 09JUL2025 - arh
+# Updated ISR to RIDDG2 @ GPI, TAYTR2 @ PVU - 06AUG2025 arh
 
 # ALIAS FILE TABLE OF CONTENTS:
 #    SPECIAL EVENT
@@ -4708,10 +4709,10 @@
 
 ;GPI RIDDG 
 .GPIRIDDGDEL .MSG ZLC_ISR ***RIDDG 1 ::: RNAV-PilotNav ::: RWY 20, 02 ::: MSO_MLP_SKOTT ::: CVS Exct Maint 12k ::: CRZ-5min(Listed) ::: DEP FREQ 127.075 
-.GPIRIDDGGND .MSG ZLC_ISR ***RIDDG 1 ::: RWY 20, 02 :::  
-.GPIRIDDGTWR .MSG ZLC_ISR ***RIDDG 1 ::: RNAV-PilotNav ::: (ALL RWYS)-(RH w/ turn to W) ::: DEP FREQ 127.075 
-.GPIRIDDGDEP .MSG ZLC_ISR ***RIDDG 1 ::: RNAV-PilotNav ::: CVS Except Maint 12K issued by DEL ::: CRZ-5min(Listed) ::: TopAlt Not Published :::  
-.GPIRIDDGCTR .MSG ZLC_ISR ***RIDDG 1 ::: CRZ-5min(Listed) ::: TopAlt Not Published :::
+.GPIRIDDGGND .MSG ZLC_ISR ***RIDDG 2 ::: RWY 20, 02 :::  
+.GPIRIDDGTWR .MSG ZLC_ISR ***RIDDG 2 ::: RNAV-PilotNav ::: (ALL RWYS)-(RH w/ turn to W) ::: DEP FREQ 127.075 
+.GPIRIDDGDEP .MSG ZLC_ISR ***RIDDG 2 ::: RNAV-PilotNav ::: CVS Except Maint 12K issued by DEL ::: CRZ-5min(Listed) ::: TopAlt Not Published :::  
+.GPIRIDDGCTR .MSG ZLC_ISR ***RIDDG 2 ::: CRZ-5min(Listed) ::: TopAlt Not Published :::
 .TCRAFTGPIRIDDG Cleared to $arr.  $route. Climb Via SID Except Maintain 12k. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk . 
 .TCRAFTGPIRIDDGU Cleared to $arr.  $route. Climb Via SID Except Maintain 12k. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk .
  ------------- 
@@ -5501,16 +5502,16 @@
 .TCRAFTPVUDITTI Cleared to $arr.  $route. Climb Via SID. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk . 
 .TCRAFTPVUDITTIU Cleared to $arr.  $route. Climb Via SID. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk . 
 
-; PVU/SPK TAYTR 1
-.PVUTAYTRCTR .MSG ZLC_ISR *** TAYTR 1 ::: RNAV ::: [ALL OPS] Descend via/Cross TAYTR @11k ::: A$altim(KPVU) 
-.SPKTAYTRCTR .MSG ZLC_ISR *** TAYTR 1 ::: RNAV ::: [ALL OPS] Descend via/Cross TAYTR @11k ::: Altim n/a 
-.PVUTAYTRAPP .MSG ZLC_ISR *** TAYTR 1 ::: RNAV ::: Descend via/@ TAYTR cleared RNAV(GPS) 13 or ILS RWY 13 ::: A$altim(KPVU) 
-.SPKTAYTRAPP .MSG ZLC_ISR *** TAYTR 1 ::: RNAV ::: Descend via/@ TAYTR cleared RNAV(GPS) Y/Z RWY 12 ::: Altim n/a ::: ADV FREQ 122.9
+; PVU/SPK TAYTR 2
+.PVUTAYTRCTR .MSG ZLC_ISR *** TAYTR 2 ::: RNAV ::: [ALL OPS] Descend via/Cross TAYTR @11k ::: A$altim(KPVU) 
+.SPKTAYTRCTR .MSG ZLC_ISR *** TAYTR 2 ::: RNAV ::: [ALL OPS] Descend via/Cross TAYTR @11k ::: Altim n/a 
+.PVUTAYTRAPP .MSG ZLC_ISR *** TAYTR 2 ::: RNAV ::: Descend via/@ TAYTR cleared RNAV(GPS) 13 or ILS RWY 13 ::: A$altim(KPVU) 
+.SPKTAYTRAPP .MSG ZLC_ISR *** TAYTR 2 ::: RNAV ::: Descend via/@ TAYTR cleared RNAV(GPS) Y/Z RWY 12 ::: Altim n/a ::: ADV FREQ 122.9
 
-.TPVUTAYTRCTR .MSG ZLC_ISR *** TAYTR 1 ::: RNAV ::: Descend via/Cross TAYTR @11k ::: A$altim(KPVU) 
-.TSPKTAYTRAPP .MSG ZLC_ISR *** TAYTR 1 ::: RNAV ::: Descend via/Cross TAYTR @11k ::: Altim n/a 
-.TPVUTAYTRCTR .MSG ZLC_ISR *** TAYTR 1 ::: RNAV ::: Cross TAYTR @11k, @ TAYTR cleared RNAV(GPS) 13 or ILS RWY 13 approach ::: A$altim(KPVU)
-.TSPKTAYTRAPP .MSG ZLC_ISR *** TAYTR 1 ::: RNAV ::: Cross TAYTR @11k, @ TAYTR cleared RNAV(GPS) Y/Z RWY 12 approach ::: Altim n/a ::: ADV FREQ 122.9------------- 
+.TPVUTAYTRCTR .MSG ZLC_ISR *** TAYTR 2 ::: RNAV ::: Descend via/Cross TAYTR @11k ::: A$altim(KPVU) 
+.TSPKTAYTRAPP .MSG ZLC_ISR *** TAYTR 2 ::: RNAV ::: Descend via/Cross TAYTR @11k ::: Altim n/a 
+.TPVUTAYTRCTR .MSG ZLC_ISR *** TAYTR 2 ::: RNAV ::: Cross TAYTR @11k, @ TAYTR cleared RNAV(GPS) 13 or ILS RWY 13 approach ::: A$altim(KPVU)
+.TSPKTAYTRAPP .MSG ZLC_ISR *** TAYTR 2 ::: RNAV ::: Cross TAYTR @11k, @ TAYTR cleared RNAV(GPS) Y/Z RWY 12 approach ::: Altim n/a ::: ADV FREQ 122.9------------- 
 
 ; PWD AIRPORT   240717 - .FF cmds removed
  ------------- 
@@ -6299,5 +6300,6 @@
 
 ; 00U RNAV (GPS) RWY 26 
 ; .00UR26F .FF CONUK ZAGHI CIRDI COGON OVIBY WIMEN JADLO 
+
 
 
