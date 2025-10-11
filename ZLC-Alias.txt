@@ -4690,18 +4690,18 @@
 ; .GPIE30F .FF VAILL ITONE KIVVE GUBKE FCA
 
 ; GPI SKOTT
-.GPISKOTTDEL .MSG ZLC_ISR *** SKOTT 2 ::: ODP ::: RWY ALL :::  ::: Maint 12K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 133.4 
+.GPISKOTTDEL .MSG ZLC_ISR *** SKOTT 2 ::: ODP ::: RWY ALL :::  ::: Maint 12K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 127.075 
 .GPISKOTTGND .MSG ZLC_ISR *** SKOTT 2 ::: RWY ALL :::  
-.GPISKOTTTWR .MSG ZLC_ISR *** SKOTT 2 ::: ODP ::: (South departure) ::: DEP FREQ 133.4 
+.GPISKOTTTWR .MSG ZLC_ISR *** SKOTT 2 ::: ODP ::: (South departure) ::: DEP FREQ 127.075 
 .GPISKOTTDEP .MSG ZLC_ISR *** SKOTT 2 ::: ODP ::: Maint 12K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
 .GPISKOTTCTR .MSG ZLC_ISR *** SKOTT 2 ::: CRZ-5min(Not-Listed) ::: TopAlt 12K (not published) :::
 .TCRAFTGPISKOTT Cleared to $arr. Depart via the SKOTT2 Obstacle Departure Procedure. $route. Maintain 12K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. .  
 .TCRAFTGPISKOTTU Cleared to $arr. Depart via the SKOTT2 Obstacle Departure Procedure. $route. Maintain 12K. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk. .  
 
 ; GPI GPI - removed 2508
-;.GPIGPIDEL .MSG ZLC_ISR *** GPI 1 ::: RNAV-PilotNav ::: RWY 20 ::: CHOTE_SKOTT ::: CVS Except Maint 12K ::: CRZ-5min(Listed) ::: DEP FREQ 133.4 
+;.GPIGPIDEL .MSG ZLC_ISR *** GPI 1 ::: RNAV-PilotNav ::: RWY 20 ::: CHOTE_SKOTT ::: CVS Except Maint 12K ::: CRZ-5min(Listed) ::: DEP FREQ 127.075 
 ;.GPIGPIGND .MSG ZLC_ISR *** GPI 1 ::: RWY 20 :::  
-;.GPIGPITWR .MSG ZLC_ISR *** GPI 1 ::: RNAV-PilotNav ::: (Staightout) ::: DEP FREQ 133.4 
+;.GPIGPITWR .MSG ZLC_ISR *** GPI 1 ::: RNAV-PilotNav ::: (Staightout) ::: DEP FREQ 127.075
 ;.GPIGPIDEP .MSG ZLC_ISR *** GPI 1 ::: RNAV-PilotNav ::: CVS Except Maint 12K issued by DEL ::: CRZ-5min(Listed) ::: TopAlt Not Published :::  
 ;.GPIGPICTR .MSG ZLC_ISR *** GPI 1 ::: CRZ-5min(Listed) ::: TopAlt Not Published :::
 ;.TCRAFTGPIGPI Cleared to $arr.  $route. Climb Via SID Except Maintain 12K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. .  
@@ -4761,7 +4761,7 @@
 ; .HCRRAF .FF CUVAK COOLI ZANGY UZEYU FUGUE IVTAW COOLI NONTY TCH
 
 ; HCR COOLI
-.HCRCOOLIDEL .MSG ZLC_ISR *** COOLI 6 ::: RNAV-PilotNav ::: RWY 4 :::  ::: Maint 12K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 119.95 
+.HCRCOOLIDEL .MSG ZLC_ISR *** COOLI 6 ::: RNAV-PilotNav ::: RWY 4 :::  ::: Maint 12K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 119.65 
 .HCRCOOLIGND .MSG ZLC_ISR *** COOLI 6 ::: RWY 4 ::: Airport is not provided Ground Control Services 
 .HCRCOOLITWR .MSG ZLC_ISR *** COOLI 6 ::: RNAV-PilotNav ::: Airport is not provided Local (TWR) Control Services ::: DEP FREQ 119.95 
 .HCRCOOLIDEP .MSG ZLC_ISR *** COOLI 6 ::: RNAV-PilotNav ::: Maint 12K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
@@ -4869,27 +4869,27 @@
 ; .HLNOAF .FF WOKEN HLN
 
 ; HLN DIVD
-.HLNDIVDDEL .MSG ZLC_ISR *** DIVD 1 ::: ODP ::: RWY 5, 9, 23, 27 :::  ::: Maint 9K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 133.4 
+.HLNDIVDDEL .MSG ZLC_ISR *** DIVD 1 ::: ODP ::: RWY 5, 9, 23, 27 :::  ::: Maint 9K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 119.5
 .HLNDIVDGND .MSG ZLC_ISR *** DIVD 1 ::: RWY 5, 9, 23, 27 :::  
-.HLNDIVDTWR .MSG ZLC_ISR *** DIVD 1 ::: ODP ::: (Immediate turn to the north) ::: DEP FREQ 133.4 
+.HLNDIVDTWR .MSG ZLC_ISR *** DIVD 1 ::: ODP ::: (Immediate turn to the north) ::: DEP FREQ 119.5
 .HLNDIVDDEP .MSG ZLC_ISR *** DIVD 1 ::: ODP ::: Maint 9K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
 .HLNDIVDCTR .MSG ZLC_ISR *** DIVD 1 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFTHLNDIVD Cleared to $arr. Depart via the DIVD1 Obstacle Departure Procedure. $route. Maintain 9K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. .  
 .TCRAFTHLNDIVDU Cleared to $arr. Depart via the DIVD1 Obstacle Departure Procedure. $route. Maintain 9K. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk. . 
 
 ; HLN HLN
-.HLNHLNDEL .MSG ZLC_ISR *** HLN 4 ::: PilotNav ::: RWY 5, 9, 27 :::  ::: Maint 9K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 133.4 
+.HLNHLNDEL .MSG ZLC_ISR *** HLN 4 ::: PilotNav ::: RWY 5, 9, 27 :::  ::: Maint 9K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 119.5 
 .HLNHLNGND .MSG ZLC_ISR *** HLN 4 ::: RWY 5, 9, 27 :::  
-.HLNHLNTWR .MSG ZLC_ISR *** HLN 4 ::: PilotNav ::: (Immediate northbound turn) ::: DEP FREQ 133.4 
+.HLNHLNTWR .MSG ZLC_ISR *** HLN 4 ::: PilotNav ::: (Immediate northbound turn) ::: DEP FREQ 119.5 
 .HLNHLNDEP .MSG ZLC_ISR *** HLN 4 ::: PilotNav ::: Maint 9K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt 9K :::  
 .HLNHLNCTR .MSG ZLC_ISR *** HLN 4 ::: CRZ-5min(Not-Listed) ::: TopAlt 9K 
 .TCRAFTHLNHLN Cleared to $arr.  $route. Maintain 9K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. .  
 .TCRAFTHLNHLNU Cleared to $arr.  $route. Maintain 9K. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk. .  
 
 ; HLN SIEBE
-.HLNSIEBEDEL .MSG ZLC_ISR *** SIEBE 3 ::: PilotNav ::: RWY 9, 27 :::  ::: Maint 9K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 133.4 
+.HLNSIEBEDEL .MSG ZLC_ISR *** SIEBE 3 ::: PilotNav ::: RWY 9, 27 :::  ::: Maint 9K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 119.54 
 .HLNSIEBEGND .MSG ZLC_ISR *** SIEBE 3 ::: RWY 9, 27 :::  
-.HLNSIEBETWR .MSG ZLC_ISR *** SIEBE 3 ::: PilotNav ::: (Immediate Northwestbound turn) ::: DEP FREQ 133.4 
+.HLNSIEBETWR .MSG ZLC_ISR *** SIEBE 3 ::: PilotNav ::: (Immediate Northwestbound turn) ::: DEP FREQ 119.5 
 .HLNSIEBEDEP .MSG ZLC_ISR *** SIEBE 3 ::: PilotNav ::: Maint 9K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
 .HLNSIEBECTR .MSG ZLC_ISR *** SIEBE 3 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFTHLNSIEBE Cleared to $arr.  $route. Maintain 9K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. .  
@@ -5263,40 +5263,40 @@
 ; .MSOOBF .FF OCEDA BAMBE PUNNS DAIRE DMFOX OCFOW JEPSN WURTH STEVI ERRIK MAJOS LIBRE MSO
 
 ; MSO GRZLY
-.MSOGRZLYDEL .MSG ZLC_ISR *** GRZLY 3 ::: ODP ::: RWY 12, 30 :::  ::: Maint 13K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 133.4 ::: TopAlt Not Published :::
+.MSOGRZLYDEL .MSG ZLC_ISR *** GRZLY 3 ::: ODP ::: RWY 12, 30 :::  ::: Maint 14K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 124.9 ::: TopAlt Not Published :::
 .MSOGRZLYGND .MSG ZLC_ISR *** GRZLY 3 ::: RWY 12, 30 :::  
-.MSOGRZLYTWR .MSG ZLC_ISR *** GRZLY 3 ::: ODP ::: (Straight out and then turn south) ::: DEP FREQ 133.4 
-.MSOGRZLYDEP .MSG ZLC_ISR *** GRZLY 3 ::: ODP ::: Maint 13K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
+.MSOGRZLYTWR .MSG ZLC_ISR *** GRZLY 3 ::: ODP ::: (Straight out and then turn south) ::: DEP FREQ 124.9 
+.MSOGRZLYDEP .MSG ZLC_ISR *** GRZLY 3 ::: ODP ::: Maint 14K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
 .MSOGRZLYCTR .MSG ZLC_ISR *** GRZLY 3 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::
-.TCRAFTMSOGRZLY Cleared to $arr. Depart via the GRZLY3 Obstacle Departure Procedure. $route. Maintain 13K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. .  
-.TCRAFTMSOGRZLYU Cleared to $arr. Depart via the GRZLY3 Obstacle Departure Procedure. $route. Maintain 13K. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk. .  
+.TCRAFTMSOGRZLY Cleared to $arr. Depart via the GRZLY3 Obstacle Departure Procedure. $route. Maintain 14K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. .  
+.TCRAFTMSOGRZLYU Cleared to $arr. Depart via the GRZLY3 Obstacle Departure Procedure. $route. Maintain 14K. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk. .  
 
 ; MSO DIDLY
-.MSODIDLYDEL .MSG ZLC_ISR *** DIDLY 5 ::: PilotNav ::: RWY 30 ::: FCA_MSO_MLP_LKT ::: CVS ::: CRZ-5min(Not-Listed) ::: DEP FREQ 133.4 
+.MSODIDLYDEL .MSG ZLC_ISR *** DIDLY 5 ::: PilotNav ::: RWY 30 ::: FCA_MSO_MLP_LKT ::: CVS ::: CRZ-5min(Not-Listed) ::: DEP FREQ 124.9 
 .MSODIDLYGND .MSG ZLC_ISR *** DIDLY 5 ::: RWY 30 :::  
-.MSODIDLYTWR .MSG ZLC_ISR *** DIDLY 5 ::: PilotNav ::: (Straight out with a possible turn back in a climb) ::: DEP FREQ 133.4 
+.MSODIDLYTWR .MSG ZLC_ISR *** DIDLY 5 ::: PilotNav ::: (Straight out with a possible turn back in a climb) ::: DEP FREQ 124.9 
 .MSODIDLYDEP .MSG ZLC_ISR *** DIDLY 5 ::: PilotNav ::: CVS issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt 14K :::  
 .MSODIDLYCTR .MSG ZLC_ISR *** DIDLY 5 ::: CRZ-5min(Not-Listed) ::: TopAlt 14K :::
 .TCRAFTMSODIDLY Cleared to $arr.  $route. Climb Via SID  . Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. .  
 .TCRAFTMSODIDLYU Cleared to $arr.  $route. Climb Via SID  . Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk. .  
 
 ; MSO MZULA
-.MSOMZULADEL .MSG ZLC_ISR *** MZULA 5 ::: PilotNav ::: RWY 12 ::: FCA_MSO_MLP_LKT ::: CVS ::: CRZ-5min(Not-Listed) ::: DEP FREQ 133.4 
+.MSOMZULADEL .MSG ZLC_ISR *** MZULA 5 ::: PilotNav ::: RWY 12 ::: FCA_MSO_MLP_LKT ::: CVS ::: CRZ-5min(Not-Listed) ::: DEP FREQ 124.9
 .MSOMZULAGND .MSG ZLC_ISR *** MZULA 5 ::: RWY 12 :::  
-.MSOMZULATWR .MSG ZLC_ISR *** MZULA 5 ::: PilotNav ::: (Straight out with a possible turn back in a climb) ::: DEP FREQ 133.4 
+.MSOMZULATWR .MSG ZLC_ISR *** MZULA 5 ::: PilotNav ::: (Straight out with a possible turn back in a climb) ::: DEP FREQ 124.9 
 .MSOMZULADEP .MSG ZLC_ISR *** MZULA 5 ::: PilotNav ::: CVS issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt 14K :::  
 .MSOMZULACTR .MSG ZLC_ISR *** MZULA 5 ::: CRZ-5min(Not-Listed) ::: TopAlt 14K 
 .TCRAFTMSOMZULA Cleared to $arr.  $route. Climb Via SID. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. .  
 .TCRAFTMSOMZULAU Cleared to $arr.  $route. Climb Via SID. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk. .  
 
 ;MSO VICTO 
-.MSOVICTODEL .MSG ZLC_ISR ***VICTO 1 ::: RNAV-PilotNav ::: RWY 12 ::: HLN_MLP_LKT_SKOTT ::: CVS Except Maint 13K ::: CRZ-10min(Listed) ::: DEP FREQ 124.9 
+.MSOVICTODEL .MSG ZLC_ISR ***VICTO 1 ::: RNAV-PilotNav ::: RWY 12 ::: HLN_MLP_LKT_SKOTT ::: CVS Except Maint 14K ::: CRZ-10min(Listed) ::: DEP FREQ 124.9 
 .MSOVICTOGND .MSG ZLC_ISR ***VICTO 1 ::: RWY 12 :::  
 .MSOVICTOTWR .MSG ZLC_ISR ***VICTO 1 ::: RNAV-PilotNav ::: (RH w/ turn S) ::: DEP FREQ 124.9 
-.MSOVICTODEP .MSG ZLC_ISR ***VICTO 1 ::: RNAV-PilotNav ::: CVS Except Maint 13K issued by DEL ::: CRZ-10min(Listed) ::: TopAlt Not Published :::  
+.MSOVICTODEP .MSG ZLC_ISR ***VICTO 1 ::: RNAV-PilotNav ::: CVS Except Maint 14K issued by DEL ::: CRZ-10min(Listed) ::: TopAlt Not Published :::  
 .MSOVICTOCTR .MSG ZLC_ISR ***VICTO 1 ::: CRZ-10min(Listed) ::: TopAlt Not Published :::
-.TCRAFTMSOVICTO Cleared to $arr.  $route. Climb Via SID Except Maintain 13K. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk . 
-.TCRAFTMSOVICTOU Cleared to $arr.  $route. Climb Via SID Except Maintain 13K. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk . 
+.TCRAFTMSOVICTO Cleared to $arr.  $route. Climb Via SID Except Maintain 14K. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk . 
+.TCRAFTMSOVICTOU Cleared to $arr.  $route. Climb Via SID Except Maintain 14K. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk . 
  ------------- 
 
 ; MUO AIRPORT  240717 - .FF cmds removed
@@ -6300,6 +6300,7 @@
 
 ; 00U RNAV (GPS) RWY 26 
 ; .00UR26F .FF CONUK ZAGHI CIRDI COGON OVIBY WIMEN JADLO 
+
 
 
 
