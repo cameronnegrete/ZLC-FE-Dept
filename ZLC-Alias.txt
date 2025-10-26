@@ -13,6 +13,7 @@
 # Removed .FW cmds (VRC)
 # Updated speed to 240kts (per SOP) - 23SEP2025 - arh
 # Updated ISR to RIDDG2 @ GPI, TAYTR2 @ PVU - 06AUG2025 arh
+# Updated GRZLY 4 dep @ MSO; dep freq 124.9 - 25Aug2025 arh
 
 # ALIAS FILE TABLE OF CONTENTS:
 #    SPECIAL EVENT
@@ -5263,11 +5264,11 @@
 ; .MSOOBF .FF OCEDA BAMBE PUNNS DAIRE DMFOX OCFOW JEPSN WURTH STEVI ERRIK MAJOS LIBRE MSO
 
 ; MSO GRZLY
-.MSOGRZLYDEL .MSG ZLC_ISR *** GRZLY 3 ::: ODP ::: RWY 12, 30 :::  ::: Maint 14K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 124.9 ::: TopAlt Not Published :::
-.MSOGRZLYGND .MSG ZLC_ISR *** GRZLY 3 ::: RWY 12, 30 :::  
-.MSOGRZLYTWR .MSG ZLC_ISR *** GRZLY 3 ::: ODP ::: (Straight out and then turn south) ::: DEP FREQ 124.9 
-.MSOGRZLYDEP .MSG ZLC_ISR *** GRZLY 3 ::: ODP ::: Maint 14K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
-.MSOGRZLYCTR .MSG ZLC_ISR *** GRZLY 3 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::
+.MSOGRZLYDEL .MSG ZLC_ISR *** GRZLY 4 ::: ODP ::: RWY 12, 30 :::  ::: Maint 14K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 124.9 ::: TopAlt Not Published :::
+.MSOGRZLYGND .MSG ZLC_ISR *** GRZLY 4 ::: RWY 12, 30 :::  
+.MSOGRZLYTWR .MSG ZLC_ISR *** GRZLY 4 ::: ODP ::: (Straight out and then turn south) ::: DEP FREQ 124.9 
+.MSOGRZLYDEP .MSG ZLC_ISR *** GRZLY 4 ::: ODP ::: Maint 14K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
+.MSOGRZLYCTR .MSG ZLC_ISR *** GRZLY 4 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::
 .TCRAFTMSOGRZLY Cleared to $arr. Depart via the GRZLY3 Obstacle Departure Procedure. $route. Maintain 14K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. .  
 .TCRAFTMSOGRZLYU Cleared to $arr. Depart via the GRZLY3 Obstacle Departure Procedure. $route. Maintain 14K. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk. .  
 
@@ -6300,6 +6301,7 @@
 
 ; 00U RNAV (GPS) RWY 26 
 ; .00UR26F .FF CONUK ZAGHI CIRDI COGON OVIBY WIMEN JADLO 
+
 
 
 
