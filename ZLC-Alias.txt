@@ -14,6 +14,7 @@
 # Updated speed to 240kts (per SOP) - 23SEP2025 - arh
 # Updated ISR to RIDDG2 @ GPI, TAYTR2 @ PVU - 06AUG2025 arh
 # Updated GRZLY 4 dep @ MSO; dep freq 124.9 - 25Aug2025 arh
+# Updated links to zlcartcc.org, alias .65P, -.equip/-.tequip - 20NOV2025 arh
 
 # ALIAS FILE TABLE OF CONTENTS:
 #    SPECIAL EVENT
@@ -366,7 +367,7 @@
 
 
 # Quick Reference Pages
-.callsign .OPENURL https://123atc.com/call-sign/$1
+#.callsign .OPENURL https://123atc.com/call-sign/$1
 .COMMANDS .OPENURL https://cdn.zlcartcc.org/uploads/67-alias-command-reference.pdf
 .FEEDBACK .OPENURL https://zlcartcc.org/feedback
 #.CHANGELOG .OPENURL https://zlcartcc.com/index.php/change-log/
@@ -427,7 +428,7 @@
 .APPFDMUO .OPENURL https://cdn.zlcartcc.org/uploads/126-muo-rapconatct.pdf
 
 .HOLDTRACKING .OPENURL https://docs.google.com/spreadsheets/d/1nYgm-xaoJWab-5xYKk37MqsVW6-OVqihrpC3UX1P0Ow/edit?usp=sharing
-#.COORD .OPENURL https://zlcartcc.com/index.php/atc-coordination/
+#.COORD .OPENURL https://zlcartcc.org/index.php/atc-coordination/
 
 
 # LOA Quick Reference Page
@@ -460,7 +461,7 @@
 .LOAVNY .OPENURL https://cdn.zlcartcc.org/uploads/160-zla-zlc.pdf
 .LOASGU .OPENURL https://cdn.zlcartcc.org/uploads/160-zla-zlc.pdf
 .LOAAZC .OPENURL https://cdn.zlcartcc.org/uploads/160-zla-zlc.pdf
-.LOAPHX .OPENURL https://zlcartcc.com/index.php/letters-of-agreement-quick-reference/#PHX_Phoenix_Sky_Harbor_International_Airport
+#.LOAPHX .OPENURL https://zlcartcc.com/index.php/letters-of-agreement-quick-reference/#PHX_Phoenix_Sky_Harbor_International_Airport
 .LOAMSP .OPENURL https://cdn.zlcartcc.org/uploads/23-zmp-zlc.pdf
 .LOAMOT .OPENURL https://cdn.zlcartcc.org/uploads/23-zmp-zlc.pdf
 .LOAMIB .OPENURL https://cdn.zlcartcc.org/uploads/23-zmp-zlc.pdf
@@ -486,7 +487,7 @@
 .GOOGLE .openurl https://www.google.com/?gws_rd=ssl#q=$1+$2+$3+$4+$5+$6+$7+$8+$9
 .EQUIP .openurl https://zlcartcc.com/index.php/tips-for-pilots/#Equipment_Suffix_Codes
 .65 .openurl https://www.faa.gov/air_traffic/publications/atpubs/atc_html/
-.65P .openurl http://www.faa.gov/documentLibrary/media/Order/7110.65Z_ATC_Bsc_dtd_6-17-21.pdf
+.65P .openurl https://www.faa.gov/documentLibrary/media/Order/7110.65BB_Bsc_w_Chg_1_dtd_8-7-25.pdf
 .CHARTS .openurl http://www.airnav.com/airport/$1#ifr
 .CHARTSA .openurl http://www.airnav.com/airport/$arr#ifr
 .CHARTSD .openurl http://www.airnav.com/airport/$dep#ifr
@@ -528,7 +529,7 @@
 
 # "Trouble Pilot"
 .PRC .MSG ZLC_ISR With all due respect, it appears that there is a significant amount of knowledge that is still required on your part to complete flights like this on the network per the VATSIM Expectations and Requirements for Pilots. Please navigate to the VATSIM Pilot Resource Center site and start there.
-.TIPS .msg ZLC_ISR There has been 1 or more encounters with you that would make us think you might benefit from some resources we have posted on our site to help pilots with misc procedures. It is our Tips for Pilots section. Take a look at it sometime. Have a great day! zlcartcc.com
+.TIPS .msg ZLC_ISR There has been 1 or more encounters with you that would make us think you might benefit from some resources we have posted on our site to help pilots with misc procedures. It is our Tips for Pilots section. Take a look at it sometime. Have a great day! zlcartcc.org
 .WHATRWY .MSG ZLC_ISR After you get your clearance, it is standard for pilots to program their main route and leave off the SID portion in the FMS because they usually do not get their RWY assignment until they notify the ATC of their position on the field and request taxi. Then during taxi, the pilot then programs the rest of the SID portion. So you will get that information when you call for taxi.
 .TWRFREQ .MSG ZLC_ISR Upon reaching the departure runway and ready to request takeoff, you are expected to change to the appropriate frequency for Tower on your own, without being told to do so. Reference the Federal Aviation Administration Aeronautical Information Manual 4-3-14.a https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap4_section_3.html#$paragraph4-3-14
 
@@ -3417,10 +3418,10 @@
 .tCLOSED  ****NOTAM $radioname() closed at $time Zulu. ****
 .tprc With all due respect, it appears that there is a significant amount of knowledge that is still required on your part to complete flights like this on the network per the VATSIM Expectations and Requirements for Pilots. Please navigate to the VATSIM Pilot Resource Center site and start there.
 .THOTMIC ATTENTION ALL AIRCRAFT: Someone is continuing to press the MIC button. Please check your connections and resolve this issue as it is disrupting communications on this frequency.
-.TTIPS There has been 1 or more encounters with you that would make us think you might benefit from some resources we have posted on our site to help pilots with misc procedures. It is our Tips for Pilots section. Take a look at it sometime. Have a great day! zlcartcc.com
+.TTIPS There has been 1 or more encounters with you that would make us think you might benefit from some resources we have posted on our site to help pilots with misc procedures. It is our Tips for Pilots section. Take a look at it sometime. Have a great day! zlcartcc.org
 .TWHATRWY After you get your clearance, it is standard for pilots to program their main route and leave off the SID portion in the FMS because they usually do not get their RWY assignment until they notify the ATC of their position on the field and request taxi. Then during taxi, the pilot then programs the rest of the SID portion. So you will get that information when you call for taxi.
 .TTWRFREQ .msg $aircraft Upon reaching the departure runway and ready to request takeoff, you are expected to change to the appropriate frequency for Tower on your own, without being told to do so. Reference the Federal Aviation Administration Aeronautical Information Manual 4-3-14.a https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap4_section_3.html#$paragraph4-3-14
-.TEQUIP .msg $aircraft What is your equipment suffix code? ***I am NOT asking for your Aircraft Code: "$type($aircraft)"*** If you need help, visit this website: https://equipment-suffix.febuddy.com/
+#.TEQUIP .msg $aircraft What is your equipment suffix code? ***I am NOT asking for your Aircraft Code: "$type($aircraft)"*** If you need help, visit this website: https://equipment-suffix.febuddy.com/
 .TPDC? The message you got via private message is a way of simulating a real world system called Controller Pilot Data Link Communications (CPDLC). At certain airports in the real world, your departure clearance is provided via this system without the need for any voice communications. If you don't have any questions concerning the clearance, just prepare your aircraft with that information and report to Ground Control when ready for taxi, squawking your assigned code.
 .TNnumber .msg $aircraft Your callsign seems to be not valid. This link assists you format your callsign per USA regulation. Thank you for the help! https://www.faa.gov/licenses_certificates/aircraft_certification/aircraft_registry/forming_nnumber/
 
@@ -6301,6 +6302,7 @@
 
 ; 00U RNAV (GPS) RWY 26 
 ; .00UR26F .FF CONUK ZAGHI CIRDI COGON OVIBY WIMEN JADLO 
+
 
 
 
