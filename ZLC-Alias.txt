@@ -5049,6 +5049,18 @@
 .TCRAFTLGUORNEY Cleared to $arr. Depart via the ORNEY1 Obstacle Departure Procedure. $route. Maintain 12K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
  ------------- 
 
+; LLJ AIRPORT   
+ ------------- 
+
+; LVM LVM
+.LLJLKTDEL .MSG ZLC_ISR *** LLJ 1 ::: ODP ::: RWY 35 :::  ::: Maint 11K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 132.4
+.LLJLKTGND .MSG ZLC_ISR *** LLJ 1 ::: RWY 35 ::: Airport is not provided Ground Control Services 
+.LLJLKTTWR .MSG ZLC_ISR *** LLJ 1 ::: ODP ::: Airport is not provided Local (TWR) Control Services ::: DEP FREQ 132.4 
+.LLJLKTDEP .MSG ZLC_ISR *** LLJ 1 ::: ODP ::: Maint 11K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published ::: Vector on course 
+.LLJLKTCTR .MSG ZLC_ISR *** LLJ 1 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
+.TCRAFTLLJLKT Cleared to $arr. Depart via the LKT1 Obstacle Departure Procedure. $route. Maintain 11K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
+ ------------- 
+
 ; LND AIRPORT   240717 - .FF cmds removed
  ------------- 
 
@@ -6257,6 +6269,7 @@
 
 ; 00U RNAV (GPS) RWY 26 
 ; .00UR26F .FF CONUK ZAGHI CIRDI COGON OVIBY WIMEN JADLO 
+
 
 
 
