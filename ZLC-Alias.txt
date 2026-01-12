@@ -3598,15 +3598,10 @@
 ; .3U3GAF .FF MARRG ROJGE MAPKK GLUES HIA CPN
  ------------- 
 
-; 41U AIRPORT   240717 - .FF cmds removed
+; 41U AIRPORT   SANPETE COUNTY RGNL
  ------------- 
 
-
-; 41U RNAV (GPS) RWY 3 
-; .41UR03F .FF WKARA RPEEN OOLIT TMPLE BRIGM SANPT YMONT DTA PUC
-
 ; 41U WUXOT 
-; .41UWUXOTF .FF WUXOT DTA
 .41UWUXOTDEL .MSG ZLC_ISR *** WUXOT 1 ::: RNAV-ODP ::: RWY 21 :::  ::: Maint 11K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 133.6 
 .41UWUXOTGND .MSG ZLC_ISR *** WUXOT 1 ::: RWY 21 ::: Airport is not provided Ground Control Services 
 .41UWUXOTTWR .MSG ZLC_ISR *** WUXOT 1 ::: RNAV-ODP ::: Airport is not provided Local (TWR) Control Services ::: DEP FREQ 133.6 
@@ -3615,7 +3610,6 @@
 .TCRAFT41UWUXOT Cleared to $arr. Depart via the WUXOT1 Obstacle Departure Procedure. $route. Maintain 11K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
 
 ; 41U YMONT 
-; .41UYMONTF .FF SANPT YMONT 
 .41UYMONTDEL .MSG ZLC_ISR *** YMONT 1 ::: RNAV-ODP ::: RWY 3 :::  ::: Maint 13K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 133.6 
 .41UYMONTGND .MSG ZLC_ISR *** YMONT 1 ::: RWY 3 ::: Airport is not provided Ground Control Services 
 .41UYMONTTWR .MSG ZLC_ISR *** YMONT 1 ::: RNAV-ODP ::: Airport is not provided Local (TWR) Control Services ::: DEP FREQ 133.6 
@@ -6269,6 +6263,7 @@
 
 ; 00U RNAV (GPS) RWY 26 
 ; .00UR26F .FF CONUK ZAGHI CIRDI COGON OVIBY WIMEN JADLO 
+
 
 
 
