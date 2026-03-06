@@ -5235,11 +5235,11 @@
 .TCRAFTMSOGRZLYU Cleared to $arr. Depart via the GRZLY3 Obstacle Departure Procedure. $route. Maintain 14K. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk. .  
 
 ; MSO DIDLY
-.MSODIDLYDEL .MSG ZLC_ISR *** DIDLY 5 ::: PilotNav ::: RWY 30 ::: FCA_MSO_MLP_LKT ::: CVS ::: CRZ-5min(Listed) ::: DEP FREQ 124.9 
+.MSODIDLYDEL .MSG ZLC_ISR *** DIDLY 5 ::: PilotNav ::: RWY 30 ::: FCA_MSO_MLP_LKT ::: CVS ::: CRZ-5min(Not-Listed) ::: DEP FREQ 124.9 
 .MSODIDLYGND .MSG ZLC_ISR *** DIDLY 5 ::: RWY 30 :::  
 .MSODIDLYTWR .MSG ZLC_ISR *** DIDLY 5 ::: PilotNav ::: (Straight out with a possible turn back in a climb) ::: DEP FREQ 124.9 
-.MSODIDLYDEP .MSG ZLC_ISR *** DIDLY 5 ::: PilotNav ::: CVS issued by DEL ::: CRZ-5min(Listed) ::: TopAlt 14K :::  
-.MSODIDLYCTR .MSG ZLC_ISR *** DIDLY 5 ::: CRZ-5min(Listed) ::: TopAlt 14K :::
+.MSODIDLYDEP .MSG ZLC_ISR *** DIDLY 5 ::: PilotNav ::: CVS issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt 14K :::  
+.MSODIDLYCTR .MSG ZLC_ISR *** DIDLY 5 ::: CRZ-5min(Not-Listed) ::: TopAlt 14K :::
 .TCRAFTMSODIDLY Cleared to $arr.  $route. Climb Via SID  . Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. .  
 .TCRAFTMSODIDLYU Cleared to $arr.  $route. Climb Via SID  . Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk. .  
 
@@ -6263,6 +6263,7 @@
 
 ; 00U RNAV (GPS) RWY 26 
 ; .00UR26F .FF CONUK ZAGHI CIRDI COGON OVIBY WIMEN JADLO 
+
 
 
 
