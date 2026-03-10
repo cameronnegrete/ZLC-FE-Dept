@@ -3530,18 +3530,10 @@
 ; 1U7 AIRPORT   240717 - .FF and .FD cmds removed
  ------------- 
 
-
-; 1U7 RNAV (GPS) RWY 10 
-; .1U7R10F .FF LUNDI LEANT KOSCH HAXEN JUVON ISELE GLUTS FIROS MLD
-
-; 1U7 RNAV (GPS) RWY 28 
-; .1U7R28F .FF DHOWS GEGME CANEN ANUTE BOMPS FIROS MLD BPI
-
 ;1U7 1U7
-; .1U71U7 .FD 1U7_1U7 
-.1U71U7DEL .MSG ZLC_ISR ***1U7 1 ::: RNAV-ODP ::: RWY 28, 34 :::  ::: Maint 12k ::: CRZ-5min(Not-Listed) ::: DEP FREQ 128.35 
+.1U71U7DEL .MSG ZLC_ISR ***1U7 1 ::: RNAV-ODP ::: RWY 28, 34 :::  ::: Maint 12k ::: CRZ-5min(Not-Listed) ::: DEP FREQ 127.7 
 .1U71U7GND .MSG ZLC_ISR ***1U7 1 ::: RWY 28, 34 ::: Airport is not provided Ground Control Services 
-.1U71U7TWR .MSG ZLC_ISR ***1U7 1 ::: RNAV-ODP ::: Airport is not provided Local (TWR) Control Services ::: DEP FREQ 128.35 
+.1U71U7TWR .MSG ZLC_ISR ***1U7 1 ::: RNAV-ODP ::: Airport is not provided Local (TWR) Control Services ::: DEP FREQ 127.7 
 .1U71U7DEP .MSG ZLC_ISR ***1U7 1 ::: RNAV-ODP ::: Maint 12k issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
 .1U71U7CTR .MSG ZLC_ISR ***1U7 1 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFT1U71U7 Cleared to $arr. Depart via the 1U71 Obstacle Departure Procedure. $route. Maintain 12k. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk . Hold For Release
@@ -3549,9 +3541,9 @@
  
 ;1U7 FIROS
 ; .1U7FIROS .FD 1U7_FIROS 
-.1U7FIROSDEL .MSG ZLC_ISR ***FIROS 1 ::: RNAV-ODP ::: RWY 10, 16 :::  ::: Maint 11k ::: CRZ-5min(Not-Listed) ::: DEP FREQ 128.35 
+.1U7FIROSDEL .MSG ZLC_ISR ***FIROS 1 ::: RNAV-ODP ::: RWY 10, 16 :::  ::: Maint 11k ::: CRZ-5min(Not-Listed) ::: DEP FREQ 127.7
 .1U7FIROSGND .MSG ZLC_ISR ***FIROS 1 ::: RWY 10, 16 ::: Airport is not provided Ground Control Services 
-.1U7FIROSTWR .MSG ZLC_ISR ***FIROS 1 ::: RNAV-ODP ::: Airport is not provided Local (TWR) Control Services ::: DEP FREQ 128.35 
+.1U7FIROSTWR .MSG ZLC_ISR ***FIROS 1 ::: RNAV-ODP ::: Airport is not provided Local (TWR) Control Services ::: DEP FREQ 127.7
 .1U7FIROSDEP .MSG ZLC_ISR ***FIROS 1 ::: RNAV-ODP ::: Maint 11k issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
 .1U7FIROSCTR .MSG ZLC_ISR ***FIROS 1 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFT1U7FIROS Cleared to $arr. Depart via the FIROS1 Obstacle Departure Procedure. $route. Maintain 11k. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk . Hold For Release
@@ -4984,12 +4976,12 @@
 .TCRAFTJACTETON Cleared to $arr. Depart via the TETON3 Obstacle Departure Procedure. $route. Maintain 14K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.
 .TCRAFTJACTETONU Cleared to $arr. Depart via the TETON3 Obstacle Departure Procedure. $route. Maintain 14K. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk.
 
-; JAC ALPIN
-.JACALPINDEL .MSG ZLC_ISR *** ALPIN 4 ::: PilotNav ::: RWY 19 ::: IDA_BPI ::: CVS Except Maint 16K (or 15K) ::: CRZ-10min(Listed) ::: DEP FREQ 133.25 
-.JACALPINGND .MSG ZLC_ISR *** ALPIN 4 ::: RWY 19
-.JACALPINTWR .MSG ZLC_ISR *** ALPIN 4 ::: PilotNav ::: (Straight out) ::: DEP FREQ 133.25 
-.JACALPINDEP .MSG ZLC_ISR *** ALPIN 4 ::: PilotNav ::: CVS Except Maint 16K (or 15K) issued by DEL ::: CRZ-10min(Listed) ::: TopAlt Not Published :::  
-.JACALPINCTR .MSG ZLC_ISR *** ALPIN 4 ::: CRZ-10min(Listed) ::: TopAlt Not Published :::
+; JAC ALPIN 5
+.JACALPINDEL .MSG ZLC_ISR *** ALPIN 5 ::: PilotNav ::: RWY 19 ::: IDA_BPI ::: CVS Except Maint 16K (or 15K) ::: CRZ-10min(Listed) ::: DEP FREQ 133.25 
+.JACALPINGND .MSG ZLC_ISR *** ALPIN 5 ::: RWY 19
+.JACALPINTWR .MSG ZLC_ISR *** ALPIN 5 ::: PilotNav ::: (Straight out) ::: DEP FREQ 133.25 
+.JACALPINDEP .MSG ZLC_ISR *** ALPIN 5 ::: PilotNav ::: CVS Except Maint 16K (or 15K) issued by DEL ::: CRZ-10min(Listed) ::: TopAlt Not Published :::  
+.JACALPINCTR .MSG ZLC_ISR *** ALPIN 5 ::: CRZ-10min(Listed) ::: TopAlt Not Published :::
 .TCRAFTJACALPIN Cleared to $arr.  $route. Climb Via SID Except Maintain 15K. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk.
 .TCRAFTJACALPINU Cleared to $arr.  $route. Climb Via SID Except Maintain 15K. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk.
 
@@ -5465,31 +5457,29 @@
 .TCRAFTPVUDITTI Cleared to $arr.  $route. Climb Via SID. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk . 
 .TCRAFTPVUDITTIU Cleared to $arr.  $route. Climb Via SID. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk . 
 
-; PVU/SPK TAYTR 2
-.PVUTAYTRCTR .MSG ZLC_ISR *** TAYTR 2 ::: RNAV ::: [ALL OPS] Descend via/Cross TAYTR @11k ::: A$altim(KPVU) 
-.SPKTAYTRCTR .MSG ZLC_ISR *** TAYTR 2 ::: RNAV ::: [ALL OPS] Descend via/Cross TAYTR @11k ::: Altim n/a 
-.PVUTAYTRAPP .MSG ZLC_ISR *** TAYTR 2 ::: RNAV ::: Descend via/@ TAYTR cleared RNAV(GPS) 13 or ILS RWY 13 ::: A$altim(KPVU) 
-.SPKTAYTRAPP .MSG ZLC_ISR *** TAYTR 2 ::: RNAV ::: Descend via/@ TAYTR cleared RNAV(GPS) Y/Z RWY 12 ::: Altim n/a ::: ADV FREQ 122.9
+; PVU/SPK TAYTR 3
+.PVUTAYTRCTR .MSG ZLC_ISR *** TAYTR 3 ::: RNAV ::: [ALL OPS] Descend via/Cross TAYTR @11k ::: A$altim(KPVU) 
+.SPKTAYTRCTR .MSG ZLC_ISR *** TAYTR 3 ::: RNAV ::: [ALL OPS] Descend via/Cross TAYTR @11k ::: Altim n/a 
+.PVUTAYTRAPP .MSG ZLC_ISR *** TAYTR 3 ::: RNAV ::: Descend via/@ TAYTR cleared RNAV(GPS) 13 or ILS RWY 13 ::: A$altim(KPVU) 
+.SPKTAYTRAPP .MSG ZLC_ISR *** TAYTR 3 ::: RNAV ::: Descend via/@ TAYTR cleared RNAV(GPS) Y/Z RWY 12 ::: Altim n/a ::: ADV FREQ 122.9
 
-.TPVUTAYTRCTR .MSG ZLC_ISR *** TAYTR 2 ::: RNAV ::: Descend via/Cross TAYTR @11k ::: A$altim(KPVU) 
-.TSPKTAYTRAPP .MSG ZLC_ISR *** TAYTR 2 ::: RNAV ::: Descend via/Cross TAYTR @11k ::: Altim n/a 
-.TPVUTAYTRCTR .MSG ZLC_ISR *** TAYTR 2 ::: RNAV ::: Cross TAYTR @11k, @ TAYTR cleared RNAV(GPS) 13 or ILS RWY 13 approach ::: A$altim(KPVU)
-.TSPKTAYTRAPP .MSG ZLC_ISR *** TAYTR 2 ::: RNAV ::: Cross TAYTR @11k, @ TAYTR cleared RNAV(GPS) Y/Z RWY 12 approach ::: Altim n/a ::: ADV FREQ 122.9------------- 
+.TPVUTAYTRCTR .MSG ZLC_ISR *** TAYTR 3 ::: RNAV ::: Descend via/Cross TAYTR @11k ::: A$altim(KPVU) 
+.TSPKTAYTRAPP .MSG ZLC_ISR *** TAYTR 3 ::: RNAV ::: Descend via/Cross TAYTR @11k ::: Altim n/a 
+.TPVUTAYTRCTR .MSG ZLC_ISR *** TAYTR 3 ::: RNAV ::: Cross TAYTR @11k, @ TAYTR cleared RNAV(GPS) 13 or ILS RWY 13 approach ::: A$altim(KPVU)
+.TSPKTAYTRAPP .MSG ZLC_ISR *** TAYTR 2 ::: RNAV ::: Cross TAYTR @11k, @ TAYTR cleared RNAV(GPS) Y/Z RWY 12 approach ::: Altim n/a ::: ADV FREQ 122.9
 
 ; PWD AIRPORT   240717 - .FF cmds removed
  ------------- 
-
 
 ; PWD RNAV (GPS) RWY 12 
 ; .PWDR12F .FF RILMY NEGAE ATEYA WODOS OWFEW IHHIB BEYYA ISN
 
 ; PWD RNAV (GPS) RWY 30 
 ; .PWDR30F .FF RILMY BEYYA QUDUC LOTNE ISN
- ------------- 
+
 
 ; RIF AIRPORT   240717 - .FF cmds removed
  ------------- 
-
 
 ; RIF RNAV (GPS) RWY 19 
 ; .RIFR19F .FF CLOEE ALESH EBOVE CETNA CENOB CEDBO EMCUE GEERY DETAN DTA PUC HVE
@@ -5846,9 +5836,9 @@
 .TSLCJAMMNCTR Cross JAMMN @ and maintain 17k if you are a jet. Cross at 15k if you are not a jet.. SLC Landing South. Altimeter A$altim(KSLC) 
 .TSLCJAMMNAPP Descend and maintain 13k. Expect 16R.. Altimeter A$altim(KSLC) 
 
-; SLC PITTT 1
-.SLCPITTTCTR .MSG ZLC_ISR *** PITTT 1 ::: RNAV ::: [SOUTH OPS] SPANE @ FL190(J) _ 17k(other) or JAMMN 17k(J) _ 15k(other) ::: A$altim(KSLC)
-.SLCPITTTAPP .MSG ZLC_ISR *** PITTT 1 ::: RNAV ::: [SOUTH OPS] Descend via/Expt vectrs 16R/L or 17 (210kts midfield prior to HO to Final) ::: A$altim(KSLC) 
+; SLC PITTT 2
+.SLCPITTTCTR .MSG ZLC_ISR *** PITTT 2 ::: RNAV ::: [SOUTH OPS] SPANE @ FL190(J) _ 17k(other) or JAMMN 17k(J) _ 15k(other) ::: A$altim(KSLC)
+.SLCPITTTAPP .MSG ZLC_ISR *** PITTT 2 ::: RNAV ::: [SOUTH OPS] Descend via/Expt vectrs 16R/L or 17 (210kts midfield prior to HO to Final) ::: A$altim(KSLC) 
 .TSLCPITTTCTR (MLF/BCE Trans)-Cross JAMMN @ and maintain 17K; (HELPR/MTU/EKR Trans)-Cross SPANE @ and maintain FL190. SLC Landing South. Altimeter A$altim(KSLC) 
 .TSLCPITTTAPP Descend via the PITTT1 arrival. Expect 16R. Altimeter A$altim(KSLC) 
 
@@ -5882,19 +5872,16 @@
 .TSLCSPANECTRN Cross SPANE @ and maintain 16k. SLC Landing North. Altimeter A$altim(KSLC) 
 .TSLCSPANEAPPN Cross FFU at or above 11k. Then cleared ILS 34R approach.. Altimeter A$altim(KSLC) 
 
-; SLC YUTES 1
-.SLCYUTESCTR .MSG ZLC_ISR *** YUTES 1 ::: RNAV ::: KNOLE @17k ::: A$altim(KSLC) 
-.SLCYUTESAPP .MSG ZLC_ISR *** YUTES 1 ::: RNAV ::: [SOUTH OPS] Descend via/Expt 16R. [NORTH OPS] Descend via/Expt 34L ::: A$altim(KSLC) 
+; SLC YUTES 2
+.SLCYUTESCTR .MSG ZLC_ISR *** YUTES 2 ::: RNAV ::: KNOLE @17k ::: A$altim(KSLC) 
+.SLCYUTESAPP .MSG ZLC_ISR *** YUTES 2 ::: RNAV ::: [SOUTH OPS] Descend via/Expt 16R. [NORTH OPS] Descend via/Expt 34L ::: A$altim(KSLC) 
 .TSLCYUTESCTRS Cross KNOLE @ and maintain 17k. SLC Landing South. Altimeter A$altim(KSLC) 
 .TSLCYUTESAPPS Descend via the YUTES1 arrival. Expect 16R. Altimeter A$altim(KSLC) 
 .TSLCYUTESCTRN Cross KNOLE @ and maintain 17k. SLC Landing North. Altimeter A$altim(KSLC) 
 .TSLCYUTESAPPN Descend via the YUTES1 arrival. Expect 34L. Altimeter A$altim(KSLC) 
- ------------- 
 
 ; SMN AIRPORT   240717 - .FF cmds removed
  ------------- 
-
-
 ; SMN RNAV (GPS) RWY 17 
 ; .SMNR17F .FF JUNKA KYTES ILUJU HOBUD FAXON EPIRE GLANS CASBA DIVDE BUTEO AXLED LOWSE MEWLS NUBIE ORELE
 
@@ -6263,6 +6250,7 @@
 
 ; 00U RNAV (GPS) RWY 26 
 ; .00UR26F .FF CONUK ZAGHI CIRDI COGON OVIBY WIMEN JADLO 
+
 
 
 
