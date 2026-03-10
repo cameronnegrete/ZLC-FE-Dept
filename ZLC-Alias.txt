@@ -3531,11 +3531,11 @@
  ------------- 
 
 ;1U7 1U7
-.1U71U7DEL .MSG ZLC_ISR ***1U7 1 ::: RNAV-ODP ::: RWY 28, 34 :::  ::: Maint 12k ::: CRZ-5min(Not-Listed) ::: DEP FREQ 127.7 
-.1U71U7GND .MSG ZLC_ISR ***1U7 1 ::: RWY 28, 34 ::: Airport is not provided Ground Control Services 
-.1U71U7TWR .MSG ZLC_ISR ***1U7 1 ::: RNAV-ODP ::: Airport is not provided Local (TWR) Control Services ::: DEP FREQ 127.7 
-.1U71U7DEP .MSG ZLC_ISR ***1U7 1 ::: RNAV-ODP ::: Maint 12k issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
-.1U71U7CTR .MSG ZLC_ISR ***1U7 1 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
+.1U71U7DEL .MSG ZLC_ISR ***BEAR LAKE 1 ::: RNAV-ODP ::: RWY 28, 34 :::  ::: Maint 12k ::: CRZ-5min(Not-Listed) ::: DEP FREQ 127.7 
+.1U71U7GND .MSG ZLC_ISR ***BEAR LAKE 1 ::: RWY 28, 34 ::: Airport is not provided Ground Control Services 
+.1U71U7TWR .MSG ZLC_ISR ***BEAR LAKE 1 ::: RNAV-ODP ::: Airport is not provided Local (TWR) Control Services ::: DEP FREQ 127.7 
+.1U71U7DEP .MSG ZLC_ISR ***BEAR LAKE 1 ::: RNAV-ODP ::: Maint 12k issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
+.1U71U7CTR .MSG ZLC_ISR ***BEAR LAKE 1 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFT1U71U7 Cleared to $arr. Depart via the 1U71 Obstacle Departure Procedure. $route. Maintain 12k. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk . Hold For Release
 .TCRAFT1U71U7U Cleared to $arr. Depart via the 1U71 Obstacle Departure Procedure. $route. Maintain 12k. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk . Hold For Release
  
@@ -6250,6 +6250,7 @@
 
 ; 00U RNAV (GPS) RWY 26 
 ; .00UR26F .FF CONUK ZAGHI CIRDI COGON OVIBY WIMEN JADLO 
+
 
 
 
