@@ -17,6 +17,7 @@
 # Updated links to zlcartcc.org, alias .65P, -.equip/-.tequip - 20NOV2025 arh
 # Add IDA SIDs - IYEFF1, FAHLZ1 - 22NOC2025 arh
 # AIRAC 2603 updates - 10MAR2026 - arh
+# Alias File Clean-up - validated links, removed VRC cmds, quickreference (old website) - 10APR2026 arh
 
 # ALIAS FILE TABLE OF CONTENTS:
 #    SPECIAL EVENT
@@ -32,6 +33,7 @@
 #    PRASEOLOGY HELP
 #        GENERAL
 #            "Trouble Pilot"
+#            "Bad Pilot commands"
 #        Military
 #        Released for Departure (Uncontrolled Field)
 #        Holding instructions
@@ -173,11 +175,11 @@
 #        SMN AIRPORT 
 #        SPK AIRPORT 
 #        SUN AIRPORT 
+#        SVR AIRPORT - was U42
 #        TVY AIRPORT 
 #        TWF AIRPORT 
 #        U02 AIRPORT 
 #        U14 AIRPORT 
-#        U42 AIRPORT 
 #        U52 AIRPORT 
 #        U55 AIRPORT 
 #        U68 AIRPORT 
@@ -323,6 +325,9 @@
 .twfdmait .msg $atccallsign($1) TWF Departure $callsign
 .hlndmait .msg $atccallsign($1) HLN Departure $callsign
 .nrait .msg $atccallsign($1) $aircraft $ftime($2)
+
+
+
 #######################################################################
 #######################################################################
 #######################################################################
@@ -337,7 +342,7 @@
 
 
 # HOLDING
-
+.HOLDTRACKING .OPENURL https://docs.google.com/spreadsheets/d/1nYgm-xaoJWab-5xYKk37MqsVW6-OVqihrpC3UX1P0Ow/edit?usp=sharing
 
 # MISC
 
@@ -359,6 +364,7 @@
 .jac1b .MSG ZLC_ISR *** SOLDR..ELLKK..HOMVA..KJAC or TCH..ELLKK..HOMVA..KJAC
 .jac1c .MSG ZLC_ISR *** CH..ELLKK..HOMVA..KJAC
 .jac1d .MSG ZLC_ISR *** SKYMM..ELLKK..HOMVA..KJAC or ELLKK..HOMVA..KJAC
+
 #######################################################################
 #######################################################################
 #######################################################################
@@ -367,73 +373,46 @@
 #######################################################################
 #######################################################################
 
-
-# Quick Reference Pages
-#.callsign .OPENURL https://123atc.com/call-sign/$1
 .COMMANDS .OPENURL https://cdn.zlcartcc.org/uploads/67-alias-command-reference.pdf
 .FEEDBACK .OPENURL https://zlcartcc.org/feedback
-#.CHANGELOG .OPENURL https://zlcartcc.com/index.php/change-log/
-#.CID .openurl  https://zlcartcc.com/index.php/cid-information/?cid=$1
 
-#.QRSLC .OPENURL https://zlcartcc.com/index.php/kslc-facility-directive-quick-reference/
-#.QRBOI .OPENURL https://zlcartcc.com/index.php/kboi-facility-directive-quick-reference/
-#.QRJAC .OPENURL https://zlcartcc.com/index.php/kjac-facility-directive-quick-reference/
-#.QRBIL .OPENURL https://zlcartcc.com/index.php/kbil-facility-directive-quick-reference/
-#.QRMSO .OPENURL https://zlcartcc.com/index.php/kmso-facility-directive-quick-reference/
-#.QRGTF .OPENURL https://zlcartcc.com/index.php/kgtf-facility-directive-quick-reference/
-#.QRHLN .OPENURL https://zlcartcc.com/index.php/khln-facility-directive-quick-reference/
-#.QRTWF .OPENURL https://zlcartcc.com/index.php/ktwf-facility-directive-quick-reference/
-#.QRBZN .OPENURL https://zlcartcc.com/index.php/kbzn-facility-directive-quick-reference/
-#.QRGPI .OPENURL https://zlcartcc.com/index.php/kgpi-facility-directive-quick-reference/
-#.QRIDA .OPENURL https://zlcartcc.com/index.php/kida-facility-directive-quick-reference/
-#.QRPIH .OPENURL https://zlcartcc.com/index.php/kpih-facility-directive-quick-reference-2/
-#.QRSUN .OPENURL https://zlcartcc.com/index.php/ksun-facility-directive-quick-reference/
-#.QRPVU .OPENURL https://zlcartcc.com/index.php/kpvu-facility-directive-quick-reference/
-#.QROGD .OPENURL https://zlcartcc.com/index.php/kogd-facility-directive-quick-reference/
+.callsign .OPENURL https://123atc.com/call-signs/$1
 
-#.APPQRS56 .OPENURL https://zlcartcc.com/index.php/salt-lake-city-s56-tracon-facility-directive-quick-reference/
-#.APPQRSLC .OPENURL https://zlcartcc.com/index.php/salt-lake-city-s56-tracon-facility-directive-quick-reference/
-#.APPQRBOI .OPENURL https://zlcartcc.com/index.php/big-sky-boi-tracon-facility-directive-quick-reference/
-#.APPQRBZN .OPENURL https://zlcartcc.com/index.php/big-sky-tracon-bzn-facility-directive-quick-reference/
-#.APPQRBIL .OPENURL https://zlcartcc.com/index.php/billings-bil-tracon-facility-directive-quick-reference/
-#.APPQRGTF .OPENURL https://zlcartcc.com/index.php/great-falls-gtf-tracon-facility-directive-quick-reference/
-#.APPQRMSO .OPENURL https://zlcartcc.com/index.php/missoula-mso-tracon-facility-directive-quick-reference/
-#.APPQRHLN .OPENURL https://zlcartcc.com/index.php/helena-hln-tracon-facility-directive-quick-reference/
-#.APPQRTWF .OPENURL https://zlcartcc.com/index.php/twin-falls-twf-tracon-facility-directive-quick-reference/
-
-.FDBIL .OPENURL https://cdn.zlcartcc.org/uploads/1.pdf
-.FDBOI .OPENURL https://cdn.zlcartcc.org/uploads/2-boi-atcttracon--na.pdf
-.FDBZN .OPENURL https://cdn.zlcartcc.org/uploads/3-bzn-fcttracon--na.pdf
-.FDSUN .OPENURL https://cdn.zlcartcc.org/uploads/15-sun-fct--na.pdf
-.FDGPI .OPENURL https://cdn.zlcartcc.org/uploads/4-gpi-fct--na.pdf
+.FDBIL .OPENURL https://cdn.zlcartcc.org/uploads/201-bil-atcttracon--71103b.pdf
+.FDBOI .OPENURL https://cdn.zlcartcc.org/uploads/2-boi-atcttracon--71102b.pdf
+.FDBZN .OPENURL https://cdn.zlcartcc.org/uploads/3-bzn-fct--na.pdf
+.FDGPI .OPENURL https://cdn.zlcartcc.org/uploads/202-gpi-fct--71108a.pdf
 .FDGTF .OPENURL https://cdn.zlcartcc.org/uploads/5-gtf-atcttracon--na.pdf
-.FDHLN .OPENURL https://cdn.zlcartcc.org/uploads/6-hln-atct--na.pdf
+.FDHIF .OPENURL https://cdn.zlcartcc.org/uploads/187-hif-nfct--711016a.pdf
+.FDHLN .OPENURL https://cdn.zlcartcc.org/uploads/199-hln-atctapproach--711011a.pdf
 .FDIDA .OPENURL https://cdn.zlcartcc.org/uploads/7-ida-fct--na.pdf
-.FDJAC .OPENURL https://cdn.zlcartcc.org/uploads/8-jac-fct--na.pdf
+.FDJAC .OPENURL https://cdn.zlcartcc.org/uploads/8-jac-fct--71107a.pdf
 .FDMSO .OPENURL https://cdn.zlcartcc.org/uploads/9-mso-fcttracon--na.pdf
+.FDMUO .OPENURL https://cdn.zlcartcc.org/uploads/126-muo-rapconatct.pdf
 .FDOGD .OPENURL https://cdn.zlcartcc.org/uploads/10-ogd-fct--na.pdf
 .FDPIH .OPENURL https://cdn.zlcartcc.org/uploads/11-pih-fct--na.pdf
 .FDPVU .OPENURL https://cdn.zlcartcc.org/uploads/12-pvu-fct--na.pdf
-.FDSLC .OPENURL https://cdn.zlcartcc.org/uploads/13-slc-atct--71101a.pdf
-.FDTWF .OPENURL https://cdn.zlcartcc.org/uploads/16-twf-atct--na.pdf
-.FDMUO .OPENURL https://cdn.zlcartcc.org/uploads/126-muo-rapconatct.pdf
+.FDSLC .OPENURL https://cdn.zlcartcc.org/uploads/13-slc-atct--71101b.pdf
+.FDSUN .OPENURL https://cdn.zlcartcc.org/uploads/15-sun-fct--na.pdf
+.FDTWF .OPENURL https://cdn.zlcartcc.org/uploads/190-twf-atctapproach--711012a.pdf
+
 					
-.APPFDBOI .OPENURL https://cdn.zlcartcc.org/uploads/2-boi-atcttracon--na.pdf
-.APPFDBZN .OPENURL https://cdn.zlcartcc.org/uploads/3-bzn-fcttracon--na.pdf
-.APPFDBIL .OPENURL https://cdn.zlcartcc.org/uploads/1.pdf
+.APPFDBOI .OPENURL https://cdn.zlcartcc.org/uploads/2-boi-atcttracon--71102b.pdf
+.APPFDBZN .OPENURL https://cdn.zlcartcc.org/uploads/3-bzn-fct--na.pdf
+.APPFDBIL .OPENURL https://cdn.zlcartcc.org/uploads/201-bil-atcttracon--71103b.pdf
 .APPFDGTF .OPENURL https://cdn.zlcartcc.org/uploads/5-gtf-atcttracon--na.pdf
-.APPFDHLN .OPENURL https://cdn.zlcartcc.org/uploads/6-hln-atct--na.pdf
+.APPFDHLN .OPENURL https://cdn.zlcartcc.org/uploads/199-hln-atctapproach--711011a.pdf
 .APPFDMSO .OPENURL https://cdn.zlcartcc.org/uploads/9-mso-fcttracon--na.pdf
-.APPFDS56 .OPENURL https://cdn.zlcartcc.org/uploads/134-s56-tracon--71101a.pdf
-.APPFDSLC .OPENURL https://cdn.zlcartcc.org/uploads/134-s56-tracon--71101a.pdf
-.APPFDTWF .OPENURL https://cdn.zlcartcc.org/uploads/16-twf-atct--na.pdf
+.APPFDS56 .OPENURL https://cdn.zlcartcc.org/uploads/134-s56-tracon--711020c.pdf
+.APPFDSLC .OPENURL https://cdn.zlcartcc.org/uploads/134-s56-tracon--711020c.pdf
+.APPFDTWF .OPENURL https://cdn.zlcartcc.org/uploads/190-twf-atctapproach--711012a.pdf
 .APPFDMUO .OPENURL https://cdn.zlcartcc.org/uploads/126-muo-rapconatct.pdf
 
-.HOLDTRACKING .OPENURL https://docs.google.com/spreadsheets/d/1nYgm-xaoJWab-5xYKk37MqsVW6-OVqihrpC3UX1P0Ow/edit?usp=sharing
+
 #.COORD .OPENURL https://zlcartcc.org/index.php/atc-coordination/
 
 
-# LOA Quick Reference Page
+# LOA Reference Pages/Links
 
 .LOASEA .OPENURL https://cdn.zlcartcc.org/uploads/25-zse-zlc.pdf
 .LOAPDX .OPENURL https://cdn.zlcartcc.org/uploads/25-zse-zlc.pdf
@@ -444,6 +423,8 @@
 .LOAHWD .OPENURL https://cdn.zlcartcc.org/uploads/24-zoa-zlc.pdf
 .LOASJC .OPENURL https://cdn.zlcartcc.org/uploads/24-zoa-zlc.pdf
 .LOARNO .OPENURL https://cdn.zlcartcc.org/uploads/24-zoa-zlc.pdf
+.LOATRK .OPENURL https://cdn.zlcartcc.org/uploads/24-zoa-zlc.pdf
+.LOATVL .OPENURL https://cdn.zlcartcc.org/uploads/24-zoa-zlc.pdf
 .LOALAX .OPENURL https://cdn.zlcartcc.org/uploads/160-zla-zlc.pdf
 .LOALAS .OPENURL https://cdn.zlcartcc.org/uploads/160-zla-zlc.pdf
 .LOALSV .OPENURL https://cdn.zlcartcc.org/uploads/160-zla-zlc.pdf
@@ -463,13 +444,11 @@
 .LOAVNY .OPENURL https://cdn.zlcartcc.org/uploads/160-zla-zlc.pdf
 .LOASGU .OPENURL https://cdn.zlcartcc.org/uploads/160-zla-zlc.pdf
 .LOAAZC .OPENURL https://cdn.zlcartcc.org/uploads/160-zla-zlc.pdf
-#.LOAPHX .OPENURL https://zlcartcc.com/index.php/letters-of-agreement-quick-reference/#PHX_Phoenix_Sky_Harbor_International_Airport
 .LOAMSP .OPENURL https://cdn.zlcartcc.org/uploads/23-zmp-zlc.pdf
 .LOAMOT .OPENURL https://cdn.zlcartcc.org/uploads/23-zmp-zlc.pdf
 .LOAMIB .OPENURL https://cdn.zlcartcc.org/uploads/23-zmp-zlc.pdf
 .LOADIK .OPENURL https://cdn.zlcartcc.org/uploads/23-zmp-zlc.pdf
-.LOATRK .OPENURL https://cdn.zlcartcc.org/uploads/24-zoa-zlc.pdf
-.LOATVL .OPENURL https://cdn.zlcartcc.org/uploads/24-zoa-zlc.pdf
+
 
 
 # EXTERNAL SITE REFERENCE COMMANDS
@@ -487,15 +466,14 @@
 # Other
 .NAVAID .openurl http://www.myfsim.com/navaid.php?NAVAID=$1
 .GOOGLE .openurl https://www.google.com/?gws_rd=ssl#q=$1+$2+$3+$4+$5+$6+$7+$8+$9
-.EQUIP .openurl https://zlcartcc.com/index.php/tips-for-pilots/#Equipment_Suffix_Codes
 .65 .openurl https://www.faa.gov/air_traffic/publications/atpubs/atc_html/
-.65P .openurl https://www.faa.gov/documentLibrary/media/Order/7110.65BB_Bsc_w_Chg_1_dtd_8-7-25.pdf
+.65P .openurl https://www.faa.gov/documentLibrary/media/Order/7110.65BB_Bsc_w_Chg_1_and_2_dtd_1-22-26_Final.pdf
 .CHARTS .openurl http://www.airnav.com/airport/$1#ifr
 .CHARTSA .openurl http://www.airnav.com/airport/$arr#ifr
 .CHARTSD .openurl http://www.airnav.com/airport/$dep#ifr
-.ICAOEQUIP .OPENURL https://map.vatsim.net/equipment
 .TMUMAP .OPENURL https://www.vatusa.net/tmu/map/ZLC
-
+# .EQUIP .openurl https://zlcartcc.com/index.php/tips-for-pilots/#Equipment_Suffix_Codes
+# .ICAOEQUIP .OPENURL https://map.vatsim.net/equipment
 
 #######################################################################
 #######################################################################
@@ -3281,7 +3259,7 @@
 #######################################################################
 #######################################################################
 #######################################################################
-
+# ???
 
 # General Commands
 .WHERE .AN DBL
@@ -3488,9 +3466,6 @@
 ; 05U AIRPORT    240717 - .FF cmds removed
  ------------- 
 
-; 05U RNAV (GPS) RWY 18 
-; .05UR18F .FF SIKEE JEBEG FESGO ZIGBI SAYOT INGOL RAPYO LECED 
-
 ; 05U MINES 
 .05UMINESDEL .MSG ZLC_ISR *** MINES 1 ::: RNAV-ODP ::: RWY 36 :::  ::: Maint 14K ::: CRZ-10min(Listed) ::: DEP FREQ 132.25 
 .05UMINESGND .MSG ZLC_ISR *** MINES 1 ::: RWY 36 ::: Airport is not provided Ground Control Services 
@@ -3499,17 +3474,11 @@
 .05UMINESCTR .MSG ZLC_ISR *** MINES 1 ::: CRZ-10min(Listed) ::: TopAlt 14K 
 .TCRAFT05UMINES Cleared to $arr. Depart via the MINES1 Obstacle Departure Procedure. $route. Maintain 14K. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
 
- 
  ------------- 
 ; 10U AIRPORT   240717 - .FF cmds removed
  ------------- 
  
-;10U RNAV (GPS) RWY 5 
-; .10UR05 .FD 10U_RNAV (GPS) RWY 5  
-; .10UR05F .FF TABIO HYVAL KITTS HIDET JENVU JAYED BAM OPTEC WAMAN DOBYS ZONOT LUUIS 
-
 ;10U OPTEC 
-; .10UOPTEC .FD 10U_OPTEC 
 .10UOPTECDEL .MSG ZLC_ISR ***OPTEC 1 ::: RNAV-PilotNav ::: RWY ALL :::  ::: CVS   ::: CRZ-5min(Not-Listed) ::: DEP FREQ 118.05 
 .10UOPTECGND .MSG ZLC_ISR ***OPTEC 1 ::: RWY ALL ::: Airport is not provided Ground Control Services 
 .10UOPTECTWR .MSG ZLC_ISR ***OPTEC 1 ::: RNAV-PilotNav ::: Airport is not provided Local (TWR) Control Services ::: DEP FREQ 118.05 
@@ -3519,15 +3488,11 @@
 .TCRAFT10UOPTECU Cleared to $arr.  $route. Climb Via SID  . Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk . Hold For Release
 
  ------------- 
-
 ; 1S3 AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; 1S3 RNAV (GPS) RWY 27 
-; .1S3R27F .FF ASHLI ATIZO ALOSY FREYA CONUK 
  ------------- 
-
 ; 1U7 AIRPORT   240717 - .FF and .FD cmds removed
  ------------- 
 
@@ -3552,45 +3517,26 @@
 
 
  ------------- 
-
 ; 20U AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; 20U RNAV (GPS) RWY 12 
-; .20UR12F .FF EKENE CADOM DEVGE EKOYU 
-
-; 20U RNAV (GPS) RWY 30 
-; .20UR30F .FF EKOYU CAXET DEKRE EKENE 
  ------------- 
-
 ; 32S AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; 32S RNAV (GPS)-A 
-; .32SRAF .FF RIVAL FEGUR TAGOE CEBED HAMID MSO
  ------------- 
-
 ; 38S AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; 38S RNAV (GPS)-A 
-; .38SRAF .FF ZISON AYUNO CITSU JOGUT APICI WAKIX CPN
  ------------- 
-
 ; 3U3 AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; 3U3 VOR/DME-A 
-; .3U3EAF .FF MARRG ROJGE MAPKK GLUES HIA CPN
-
-; 3U3 GPS-A 
-; .3U3GAF .FF MARRG ROJGE MAPKK GLUES HIA CPN
  ------------- 
-
 ; 40U AIRPORT   MANILA
  ------------- 
 
@@ -3602,6 +3548,8 @@
 .40UWEGUMCTR .MSG ZLC_ISR *** WEGUM 1 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFT40UWEGUM Cleared to $arr. Depart via the WEGUM1 Obstacle Departure Procedure. $route. Maintain 14K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
 
+
+ ------------- 
 ; 41U AIRPORT   SANPETE COUNTY RGNL
  ------------- 
 
@@ -3620,72 +3568,39 @@
 .41UYMONTDEP .MSG ZLC_ISR *** YMONT 1 ::: RNAV-ODP ::: Maint 13K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
 .41UYMONTCTR .MSG ZLC_ISR *** YMONT 1 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFT41UYMONT Cleared to $arr. Depart via the YMONT1 Obstacle Departure Procedure. $route. Maintain 13K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
- ------------- 
 
+
+------------- 
 ; 4U6 AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; 4U6 RNAV (GPS) RWY 12 
-; .4U6R12F .FF DORIA JITAG JONOK ZAKEM WIRIM CETBI 
-
-; 4U6 RNAV (GPS) RWY 30 
-; .4U6R30F .FF EXADE ZITGA CETBI WOPKU WITUS JONOK 
  ------------- 
-
 ; 69V AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; 69V RNAV (GPS)-C 
-; .69VRCF .FF ARBIH TIVPE MYZER PUC
-
-; 69V VOR-B 
-; .69VOBF .FF ARBIH TIVPE MYZER PUC
  ------------- 
-
 ; 6S0 AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; 6S0 RNAV (GPS) RWY 6 
-; .6S0R06F .FF SUBKY ZELTI JUTIM ONROW WETIG LVM
-
-; 6S0 RNAV (GPS) RWY 24 
-; .6S0R24F .FF REEPO SUBKY WETIG JUREP 
  ------------- 
-
 ; HRF AIRPORT   240717 - .FF cmds removed
  ------------- 
  
-;HRF RNAV (GPS) RWY 17 
-; .HRFR17F .FF ACAFI ILUGE MEXUE MSO 
-
-; HRF RNAV (GPS)-A 
-; .HRFRAF .FF WEDAK OBLIE GARPE ECENE DIGEY YOGIN BOPSE ACAFI ILUGE MEXUE MSO
-
 ; HRF HAMEY 
-; .HRFHAMEYF .FF DEPTE HAMEY MEXUE MSO
 .HRFHAMEYDEL .MSG ZLC_ISR *** HAMEY 2 ::: RNAV-ODP ::: RWY 34 :::  ::: Maint 10K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 133.4 
 .HRFHAMEYGND .MSG ZLC_ISR *** HAMEY 2 ::: RWY 34 ::: Airport is not provided Ground Control Services 
 .HRFHAMEYTWR .MSG ZLC_ISR *** HAMEY 2 ::: RNAV-ODP ::: Airport is not provided Local (TWR) Control Services ::: DEP FREQ 133.4 
 .HRFHAMEYDEP .MSG ZLC_ISR *** HAMEY 2 ::: RNAV-ODP ::: Maint 10K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt 10K :::  
 .HRFHAMEYCTR .MSG ZLC_ISR *** HAMEY 2 ::: CRZ-5min(Not-Listed) ::: TopAlt 10K 
 .TCRAFTHRFHAMEY Cleared to $arr, Depart via the HAMEY2 obstacle departure procedure. $route. Maintain 10K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
- ------------- 
 
+
+------------- 
 ; 6S8 AIRPORT   240717 - .FF cmds removed
  ------------- 
-
-
-; 6S8 RNAV (GPS) RWY 4 
-.6S8R04F .FF REEPO FAVUP HAKDI JIBES NERKE CAMUD 
-
-; 6S8 RNAV (GPS) RWY 22 
-.6S8R22F .FF ARDMO ZEKLO NIBBE SHELA LOPBI INAVE SEPVE FANAV JIBES BIL
-
-; 6S8 VOR RWY 22 
-.6S8O22F .FF FINRO BIL
 
 ; 6S8 BIL 
 .6S8BILDEL .MSG ZLC_ISR *** BIL 5 ::: Vectored ::: RWY 4, 22 ::: Maint 15K ::: CRZ-5min(Listed) ::: DEP FREQ 119.2 (or) 120.5 
@@ -3694,36 +3609,21 @@
 .6S8BILDEP .MSG ZLC_ISR *** BIL 5 ::: Vectored ::: Maint 15K issued by DEL ::: CRZ-5min(Listed) ::: TopAlt 15k ::: Vector on course 
 .6S8BILCTR .MSG ZLC_ISR *** BIL 5 ::: CRZ-5min(Listed) ::: TopAlt 15k 
 .TCRAFT6S8BIL Cleared to $arr.  $route. Maintain 15K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
- ------------- 
 
+
+------------- 
 ; 74V AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; 74V RNAV (GPS) RWY 25 
-; .74VR25F .FF JEFUB URUDE CHAND IGEHU 
-
-; 74V VOR-A 
-; .74VOAF .FF FOSLA MARPK MTU
  ------------- 
-
 ; 79S AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; 79S RNAV (GPS) RWY 23 
-; .79SR23F .FF BELCA ANALE JOTUN KEVKE 
  ------------- 
-
 ; 7S0 AIRPORT   240717 - .FF cmds removed
  ------------- 
-
-
-; 7S0 RNAV (GPS) RWY 16 
-; .7S0R16F .FF HANIM DMESR ANGIL EGOCY FATMI GEDKE IBBOR 
-
-; 7S0 RNAV (GPS) RWY 34 
-; .7S0R34F .FF ARLEE NALSE LAVBE JAKBA OBTOW PEKBE QATQI HANIM 
 
 ; 7S0 HANIM 
 .7S0HANIMDEL .MSG ZLC_ISR *** HANIM 2 ::: RNAV-PilotNav ::: RWY 16 ::: Maint 13K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 133.4 
@@ -3740,20 +3640,13 @@
 .7S0RONANDEP .MSG ZLC_ISR *** RONAN 3 ::: RNAV-PilotNav ::: Maint 10K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt 10K :::  
 .7S0RONANCTR .MSG ZLC_ISR *** RONAN 3 ::: CRZ-5min(Not-Listed) ::: TopAlt 10K 
 .TCRAFT7S0RONAN Cleared to $arr.  $route. Maintain 10K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
- ------------- 
 
+
+ ------------- 
 ; RVF AIRPORT   240717 - .FF cmds removed
  ------------- 
 
-
-; RVF RNAV (GPS) RWY 17 
-; .RVFR17F .FF DISLE CELGA ELOIN FAMIT GNAWS HIA DLN
-
-; RVF RNAV (GPS) RWY 35 
-; .RVFR35F .FF FELIK GNARS DURPE ERUTE CAVUL DLN
-
 ; RVF RVF
-; .RVFF .FF  HIA
 .RVFRVFDEL .MSG ZLC_ISR *** RVF 1 ::: RNAV-ODP ::: RWY 35 :::  ::: Maint 11K ::: CRZ-5min(Listed) ::: DEP FREQ 132.4 
 .RVFRVFGND .MSG ZLC_ISR *** RVF 1 ::: RWY 35 ::: Airport is not provided Ground Control Services 
 .RVFRVFTWR .MSG ZLC_ISR *** RVF 1 ::: RNAV-ODP ::: Airport is not provided Local (TWR) Control Services ::: DEP FREQ 132.4 
@@ -3769,17 +3662,11 @@
 .RVFDLNDEP .MSG ZLC_ISR *** DLN 1 ::: RNAV-ODP ::: Maint 12K issued by DEL ::: CRZ-5min(Listed) ::: TopAlt Not Published :::  
 .RVFDLNCTR .MSG ZLC_ISR *** DLN 1 ::: CRZ-5min(Listed) ::: TopAlt Not Published 
 .TCRAFTRVFDLN Cleared to $arr. Depart via the DLN1 Obstacle Departure Procedure. $route. Maintain 12K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
- ------------- 
 
+
+------------- 
 ; 8S1 AIRPORT   240717 - .FF cmds removed
  ------------- 
-
-
-; 8S1 RNAV (GPS) RWY 18 
-; .8S1R18F .FF JAGEL ITONE KULTE HALSO POLAE FCA
-
-; 8S1 RNAV (GPS) RWY 36 
-; .8S1R36F .FF ARLEE CABLI EDOBE FABID GORTE DODSE BESKE MIGSE 
 
 ; 8S1 ANGIL
 .8S1ANGILDEL .MSG ZLC_ISR *** ANGIL 1 ::: RNAV-ODP ::: RWY 36 ::: Maint 10K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 133.4 
@@ -3788,25 +3675,16 @@
 .8S1ANGILDEP .MSG ZLC_ISR *** ANGIL 1 ::: RNAV-ODP ::: Maint 10K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
 .8S1ANGILCTR .MSG ZLC_ISR *** ANGIL 1 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFT8S1ANGIL Cleared to $arr. Depart via the ANGIL1 Obstacle Departure Procedure. $route. Maintain 10K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
- ------------- 
 
+
+------------- 
 ; 9S2 AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; 9S2 RNAV (GPS) RWY 12 
-; .9S2R12F .FF ROGUU NIJBU GEMPE DOGNE GGW ISN
  ------------- 
-
 ; AFO AIRPORT   240717 - .FF cmds removed
  ------------- 
-
-
-; AFO RNAV (GPS) RWY 16 
-; .AFOR16F .FF TUVOC COTEG GIGSE WARPU NIKSE THAYN HSKEE ZASGO BPI
-
-; AFO RNAV (GPS) RWY 34 
-; .AFOR34F .FF GRIPS SISLE IVAYU CAALL ALLRD POKEE PITSZ BPI MLD
 
 ; AFO AFTON
 .AFOAFTONDEL .MSG ZLC_ISR *** AFTON 4 ::: RNAV-ODP ::: RWY 34 :::  ::: Maint 16K ::: CRZ-5min(Listed) ::: DEP FREQ 128.35 
@@ -3823,14 +3701,11 @@
 .AFOLUNDIDEP .MSG ZLC_ISR *** LUNDI 2 ::: RNAV-ODP ::: Maint 15K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
 .AFOLUNDICTR .MSG ZLC_ISR *** LUNDI 2 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFTAFOLUNDI Cleared to $arr. Depart via the LUNDI2 Obstacle Departure Procedure. $route. Maintain 15K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
- ------------- 
 
+
+ ------------- 
 ; AOC AIRPORT   240717 - .FF cmds removed
  ------------- 
-
-
-; AOC RNAV (GPS)-A 
-; .AOCRAF .FF JATTS BOFZA BETRE NEJAP RINIJ FIGOJ ITSEJ 
 
 ; AOC JATTS 
 .AOCJATTSF .FF JOBRO JATTS 
@@ -3840,31 +3715,16 @@
 .AOCJATTSDEP .MSG ZLC_ISR *** JATTS 1 ::: RNAV-ODP ::: Maint 8K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
 .AOCJATTSCTR .MSG ZLC_ISR *** JATTS 1 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFTAOCJATTS Cleared to $arr, $route. Maintain 8K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
- ------------- 
 
+
+------------- 
 ; BAM AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; BAM RNAV (GPS) RWY 4 
-; .BAMR04F .FF RAJKO DIYLA EBREQ ZOLPI SIHEJ BAM
-
-; BAM RNAV (GPS) RWY 22 
-; .BAMR22F .FF UHYUV JOKNA HEPOR WOGID ZOWIE OQSUL RAJKO BAM
-
-; BAM VOR RWY 4 
-; .BAMO04F .FF WIKLO GRAIG ZEPAT HUGVU RITYO FESUD BAM
  ------------- 
-
 ; BCE AIRPORT   240717 - .FF cmds removed
  ------------- 
-
-
-; BCE RNAV (GPS) RWY 3 
-; .BCER03F .FF CEXAT HEGID CABER CIXOS IPYAD EXAKY ETIKE WEKPI HURTU BCE
-
-; BCE RNAV (GPS) RWY 21 
-; .BCER21F .FF OMUCE UJACI AXGEX BEYAB HIKMU ZUGOV CUNYA WOBNO OPAWO CEXAT BCE
 
 ; BCE BRYCE
 .BCEBRYCEDEL .MSG ZLC_ISR *** BRYCE 2 ::: RNAV-ODP ::: RWY ALL :::  ::: Maint 12K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 133.6 
@@ -3873,53 +3733,16 @@
 .BCEBRYCEDEP .MSG ZLC_ISR *** BRYCE 2 ::: RNAV-ODP ::: Maint 12K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
 .BCEBRYCECTR .MSG ZLC_ISR *** BRYCE 2 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFTBCEBRYCE Cleared to $arr. Depart via the BRYCE2 Obstacle Departure Procedure. $route. Maintain 12K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
- ------------- 
 
+
+------------- 
 ; BHK AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; BHK RNAV (GPS) RWY 13 
-; .BHKR13F .FF KIXCO ZUXIB OVSEE 
-
-; BHK RNAV (GPS) RWY 31
-; .BHKR31F .FF DIXLE MAGYE EQUIN BAIKE AIMED KIXCO 
  ------------- 
-
 ; BIL AIRPORT   240717 - .FF cmds removed
  ------------- 
-
-
-
-; BIL ILS RWY 28R 
-; .BILI8RF .FF GRYZZ DOPIC HRDIN SUTLE PILLR YIGUD PICTO YICUN BIL
-
-; BIL LOC RWY 28R 
-; .BILL8RF .FF GRYZZ DOPIC HRDIN SUTLE PILLR YIGUD PICTO YICUN BIL
-
-; BIL ILS Y RWY 10L 
-; .BILIY0LF .FF BEARE LRSUN WIBON HEXOS ZOBUM BIL
-
-; BIL LOC Y RWY 10L 
-; .BILLY0LF .FF BEARE LRSUN WIBON HEXOS ZOBUM BIL
-
-; BIL RNAV (RNP) Z RWY 28R 
-; .BILRZ8RF .FF BBCAT CUBEK PILLR HRDIN GRYZZ DOPIC YIGUD PICTO WIBON 
-
-; BIL RNAV (GPS) RWY 7 
-; .BILR07F .FF WIBMU HAKDI COLUS YURUB CAPTU TOLNE MUMEE BIL
-
-; BIL RNAV (GPS) RWY 10L 
-; .BILR0LF .FF BEARE LRSUN WIBON HEXOS ZOBUM KOXMY 
-
-; BIL RNAV (GPS) RWY 25 
-; .BILR25F .FF NIBBE SCUDZ MUMEE FASOK OLOLE OXIVY BIL
-
-; BIL RNAV (GPS) Y RWY 28R 
-; .BILRY8RF .FF GRYZZ KRONA DOPIC HRDIN PILLR YIGUD PICTO YICUN WIBON 
-
-; BIL VOR/DME RWY 28R 
-; .BILE8RF .FF POCOV NELWN SUDSE YEGUL MUSTY WYLED LATDI BIL
 
 ; BIL BIL
 .BILBILDEL .MSG ZLC_ISR *** BIL 5 ::: Vectored ::: RWY 7, 10L, 25, 28L/R ::: Maint 7K ::: CRZ-10min(Listed) ::: DEP FREQ 120.5 
@@ -3961,99 +3784,26 @@
 .TBILYLSTNAPPE [EAST OPS] @ BEARE cleared RNAV 10L approach. Altimeter A$altim(KBIL) 
 .TBILYLSTNCTRW Descend via the YLSTN3 arrival. BIL Landing West. Altimeter A$altim(KBIL) 
 .TBILYLSTNAPPW [WEST OPS] @ GRYZZ cleared RNAV Y 28R approach. Altimeter A$altim(KBIL) 
- ------------- 
 
+
+ ------------- 
 ; BKE AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; BKE RNAV (GPS) RWY 13 
-; .BKER13F .FF WOLIP LACED JELTI SITOC TEGTE ZASKA SOKNE CAKPU GOYEK 
-
-; BKE VOR/DME RWY 13 
-; .BKEE13F .FF JELTI GUCEV DOYEL WOLIP HULEX FIDAM BOYBA AKICI CTBRT BKE
-
-; BKE VOR-A 
-; .BKEOAF .FF BKE
  ------------- 
-
 ; BMC AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; BMC RNAV (GPS) RWY 35 
-; .BMCR35F .FF NUBGE MOINT KONNE WIZSI OZFEL XEXXA OGD
  ------------- 
-
 ; BNO AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; BNO RNAV (GPS) RWY 30 
-; .BNOR30F .FF GAYTE PONNI NIDIC ZOMOL BELYA GISSE ILR
-
-; BNO VOR RWY 30 
-; .BNOO30F .FF  ILR
  ------------- 
-
 ; BOI AIRPORT   240717 - .FF cmds removed
  ------------- 
-
-
-
-; BOI ILS RWY 28R 
-; .BOII8RF .FF TOILS ZETIL JOLTI ZIXIP WIDOP ATTOL BOI
-
-; BOI LOC RWY 28R 
-; .BOIL8RF .FF TOILS ZETIL JOLTI ZIXIP WIDOP ATTOL BOI
-
-; BOI ILS Y RWY 10R 
-; .BOIIY0RF .FF SALLA RENOL JIMMI ELUBE SITSE CUBTA BOI
-
-; BOI LOC Y RWY 10R 
-; .BOILY0RF .FF SALLA RENOL JIMMI ELUBE SITSE CUBTA BOI
-
-; BOI RNAV (RNP) X RWY 28L 
-; .BOIRX8LF .FF CAMML SMYRF ODRUE NUCIC GEYEY WEDEK JIMMI
-
-; BOI RNAV (RNP) X RWY 28R 
-; .BOIRX8RF .FF CAMML SMYRF CUBAR SIALS WOSEP ZAKVA OGUVE UZZOX ATTOL 
-
-; BOI RNAV (RNP) Z RWY 10L 
-; .BOIRZ0LF .FF KOLKE ALSIZ LIBBY CAMML CUVEL SEPRE JIMMI AEDES APISE EKEME ODUME ZAMDA FATIB FEBES CANEK 
-
-; BOI RNAV (RNP) Z RWY 10R 
-; .BOIRZ0RF .FF KOLKE OYISI LIBYY CAMML ONEXE INION JIMMI ELUBE APISE EKEME BUVXE JODIX ISEBE AYDOK CANEK
-
-; BOI RNAV (RNP) Z RWY 28L 
-; .BOIRZ8LF .FF CELOR OFTER MUFPI JUBEN SAKVY CEPAV DIKAC EKEME ELUMY CIPSA ZOVAM HOBSI JIMMI OFTER ROCKT NEWKU LITTL
-
-; BOI RNAV (RNP) Z RWY 28R 
-; .BOIRZ8RF .FF CELOR OFTER MUFPI JUBEN SAKVY CEPAV DIKAC EKEME WIKIS HEGUT FEGNI HAPNU ATTOL 
-
-; BOI RNAV (GPS) Y RWY 10L 
-; .BOIRY0LF .FF NICPE PARMO RENOL BOYCA JIMMI MIGEE
-
-; BOI RNAV (GPS) Y RWY 10R 
-; .BOIRY0RF .FF NICPE PARMO RENOL BOYCA JIMMI SITSE
-
-; BOI RNAV (GPS) Y RWY 28L 
-; .BOIRY8LF .FF LITTL YOGUC GONSE CANEK CELOR NESLE VUNCU DUTME JIMMI 
-
-; BOI RNAV (GPS) Y RWY 28R 
-; .BOIRY8RF .FF LITTL YOGUC GONSE CANEK CELOR IRUSE EMIME ZIXIP WIDOP ATTOL 
-
-; BOI VOR/DME RWY 10L 
-; .BOIE0LF .FF SALLA EMETT FELED CROKT HMISH JIMMI UCAGA YARUL BOI
-
-; BOI TACAN RWY 10L 
-; .BOIT0LF .FF SALLA EMETT FELED CROKT HMISH JIMMI UCAGA YARUL BOI
-
-; BOI VOR/DME RWY 28L 
-; .BOIE8LF .FF HESGO ARYOT CANEK ZIBOR EMAPE UNTIJ REWAY YODVU JIMMI BOI
-
-; BOI TACAN RWY 28L 
-; .BOIT8LF .FF HESGO ARYOT CANEK ZIBOR EMAPE UNTIJ REWAY YODVU JIMMI BOI
 
 ; BOI GOWEN
 .BOIGOWENDEL .MSG ZLC_ISR *** GOWEN 4 ::: ODP ::: RWY ALL :::  ::: Maint 16K ::: CRZ-5min(Not-Listed) ::: DEP FREQ (ALPINE) 126.9 __ (SAGE) 119.6 ::: VCOA Avail. at Pilot Request
@@ -4120,77 +3870,40 @@
 .TBOISPUUDAPPE @ EKEME Cleared RNAV Z 10R approach. Altimeter A$altim(KBOI) 
 .TBOISPUUDCTRW Descend via the SPUUD4 arrival. BOI Landing West. Altimeter A$altim(KBOI) 
 .TBOISPUUDAPPW @ CELOR Cleared RNAV Y 28L approach. Altimeter A$altim(KBOI) 
- ------------- 
 
+
+ ------------- 
 ; BPI AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; BPI RNAV (GPS) RWY 31 
-; .BPIR31F .FF GRIPS OTAYI JITJU HICDE BPI
-
-; BPI VOR RWY 31 
-; .BPIO31F .FF BPI
  ------------- 
-
 ; BTM AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; BTM ILS RWY 15 
-; .BTMI15F .FF EVVER NIYID MAGIC ZIPPR GEYGE WELDU CPN HIA
-
-; BTM LOC RWY 15 
-; .BTML15F .FF EVVER NIYID MAGIC ZIPPR GEYGE WELDU CPN HIA
-
-; BTM RNAV (GPS) RWY 15 
-; .BTMR15F .FF WAKIX DUXHU GLUES EVVER YURUV CATPU ZIPPR GEYGE WELDU CPN
-
-; BTM VOR-A 
-; .BTMOAF .FF NUNZU DMKEX MACXA CPN
  ------------- 
-
 ; BWW AIRPORT    240717 - .FF cmds removed
  ------------- 
 
 
-; BWW RNAV (GPS) RWY 13 
-; .BWWR13F .FF HAGDA FOBRA SEWAN HAYNI 
-
-; BWW RNAV (GPS) RWY 31 
-; .BWWR31F .FF TROAK BRANK CODAP HAYNI 
  ------------- 
-
 ; BYG AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; BYG RNAV (GPS) RWY 31 
-; .BYGR31F .FF ONECI NICIG CZI
-
-; BYG VOR/DME RWY 31 
-; .BYGE31F .FF INJUX MIZNR CZI
  ------------- 
-
 ; BYI AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; BYI RNAV (GPS) RWY 20 
-; .BYIR20F .FF SHONE JADUP MALTT MUTOE IREME HIKLO JAMID 
-
-; BYI VOR-A 
-; .BYIOAF .FF SHONE ZIVEN HAZZL BYI TWF
  ------------- 
- 
 ; BZN AIRPORT - 2413: MEADO update
  ------------- 
  
 ;BZN TEERX - deleted
- 
 ;BZN HIA - no change
 ;BZN BZN 6 - no change
-;BZN - removed .FF commands
 
 ; BZN HIA 5
 .BZNHIADEL .MSG ZLC_ISR *** HIA 5 ::: PilotNav ::: RWY 12, 30 :::  ::: Maint 16K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 118.975
@@ -4276,70 +3989,25 @@
 .TBZNEATZZCTRW .MSG ZLC_ISR *** EATZZ 1 ::: RNAV ::: Cross EATZZ @15.6k-17k/<250kts. BZN landing WEST ::: A$altim(KBZN) 
 .TBZNEATZZAPPW .MSG ZLC_ISR *** EATZZ 1 ::: RNAV ::: Descend via/@ BEARY cleared RNAV (RNP) Z RWY 30  ::: A$altim(KBZN)
 
+
  ------------- 
 ; CDC AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; CDC ILS RWY 20 
-; .CDCI20F .FF JEPIL WISEB VELDE HISDU SAYHO XOJPO BERYL MLF EHK BCE
-
-; CDC LOC RWY 20 
-; .CDCL20F .FF JEPIL WISEB VELDE HISDU SAYHO XOJPO BERYL MLF EHK BCE
-
-; CDC RNAV (GPS) RWY 20 
-; .CDCR20F .FF HINRA WISEB VELDE SAYHO XOJOP ZUMAS WULMU BERYL MLF
-
-; CDC VOR RWY 20 
-; .CDCO20F .FF RUSBE BERYL EHK MLF
  ------------- 
-
 ; CII AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; CII RNAV (GPS) RWY 15 
-; .CIIR15F .FF AMURE BEDEW CALAD CTB GTF
-
-; CII RNAV (GPS) RWY 33 
-; .CIIR33F .FF SHIMY CHOTE DOZRE EMUTE FAMOT AMURE 
  ------------- 
-
 ; COD AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; COD RNAV (GPS) RWY 4 
-; .CODR04F .FF TOCUD JABOS KEBDE TAKBE JKIES WIBOP ZABMO BOART SEZJI 
-
-; COD RNAV (GPS) RWY 22 
-; .CODR22F .FF SEZJI NICQE CRANY HOZZR DUSCA ELYPS COYAV JUSIL 
-
-; COD RNAV (GPS)-B 
-; .CODRBF .FF OLWOR NICQE KEVHI MOYAV 
-
-; COD VOR-A 
-; .CODOAF .FF SEZJI MAFZO COD
  ------------- 
-
 ; CTB AIRPORT    240717 - .FF cmds removed
  ------------- 
-
-
-; CTB RNAV (GPS) RWY 5 
-; .CTBR05F .FF PENRY GAPAR UCEBE ZEGEL WUBIT ZULEG WEBVO 
-
-; CTB RNAV (GPS) RWY 14 
-; .CTBR14F .FF GAPAR NOSRE HOLOX SUYOV JOVEN CIGUD NUMSE PENRY CTB
-
-; CTB RNAV (GPS) RWY 23 
-; .CTBR23F .FF WEBVO ZULTU WUTBO ZABOV PENRY CTB
-
-; CTB RNAV (GPS) RWY 32 
-; .CTBR32F .FF AGRYN BRADZ PENRY EPILE MALCO WEDAP WEBVO CTB
-
-; CTB VOR RWY 32 
-; .CTBO32F .FF HEKIT HOMGO WELUR CTB
 
 ; CTB MRIAS
 .CTBMRIASDEL .MSG ZLC_ISR *** MRIAS 3 ::: RNAV-PilotNav ::: RWY ALL ::: BRADZ_PENRY ::: [PENRY] CVS Except Maint 10k __ [BRADZ] Maint 10k ::: CRZ-5min(Not-Listed) ::: DEP FREQ 133.4 ::: TopAlt Not Published :::
@@ -4348,25 +4016,16 @@
 .CTBMRIASDEP .MSG ZLC_ISR *** MRIAS 3 ::: RNAV-PilotNav ::: [PENRY] CVS Except Maint 10K __ [BRADZ] Maint 10k issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
 .CTBMRIASCTR .MSG ZLC_ISR *** MRIAS 3 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::
 .TCRAFTCTBMRIAS Cleared to $arr, $route. [IF PENRY Transition] CVS Except Maint 10K __ [IF BRADZ Transition] Maint 10k. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. Hold for release.
- ------------- 
 
+
+ ------------- 
 ; D50 AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; D50 RNAV (GPS) RWY 30 
-; .D50R30F .FF FONIA JOXNI FATRE BUVFY ISN
  ------------- 
-
 ; DIJ AIRPORT   240717 - .FF cmds removed
  ------------- 
-
-
-; DIJ RNAV (GPS) RWY 4 
-; .DIJR04F .FF LAMON EYITA OLNUE RUDTO VICUP FIXOD JUSIR IDA
-
-; DIJ RNAV (GPS)-A 
-; .DIJRAF .FF SABAT QUIRT PIKEQ TIHQI DIGUQ 
 
 ; DIJ LAMON
 .DIJLAMONDEL .MSG ZLC_ISR *** LAMON 3 ::: RNAV-ODP ::: RWY ALL :::  ::: Maint 13K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 128.35 
@@ -4375,51 +4034,21 @@
 .DIJLAMONDEP .MSG ZLC_ISR *** LAMON 3 ::: RNAV-ODP ::: Maint 13K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
 .DIJLAMONCTR .MSG ZLC_ISR *** LAMON 3 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFTDIJLAMON Cleared to $arr, $route. Maintain 13K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
- ------------- 
 
+
+ ------------- 
 ; DLN AIRPORT    240717 - .FF cmds removed
  ------------- 
 
 
-; DLN RNAV (GPS) RWY 17 
-; .DLNR17F .FF JOXIT OMEXE SAZMI CUSIF NACCI HIA
-
-; DLN V 
-; .DLNR35F .FF PUFFS WEMKO UNEPE PARUE IDOME DUYES OSURE FESLO AKRAH RICOV VUBBU KEYET BLENI HIA
-
-; DLN VOR/DME-B 
-; .DLNEBF .FF NUWLI BUCAD WAKUX CAXOK DLN
-
-; DLN VOR-A 
-; .DLNOAF .FF DLN
  ------------- 
-
 ; DPG AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; DPG RNAV (GPS) RWY 12 
-; .DPGR12F .FF CEVAR ETUBY UWOZO HISUK BVL DTA
-
-; DPG TACAN RWY 12 
-; .DPGT12F .FF VERNE KUDME POISN CUCAP ZUSAD DTA BVL
  ------------- 
-
 ; DTA AIRPORT   240717 - .FF cmds removed
  ------------- 
-
-
-; DTA RNAV (GPS) RWY 17 
-; .DTAR17F .FF PUCIT LOLIC WUNDI LUSSI ZOBMA TAVTE JULIK 
-
-; DTA RNAV (GPS) RWY 35 
-; .DTAR35F .FF RUBOY BICAN ZIBRA UTONE TAVTE ILACE WADOK 
-
-; DTA VOR/DME RWY 17 
-; .DTAE17F .FF LOLIC RUBOY GIDEY EACKS DTA
-
-; DTA VOR RWY 35 
-; .DTAO35F .FF BICAN JULIK ZIBRA DELKE DTA
 
 .DTADTADEL .MSG ZLC_ISR *** DTA 1 ::: ODP ::: RWY ALL :::  ::: Maint 12k ::: CRZ-5min(Not-Listed) ::: DEP FREQ 127.825 
 .DTADTAGND .MSG ZLC_ISR *** DTA 1 ::: RWY ALL ::: Airport is not provided Ground Control Services 
@@ -4429,34 +4058,15 @@
 .TCRAFTDTADTA Cleared to $arr. Depart via the DTA1 Obstacle Departure Procedure. $route. Maintain 12k. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk . Hold For Release
 .TCRAFTDTADTAU Cleared to $arr. Depart via the DTA1 Obstacle Departure Procedure. $route. Maintain 12k. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk . Hold For Release
 
- ------------- 
 
+ ------------- 
 ; EKO AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; EKO RNAV (GPS) RWY 6 
-; .EKOR06F .FF ARAYI SAZTO EGOLY FATRO 
-
-; EKO RNAV (GPS) RWY 24 
-; .EKOR24F .FF ZEBEG TEVOE SPEIL YOBBO VODOU BUCAK KOQHO LOYIW NIXIE ZOKEG SAZTO 
-
-; EKO LDA/DME RWY 24 
-; .EKOD24F .FF ELROD BUCAK JACKD AASON FARAS GELDS HAHAS ZABTU BQU
-
-; EKO VOR/DME-B 
-; .EKOEBF .FF MUNGO PEPIY SIKEE DUCAY BUTTA OLGAA ATACI BAGKA BQU
  ------------- 
-
 ; EKS AIRPORT   240717 - .FF cmds removed
  ------------- 
-
-
-; EKS RNAV (GPS) RWY 16 
-; .EKSR16F .FF HIA IBAYA MDISN JFFRS QUERY NYMPF RANBW FEDNU HUDAT
-
-; EKS RNAV (GPS) RWY 34 
-; .EKSR34F .FF WAIDE PUDIY OGHEP KEEPO HIRSO CARGI BUVDE MDISN 
 
 ; EKS ENNIS
 .EKSENNISDEL .MSG ZLC_ISR *** ENNIS 1 ::: RNAV-ODP ::: RWY ALL :::  ::: Maint 11K ::: CRZ-10min(Listed) ::: DEP FREQ 118.975
@@ -4465,17 +4075,11 @@
 .EKSENNISDEP .MSG ZLC_ISR *** ENNIS 1 ::: RNAV-ODP ::: Maint 11K issued by DEL ::: CRZ-10min(Listed) ::: TopAlt Not Published :::  
 .EKSENNISCTR .MSG ZLC_ISR *** ENNIS 1 ::: CRZ-10min(Listed) ::: TopAlt Not Published 
 .TCRAFTEKSENNIS Cleared to $arr, Depart via the ENNIS1 obstacle departure procedure. $route. Maintain 11K. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk. Hold For Release 
- ------------- 
 
+
+ ------------- 
 ; ELY AIRPORT   240717 - .FF cmds removed
  ------------- 
-
-
-; ELY RNAV (GPS) RWY 18 
-; .ELYR18F .FF INGOL GUSME FAPGI JAMOP FEILL ZOLOB DOTME 
-
-; ELY VOR/DME-C 
-; .ELYECF .FF HARRV JAMKI VIANT JASIS MCGIL BIVNE DOTME ELY
 
 ; ELY ELY
 .ELYELYDEL .MSG ZLC_ISR *** ELY 2 ::: ODP ::: RWY ALL ::: Maint 12K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 133.45 
@@ -4484,17 +4088,11 @@
 .ELYELYDEP .MSG ZLC_ISR *** ELY 2 ::: ODP ::: Maint 12K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
 .ELYELYCTR .MSG ZLC_ISR *** ELY 2 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFTELYELY Cleared to $arr. Depart via the ELY2 Obstacle Departure Procedure. $route. Maintain 12K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
- ------------- 
 
+
+ ------------- 
 ; EMM AIRPORT   240717 - .FF cmds removed
  ------------- 
-
-
-; EMM RNAV (GPS) RWY 16 
-; .EMMR16F .FF ODUNE HINAV MIKAE AMPLY WOTOP WAGEX ILUME 
-
-; EMM RNAV (GPS) RWY 34 
-; .EMMR34F .FF MUSTE ZUVUN ILUME FOSKA AUNTS ATOXY GEGME 
 
 ; EMM KEMRR
 .EMMKEMRRDEL .MSG ZLC_ISR *** KEMRR 5 ::: RNAV-PilotNav ::: RWY 16, 34 :::  ::: Maint 12K ::: CRZ-10min(Listed) ::: DEP FREQ 124.35 
@@ -4503,32 +4101,11 @@
 .EMMKEMRRDEP .MSG ZLC_ISR *** KEMRR 5 ::: RNAV-PilotNav ::: Maint 12K issued by DEL ::: CRZ-10min(Listed) ::: TopAlt 12K :::  
 .EMMKEMRRCTR .MSG ZLC_ISR *** KEMRR 5 ::: CRZ-10min(Listed) ::: TopAlt 12K 
 .TCRAFTEMMKEMRR Cleared to $arr.  $route. Maintain 12K. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
- ------------- 
 
+
+ ------------- 
 ; ENV AIRPORT   240717 - .FF cmds removed
  ------------- 
-
-
-; ENV RNAV (GPS) RWY 8
-; .ENVR08F .FF SPATS HUTLO DENRE YITUL BVL
-
-; ENV RNAV (GPS) RWY 26 
-; .ENVR26F .FF ZONSU UTAVY ZETVI BVL
-
-; ENV RNAV (GPS)-A 
-; .ENVRAF .FF UHEPI VITHE JURGA BVL
-
-; ENV RNAV (GPS)-C 
-; .ENVRCF .FF SPATS MEDBE JUTEB WEPLI MOJVL BVL
-
-; ENV VOR/DME-B 
-; .ENVEBF .FF SPATS OHWOH POWIV KREEP ZUNIG BVL
-
-; ENV VOR/DME RWY 26 
-; .ENVE26F .FF BAGGI UTHAB MAIST BVL
-
-; ENV TACAN RWY 26 
-; .ENVT26F .FF BAGGI UTHAB MAIST BVL
 
 ; ENV ENV
 .ENVENVDEL .MSG ZLC_ISR *** ENV 1 ::: RNAV-PilotNav ::: RWY 8, 12, 26 :::  ::: Maint 9K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 128.55 
@@ -4537,37 +4114,16 @@
 .ENVENVDEP .MSG ZLC_ISR *** ENV 1 ::: RNAV-PilotNav ::: Maint 9K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt 9K :::  
 .ENVENVCTR .MSG ZLC_ISR *** ENV 1 ::: CRZ-5min(Not-Listed) ::: TopAlt 9K 
 .TCRAFTENVENV Cleared to $arr.  $route. Maintain 9K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
- ------------- 
 
+
+ ------------- 
 ; EUL AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; EUL RNAV (GPS) RWY 12 
-; .EULR12F .FF EMETT DAGNE CADKI FAPDO REDVE CELUV ADEXE 
-
-; EUL RNAV (GPS) RWY 30 
-; .EULR30F .FF PLUTO RENOL ADEXE BABTE CABEP REDVE BOI
  ------------- 
-
 ; EVW AIRPORT   240717 - .FF cmds removed
  ------------- 
-
-
-; EVW ILS RWY 23 
-; .EVWI23F .FF EMUME CESLA JADUR COOLI PACKY FBR
-
-; EVW LOC/DME RWY 23 
-; .EVWE23F .FF EMUME CESLA JADUR COOLI PACKY FBR
-
-; EVW RNAV (GPS) RWY 5 
-; .EVWR05F .FF PACKY COOLI OLUNE CEMAM JADUR EXILE 
-
-; EVW RNAV (GPS) RWY 23 
-; .EVWR23F .FF PACKY EMUME CESLA JADUR SOLNE COOLI FBR
-
-; EVW VOR/DME RWY 5 
-; .EVWO05F .FF PACKY COOLI NAGNE EVAYI YULUG FBR EVW
 
 ;EVW FBR 
 .EVWFBR .FD EVW_FBR 
@@ -4579,53 +4135,25 @@
 .TCRAFTEVWFBR Cleared to $arr. Depart via the FBR1 Obstacle Departure Procedure. $route. Maintain 10k. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk . Hold For Release
 .TCRAFTEVWFBRU Cleared to $arr. Depart via the FBR1 Obstacle Departure Procedure. $route. Maintain 10k. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk . Hold For Release
 
- ------------- 
 
+ ------------- 
 ; FBR AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; FBR RNAV (GPS) RWY 22 
-; .FBRR22F .FF WEGEM SINGE LESRE EXILE FBR
-
-; FBR VOR RWY 22 
-; .FBRO22F .FF FBR
  ------------- 
-
 ; FOM AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; FOM RNAV (GPS) RWY 4 
-; .FOMR04F .FF MUBNE DETAN KEPGE JAMEP YADNU DTA
-
-; FOM RNAV (GPS) RWY 22 
-; .FOMR22F .FF YADNU ZAKLA RIJSO SUWEG CAPUG ZIBRA DTA
  ------------- 
-
 ; GDV AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; GDV RNAV (GPS) RWY 12 
-; .GDVR12F .FF ACAKO ESELE UKIMY ZORAS YAFLU 
-
-; GDV RNAV (GPS) RWY 30 
-; .GDVR30F .FF ACAKO FESTU UMWEL OYICE ZUDPO UROVE 
  ------------- 
-
 ; GEY AIRPORT   240717 - .FF cmds removed
  ------------- 
-
-
-; GEY RNAV (GPS) RWY 8 
-; .GEYR08F .FF CRANY DIVLE PECKK LEGKI ZUNOB LUTIC COD
-
-; GEY RNAV (GPS) RWY 34 
-; .GEYR34F .FF CRANY JIGAX WULAX PAYIL HUGAX RLY
-
-; GEY NDB RWY 34 
-; .GEYN34F .FF  COD RLY GEY
 
 ; GEY PECKK
 .GEYPECKKDEL .MSG ZLC_ISR *** PECKK 2 ::: RNAV-PilotNav ::: RWY ALL :::  ::: Maint 11K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 127.75 
@@ -4634,61 +4162,21 @@
 .GEYPECKKDEP .MSG ZLC_ISR *** PECKK 2 ::: RNAV-PilotNav ::: Maint 11K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
 .GEYPECKKCTR .MSG ZLC_ISR *** PECKK 2 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFTGEYPECKK Cleared to $arr.  $route. Maintain 11K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
- ------------- 
 
+
+ ------------- 
 ; GGW AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; GGW RNAV (GPS) RWY 12 
-; .GGWR12F .FF KEEVR ATCHY CETAD GOSSI EZCUP NEGAE GGW
-
-; GGW RNAV (GPS) RWY 30 
-; .GGWR30F .FF NEGAE JITAG HUAL EZCUP CETAD KEEVR GGW
-
-; GGW VOR RWY 12 
-; .GGWO12F .FF WOKAL GGW
-
-; GGW VOR RWY 30 
-; .GGWO30F .FF ZEVIL GGW
  ------------- 
-
 ; GNG AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; GNG RNAV (GPS) RWY 7 
-; .GNGR07F .FF ALKAL GOODE SOCDO FEVDO JEGAP CABTT KINZE 
-
-; GNG RNAV (GPS) RWY 25 
-; .GNGR25F .FF KINZE JEROT WABNU VATTU FEVDO  
  ------------- 
-
 ; GPI AIRPORT    240717 - .FF cmds removed
  ------------- 
-
-
-
-; GPI ILS RWY 2 
-; .GPII02F .FF OLIBY FIKAB SKOTT GOGGS JOLEK KILLY HOTRU WALNU FCA
-
-; GPI LOC RWY 2 
-; .GPIL02F .FF OLIBY FIKAB SKOTT GOGGS JOLEK KILLY HOTRU WALNU FCA
-
-; GPI RNAV (RNP) RWY 20 
-; .GPIR20F .FF ANGIL HUNUR SKOTT AKABY BUTSE FIKAB OLIBY KILLY QIGVO RAPOY LELKE IDAYE OYIKA TAGUY CAUGH DOTRE DEBRE 
-
-; GPI RNAV (RNP) Y RWY 2 
-; .GPIRY2F .FF ANGIL ZURLU SKOTT TIYUT FIKAB OLIBY NOBTE PETIY JUNRU WULEX AVDIH BINGQ JOGAD ROYOG TONUY WILTO 
-
-; GPI RNAV (GPS) RWY 30 
-; .GPIR30F .FF ANGIL ONOCO UVIFY EHTUJ IQGOJ CEPUN KILLY 
-
-; GPI RNAV (GPS) Z RWY 2 
-; .GPIRZ2F .FF OLIBY GOGGS AVDIH JALPA KALGE 
-
-; GPI VOR/DME RWY 30 
-; .GPIE30F .FF VAILL ITONE KIVVE GUBKE FCA
 
 ; GPI SKOTT
 .GPISKOTTDEL .MSG ZLC_ISR *** SKOTT 2 ::: ODP ::: RWY ALL :::  ::: Maint 12K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 127.075 
@@ -4716,50 +4204,16 @@
 .GPIRIDDGCTR .MSG ZLC_ISR ***RIDDG 2 ::: CRZ-5min(Listed) ::: TopAlt Not Published :::
 .TCRAFTGPIRIDDG Cleared to $arr.  $route. Climb Via SID Except Maintain 12k. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk . 
 .TCRAFTGPIRIDDGU Cleared to $arr.  $route. Climb Via SID Except Maintain 12k. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk .
- ------------- 
 
+
+ ------------- 
 ; GTF AIRPORT    240717 - .FF cmds removed
  ------------- 
 
 
-
-; GTF ILS RWY 3 
-; .GTFI03F .FF HOXEK FRYMN DCEEE GTF
-
-; GTF LOC RWY 3 
-; .GTFL03F .FF HOXEK FRYMN DCEEE GTF
-
-; GTF RNAV (RNP) Z RWY 3 
-; .GTFRZ3F .FF PSHKN HANTZ KYELL KEPPR DVINT SHIMY NIMPH MUDLR MSURY DCEEE JAYKE BELLT AUERR TESTR DEELM 
-
-; GTF RNAV (RNP) Z RWY 21 
-; .GTFRZ1F .FF DATSA KEPPR JANON BRADZ WOLLY DRFTR PSHKN BDGER YOGOS ZILEP URELE ROWER PADDL WEDAR KUDEY ZETNI UPIGY TUCKB 
-
-; GTF RNAV (GPS) RWY 17 
-; .GTFR17F .FF JEBOB RESLE KNOWL GISKE NICKH GTF
-
-; GTF RNAV (GPS) RWY 35 
-; .GTFR35F .FF HOXEK NICKH CEVRO TEFFS KNOWL GTF
-
-; GTF RNAV (GPS) Y RWY 3 
-; .GTFRY3F .FF ROSOE WOKEN HOXEK FRYMN DCEEE DEELM PSHKN GTF
-
-; GTF RNAV (GPS) Y RWY 21 
-; .GTFRY1F .FF PSHKN SOTOW DEELM WAGAN DCEEE TUCKB 
-
-; GTF VOR/DME RWY 3 
-; .GTFE03F .FF KYELL BILTE JAYKE FIGMU GTF
-
-; GTF VOR RWY 21 
-; .GTFO21F .FF IMUPE UMBIH WULOL TRIGG GTF
  ------------- 
-
 ; HCR AIRPORT   240717 - .FF cmds removed
  ------------- 
-
-
-; HCR RNAV (GPS)-A 
-; .HCRRAF .FF CUVAK COOLI ZANGY UZEYU FUGUE IVTAW COOLI NONTY TCH
 
 ; HCR COOLI
 .HCRCOOLIDEL .MSG ZLC_ISR *** COOLI 6 ::: RNAV-PilotNav ::: RWY 4 :::  ::: Maint 12K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 119.65 
@@ -4768,27 +4222,11 @@
 .HCRCOOLIDEP .MSG ZLC_ISR *** COOLI 6 ::: RNAV-PilotNav ::: Maint 12K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
 .HCRCOOLICTR .MSG ZLC_ISR *** COOLI 6 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFTHCRCOOLI Cleared to $arr.  $route. Maintain 12K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
- ------------- 
 
+
+ ------------- 
 ; HIF AIRPORT    240717 - .FF cmds removed
  ------------- 
-
-
-
-; HIF ILS RWY 14 
-; .HIFI14F .FF WILID MUGLE CADGO HOPPI BRAKS RAAMZ FUUJN 
-
-; HIF LOC X RWY 14 
-; .HIFL14F .FF WILID MUGLE CADGO HOPPI BRAKS RAAMZ FUUJN 
-
-; HIF ILS Z RWY 14 
-; .HIFIZ4F .FF WOKIN HOPPI GRITS 
-
-; HIF LOC Z RWY 14 
-; .HIFLZ4F .FF WOKIN HOPPI GRITS 
-
-; HIF TACAN RWY 14 
-; .HIFT14F .FF KOVAL ROUTS WUPAS RAAMZ 
 
 ; HIF DEVLN
 .HIFDEVLNDEL .MSG ZLC_ISR *** DEVLN 1 ::: PilotNav ::: RWY ALL ::: Maint 9K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 121.1 
@@ -4829,45 +4267,11 @@
 .HIFWLLRDDEP .MSG ZLC_ISR *** WLLRD 1 ::: Vectored ::: Maint 7K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published ::: Vector on course 
 .HIFWLLRDCTR .MSG ZLC_ISR *** WLLRD 1 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFTHIFWLLRD Cleared to $arr.  $route. Maintain 7K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. 
- ------------- 
 
+
+ ------------- 
 ; HLN AIRPORT    240717 - .FF cmds removed
  ------------- 
-
-
-
-; HLN ILS Y RWY 27 
-; .HLNIY7F .FF SWEDD JUVGO DOOKR YERUT FALDE GELEY WOKEN HAU HLN
-
-; HLN LOC Y RWY 27 
-; .HLNLY7F .FF SWEDD JUVGO DOOKR YERUT FALDE GELEY WOKEN HAU HLN
-
-; HLN ILS Z RWY 27 
-; .HLNIZ7F .FF CUSDA PATRR ZIMUM JUVGO DOOKR HUDVU NNORA KEDEC YERUT GELEY FERRI WOKEN HAU HLN
-
-; HLN LOC Z RWY 27 
-; .HLNLZ7F .FF CUSDA PATRR ZIMUM JUVGO DOOKR HUDVU NNORA KEDEC YERUT GELEY FERRI WOKEN HAU HLN
-
-; HLN RNAV (RNP) Y RWY 27 
-; .HLNRY7F .FF CEMLI DULCA SUZZY FAVTA SWEDD URELE LINGE HEXOL FALDE BOSCA JEXUT ZEKSA MUSEW JEBSI KELTY PIXXI HLN HIA
-
-; HLN RNAV (RNP) Z RWY 9 
-; .HLNRZ9F .FF BENZE FEXAD GLUES PIXXI KELTY HIRSA JEBSI BOSCA URELE HLN
-
-; HLN RNAV (RNP) Z RWY 27 
-; .HLNRZ7F .FF SUZZY CEMLI DULCA FAVTA SWEDD URELE LINGE HEXOL FALDE BOSCA JEXUT JEBSI KELTY PIXXI HIA
-
-; HLN RNAV (GPS) X RWY 27 
-; .HLNRX7F .FF SWEDD GASBE BIBDE EKIKE WOKEN 
-
-; HLN RNAV (GPS) Y RWY 9 
-; .HLNRY9F .FF PIXXI GLUES KELTY DOMVE AXOBE CENET KELTY SIEBE HLN
-
-; HLN VOR/DME-B 
-; .HLNEBF .FF KOTLE TICUS HONVI FAVOX JOVIX LOCIS JEVAM HUDUB CUSRI SEWAL JUBTI WOKEN HLN
-
-; HLN VOR-A 
-; .HLNOAF .FF WOKEN HLN
 
 ; HLN DIVD
 .HLNDIVDDEL .MSG ZLC_ISR *** DIVD 1 ::: ODP ::: RWY 5, 9, 23, 27 :::  ::: Maint 9K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 119.5
@@ -4904,47 +4308,24 @@
 .HLNSTAKKCTR .MSG ZLC_ISR *** STAKK 4 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFTHLNSTAKK Cleared to $arr.  $route. Maintain 9K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. .  
 .TCRAFTHLNSTAKKU Cleared to $arr.  $route. Maintain 9K. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk. .  
- ------------- 
 
+
+ ------------- 
 ; HSG AIRPORT    240717 - .FF cmds removed
  ------------- 
 
 
-; HSG RNAV (GPS) RWY 5 
-; .HSGR05F .FF DIMSE CASPI WIBTI SHOTE KARST OWEVU RLY
-
-; HSG RNAV (GPS) RWY 23 
-; .HSGR23F .FF ALVIL RANKK HEDRA CARGU RODEN RLY BOY
  ------------- 
-
 ; HVR AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; HVR RNAV (GPS) RWY 8 
-; .HVRR08F .FF YOYNO ETOHO JINTO CIBMI COSOG ARHUF FIKOB 
-
-; HVR RNAV (GPS) RWY 26 
-; .HVRR26F .FF ISITE JEPAL COSOG JEPAL CIBMI ETOHO HVR
-
-; HVR VOR RWY 8 
-; .HVRO08F .FF HVR
-
-; HVR VOR RWY 26 
-; .HVRO26F .FF HVR
  ------------- 
-
 ; HWQ AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; HWQ RNAV (GPS) RWY 9 
-; .HWQR09F .FF TEKOE RIELS BAXTA FAMGI AZAPU HALKO RECTA FALKI TASSE 
-
-; HWQ RNAV (GPS) RWY 27 
-; .HWQR27F .FF PELJE BAXTA PEGME MACSY CEBLO QOVCA ZERZO 
  ------------- 
-
 ; IDA AIRPORT    - old cmds removed
  ------------- 
 
@@ -4965,8 +4346,9 @@
 .IDAFAHLZCTR .MSG ZLC_ISR ***IYEFF 1 ::: CRZ-10min(Listed) ::: TopAlt Not Published 
 .TCRAFTIDAFAHLZ Cleared to $arr.  $route. Climb Via SID except maintain 12k. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk . 
 .TCRAFTIDAFAHLZU Cleared to $arr.  $route. Climb Via SID except maintain 12k. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk . 
- ------------- 
 
+
+ ------------- 
 ; JAC AIRPORT    240717 - old cmds removed
  ------------- 
 
@@ -5007,36 +4389,13 @@
 
 
  ------------- 
-
 ; JER AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; JER RNAV (GPS) RWY 9 
-; .JERR09F .FF GOODE SECAR LAHEW LEZIB PINTO 
-
-; JER RNAV (GPS) RWY 27 
-; .JERR27F .FF SHONE DRYAD APGUH FANCO CITCO LAHEW BYI
-
-; JER VOR-A 
-; .JEROAF .FF RARAC QAGDO TWF
  ------------- 
-
 ; LGU AIRPORT    240717 - .FF cmds removed
  ------------- 
-
-
-; LGU ILS RWY 17 
-; .LGUI17F .FF HUSEM JINUG FILOB KOKPE LOCIG IKUCI NIWTE MLD LHO
-
-; LGU LOC/DME RWY 17 
-; .LGUE17F .FF HUSEM JINUG FILOB KOKPE LOCIG IKUCI NIWTE MLD LHO
-
-; LGU RNAV (GPS) RWY 17 
-; .LGUR17F .FF CORIN TINRE HODNI FILOB ORNEY ACACO PIMIE 
-
-; LGU RNAV (GPS) RWY 35 
-; .LGUR35F .FF BYBEE JIPOS EPSAC OBNUE COVNU PIMIE OGD
 
 ; LGU ORNEY
 .LGUORNEYDEL .MSG ZLC_ISR *** ORNEY 1 ::: ODP ::: RWY 17, 35 :::  ::: Maint 12K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 127.7 
@@ -5045,8 +4404,9 @@
 .LGUORNEYDEP .MSG ZLC_ISR *** ORNEY 1 ::: ODP ::: Maint 12K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt 12K :::  
 .LGUORNEYCTR .MSG ZLC_ISR *** ORNEY 1 ::: CRZ-5min(Not-Listed) ::: TopAlt 12K 
 .TCRAFTLGUORNEY Cleared to $arr. Depart via the ORNEY1 Obstacle Departure Procedure. $route. Maintain 12K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
- ------------- 
 
+
+ ------------- 
 ; LLJ AIRPORT   
  ------------- 
 
@@ -5057,25 +4417,16 @@
 .LLJLKTDEP .MSG ZLC_ISR *** LLJ 1 ::: ODP ::: Maint 12K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published ::: Vector on course 
 .LLJLKTCTR .MSG ZLC_ISR *** LLJ 1 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFTLLJLKT Cleared to $arr. Depart via the LKT1 Obstacle Departure Procedure. $route. Maintain 12K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
- ------------- 
 
+
+ ------------- 
 ; LND AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; LND RNAV (GPS) RWY 22 
-; .LNDR22F .FF SWEAT CUDKI JIVOL CIKUV ZEMTO RIW
  ------------- 
-
 ; LVM AIRPORT   240717 - .FF cmds removed
  ------------- 
-
-
-; LVM RNAV (GPS) RWY 22 
-; .LVMR22F .FF SUBKY TUWMO AGMEW WEPAP NOMOF ACAPE NUKUW LVM
-
-; LVM VOR/DME-B 
-; .LVMEBF .FF CIDUK MODOC LIVIY ZIDAN LVM
 
 ; LVM LVM
 .LVMLVMDEL .MSG ZLC_ISR *** LVM 2 ::: ODP ::: RWY 4, 22 :::  ::: Maint 9K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 119.55 
@@ -5084,31 +4435,16 @@
 .LVMLVMDEP .MSG ZLC_ISR *** LVM 2 ::: ODP ::: Maint 9K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published ::: Vector on course 
 .LVMLVMCTR .MSG ZLC_ISR *** LVM 2 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFTLVMLVM Cleared to $arr. Depart via the LVM2 Obstacle Departure Procedure. $route. Maintain 9K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
- ------------- 
 
+
+ ------------- 
 ; LWT AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; LWT RNAV (GPS) RWY 8 
-; .LWTR08F .FF AXABE UFXIT EVBUJ OKVUJ CIWXU LWT
-
-; LWT RNAV (GPS) RWY 26 
-; .LWTR26F .FF ESTRO ITEVE ZUTOG GAJMA UFXIT LWT
-
-; LWT VOR RWY 8 
-; .LWTO08F .FF AXABE YESUT ZEKEL UFXIT LWT
  ------------- 
-
 ; M46 AIRPORT    240717 - .FF cmds removed
  ------------- 
-
-
-; M46 GPS RWY 6 
-; .M46g06F .FF SHERY JAILR LAWTN CHOCO BIL
-
-; M46 GPS RWY 24 
-; .M46G24F .FF RIXRI LAMYU UBANE SACTI CHOCO MLS
 
 ; M46 CISPU
 .M46CISPUDEL .MSG ZLC_ISR *** CISPU 1 ::: RNAV-ODP ::: RWY 6 :::  ::: Maint 9K ::: CRZ-10min(Listed) ::: DEP FREQ 132.425
@@ -5125,28 +4461,16 @@
 .M46CONUKDEP .MSG ZLC_ISR *** CONUK 1 ::: RNAV-ODP ::: Maint 6K issued by DEL ::: CRZ-10min(Listed) ::: TopAlt 6K
 .M46CONUKCTR .MSG ZLC_ISR *** CONUK 1 ::: CRZ-10min(Listed) ::: TopAlt 6K 
 .TCRAFTM46CONUK Cleared to $arr, Depart via the CONUK1 obstacle departure procedure. $route. Maintain 6K. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk. Hold For Release 
- ------------- 
 
+
+ ------------- 
 ; M75 AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; M75 RNAV (GPS) RWY 8 
-; .M75R08F .FF CAGAT BUMDE CUGIR BOWDN 
-
-; M75 RNAV (GPS) RWY 26 
-; .M75R26F .FF BOWDN AKEKE INATE DOMRE OCERA CAGAT 
  ------------- 
-
 ; MAN AIRPORT   240717 - .FF cmds removed
  ------------- 
-
-
-; MAN RNAV (GPS) RWY 11 
-; .MANR11F .FF EMETT PARMO NOFFE ZURMU YEPDU CUSMU NEMEW BOI
-
-; MAN RNAV (GPS)-B 
-; .MANRBF .FF JUNGA FATAV WORAT DEFKI BOI
 
 ; MAN ADEXE
 .MANADEXEDEL .MSG ZLC_ISR *** ADEXE 1 ::: RNAV-ODP ::: RWY 11 :::  ::: Maint 6K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 119.6 ::: Clear to ADEXE (not destination)
@@ -5163,71 +4487,21 @@
 .MANCADKIDEP .MSG ZLC_ISR *** CADKI 1 ::: RNAV-ODP ::: Maint 9K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published ::: Radar ID when AOA 8K. Then, Clear to $arr via route 
 .MANCADKICTR .MSG ZLC_ISR *** CADKI 1 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFTMANCADKI Cleared to CADKI. Depart via the CADKI obstacle departure procedure. Maintain 9K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
- ------------- 
 
+
+ ------------- 
 ; MLF AIRPORT    240717 - .FF cmds removed
  ------------- 
 
 
-; MLF RNAV (GPS) RWY 16 
-; .MLFR16F .FF BEVRR OZOMO CUMSA PEWKE CUSAK MLF
-
-; MLF RNAV (GPS) RWY 34 
-; .MLFR34F .FF BERYL CUSAK SACOT SIDGE PEWKE HIBON KUNEC BEVRR BCE
-
-; MLF VOR/DME-A 
-; .MLFEAF .FF NAMKE MAJSO MUPOE MLF
  ------------- 
-
 ; MLS AIRPORT    240717 - .FF cmds removed
  ------------- 
 
 
-; MLS RNAV (GPS) RWY 4
-; .MLSR04F .FF TEJIY ONBOH OPEJY UCVIC YULUT AXUPE 
-
-; MLS RNAV (GPS) RWY 13 
-; .MLSR13F .FF DEYEN DHAKS EGITE JAXOD BOKDE 
-
-; MLS RNAV (GPS) RWY 22 
-; .MLSR22F .FF JASRU WUTEK AXUPE ZONOG LOCIP OPEJY 
-
-; MLS RNAV (GPS) RWY 31 
-; .MLSR31F .FF EASTE NEUMS BOKDE AVUNE CADUX EGITE 
-
-; MLS VOR/DME RWY 22 
-; .MLSE22F .FF OCAHO CFGAD OBYOC KINSY MLS
-
-; MLS VOR RWY 4 
-; .MLSO04F .FF  MLS
  ------------- 
-
 ; MSO AIRPORT - 240717 - .FF cmds removed
  ------------- 
-
-; MSO ILS Y RWY 12 
-; .MSOIY2F .FF EMIBE NEGOE JIROS MLP MSO
-
-; MSO ILS Z RWY 12 
-; .MSOIZ2F .FF EMIBE NEGOE JIROS DIPHU JEPSN MLP MSO
-
-; MSO RNAV (RNP) RWY 30 
-; .MSOR30F .FF PIXXI ROKNY CUPRA WAMIS WEDAK NOHHA TUFFY CEBED JEXOM FISIS STOVN SUPPY HEDVA LOCIV NEYOC ARLEE MSO
-
-; MSO RNAV (RNP) Z RWY 12 
-; .MSORZ2F .FF LOLLO JUMIS NABNE FERSI SUCTO WENKE OKASE TAGOE 
-
-; MSO RNAV (GPS) Y RWY 12 
-; .MSORY2F .FF CHARL JENKI RIVAL LANNY ODIRE CALIP SUPPY BEGPE CINON TUSEE JENKI 
-
-; MSO RNAV (GPS)-D 
-; .MSORDF .FF UBIJO STACC NOHHA BOTBY VISVE WOJHO ALHOB WENKE LIBRE 
-
-; MSO VOR-A 
-; .MSOOAF .FF SULFY ALTON NOSPE WAANE HULPA WAMAS HUSON MADEF SQIDS SPUNK TAGOE MSO
-
-; MSO VOR-B 
-; .MSOOBF .FF OCEDA BAMBE PUNNS DAIRE DMFOX OCFOW JEPSN WURTH STEVI ERRIK MAJOS LIBRE MSO
 
 ; MSO GRZLY
 .MSOGRZLYDEL .MSG ZLC_ISR *** GRZLY 4 ::: ODP ::: RWY 12, 30 :::  ::: Maint 14K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 124.9 ::: TopAlt Not Published :::
@@ -5264,40 +4538,16 @@
 .MSOVICTOCTR .MSG ZLC_ISR ***VICTO 1 ::: CRZ-10min(Listed) ::: TopAlt Not Published :::
 .TCRAFTMSOVICTO Cleared to $arr.  $route. Climb Via SID Except Maintain 14K. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk . 
 .TCRAFTMSOVICTOU Cleared to $arr.  $route. Climb Via SID Except Maintain 14K. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk . 
- ------------- 
 
+
+ ------------- 
 ; MUO AIRPORT  240717 - .FF cmds removed
  ------------- 
 
 
-; MUO ILS RWY 12 
-; .MUOI12F .FF MSTNG DEPTY HAGPA JUNEK 
-
-; MUO LOC Z RWY 12 
-; .MUOLZ2F .FF MSTNG DEPTY HAGPA JUNEK 
-
-; MUO ILS RWY 30 
-; .MUOI30F .FF MSTNG FANGG FEGEB ZOVTA 
-
-; MUO LOC Z RWY 30 
-; .MUOLZ0F .FF MSTNG FANGG FEGEB ZOVTA 
-
-; MUO TACAN Z RWY 12 
-; .MUOTZ2F .FF MSTNG OTLAW HUPKU CUGUK ZIBTU JUNEK 
-
-; MUO TACAN Z RWY 30 
-; .MUORZ0F .FF MSTNG RATLR SENPE JERLU ZOVTA 
  ------------- 
-
 ; MYL AIRPORT   240717 - .FF cmds removed
  ------------- 
-
-
-; MYL RNAV (GPS) RWY 16 
-; .MYLR16F .FF KOVRY JALUL HETSO LUHPY FIKVO EGNAJ XOYTY UDABE PEPUC DNJ
-
-; MYL RNAV (GPS) RWY 34 
-; .MYLR34F .FF SIDZY PEPUC VACUA WADPO SUMOQ DNJ
 
 ; MYL PEPUC
 .MYLPEPUCDEL .MSG ZLC_ISR *** PEPUC 2 ::: RNAV-ODP ::: RWY 16 :::  ::: Maint 12K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 128.05 
@@ -5306,23 +4556,11 @@
 .MYLPEPUCDEP .MSG ZLC_ISR *** PEPUC 2 ::: RNAV-ODP ::: Maint 12K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
 .MYLPEPUCCTR .MSG ZLC_ISR *** PEPUC 2 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFTMYLPEPUC Cleared to $arr, $route. Maintain 12K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
- ------------- 
 
+
+ ------------- 
 ; OGD AIRPORT   240717 - .FF cmds removed
  ------------- 
-
-
-; OGD ILS RWY 3 
-; .OGDI03F .FF RIDEN JOSIF WULFE MOINT TCH OGD
-
-; OGD LOC RWY 3 
-; .OGDL03F .FF RIDEN JOSIF WULFE MOINT TCH OGD
-
-; OGD RNAV (GPS) RWY 3 
-; .OGDR03F .FF MOINT RIDEN STACO CISBI WULFE TCH
-
-; OGD VOR-A 
-; .OGDOAF .FF RACGO ZIXIV JEMKU MOINT OGD
 
 ; OGD EMONT
 .OGDEMONTDEL .MSG ZLC_ISR *** EMONT 3 ::: ODP ::: RWY 3, 21, 35 :::  ::: Maint 9K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 121.1 ::: RWY 3 VCOA Avail upon pilot request. :::
@@ -5332,47 +4570,21 @@
 .OGDEMONTCTR .MSG ZLC_ISR *** EMONT 3 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFTOGDEMONT Cleared to $arr. Depart via the EMONT3 Obstacle Departure Procedure. $route. Maintain 9K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. .  
 .TCRAFTOGDEMONTU Cleared to $arr. Depart via the EMONT3 Obstacle Departure Procedure. $route. Maintain 9K. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk. .  
- ------------- 
 
+
+ ------------- 
 ; OLF AIRPORT   240717 - .FF cmds removed
  ------------- 
 
-; OLF RNAV (GPS) RWY 11 
-; .OLFR11F .FF RULIE WOLIV ZIGAB CARAV DORIA GGW
 
-; OLF RNAV (GPS) RWY 29 
-; .OLFR29F .FF RILMY CARAV FAXIS GETKE DORIA RULIE 
  ------------- 
-
 ; ONO AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; ONO RNAV (GPS) RWY 15 
-; .ONOR15F .FF NEYGI HOVEL PIYID CEYTA JIRBU KODGE ZEMTI TEMAE 
-
-; ONO RNAV (GPS) RWY 33 
-; .ONOR33F .FF EMETT PARMO HOSTS UKAYI OYABU YENUR AKIYA ZEMTI HOVEL 
  ------------- 
-
 ; PIH AIRPORT   240717 - .FF cmds removed
  ------------- 
-
-
-; PIH ILS RWY 21 
-; .PIHI21F .FF BARSE CUPTA FALLO TYHEE IDA PIH
-
-; PIH LOC RWY 21 
-; .PIHL21F .FF BARSE CUPTA FALLO TYHEE IDA PIH
-
-; PIH RNAV (GPS) RWY 3 
-; .PIHR03F .FF JANIN COLAY JELOD UNADE YOGUT CUPTA 
-
-; PIH RNAV (GPS) RWY 21 
-; .PIHR21F .FF BARSE CUPTA HESNO HUMBA SICOY IDA PIH
-
-; PIH VOR RWY 3 
-; .PIHO03F .FF TANOY YERUP PIH
 
 ; PIH KNURL
 .PIHKNURLDEL .MSG ZLC_ISR *** KNURL 1 ::: ODP ::: RWY ALL :::  ::: Maint 12K ::: CRZ-10min(Listed) ::: DEP FREQ 128.35 
@@ -5382,73 +4594,31 @@
 .PIHKNURLCTR .MSG ZLC_ISR *** KNURL 1 ::: CRZ-10min(Listed) ::: TopAlt Not Published 
 .TCRAFTPIHKNURL Cleared to $arr. Depart via the KNURL1 obstacle departure procedure. $route. Maintain 12K. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk. .  
 .TCRAFTPIHKNURLU Cleared to $arr. Depart via the KNURL1 obstacle departure procedure. $route. Maintain 12K. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk. .  
- ------------- 
 
+
+ ------------- 
 ; PNA AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; PNA RNAV (GPS) RWY 11 
-; .PNAR11F .FF IDECA VACSU UBUPY HONLI DOYED FEDPA SEYTO 
-
-; PNA RNAV (GPS) RWY 29 
-; .PNAR29F .FF SEYTO DEDNE COTDA FEDPA PINIY BPI
-
-; PNA NDB-A 
-; .PNANAF .FF PNA BPI
  ------------- 
-
 ; PO1 AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; PO1 RNAV (GPS) RWY 9 
-; .PO1R09F .FF RILMY DORIA ZIKIK WAXIV CURVU DAXIQ 
-
-; PO1 RNAV (GPS) RWY 27 
-; .PO1R27F .FF DUCBA DAXIQ LITVE QUMGY FOKBU ORMOW DORIA 
  ------------- 
-
 ; POY AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; POY RNAV (GPS) RWY 13 
-; .POYR13F .FF REDLO DUPZE AKEVY GEVEC EVZOB CRANY BIL COD
-
-; POY RNAV (GPS) RWY 31 
-; .POYR31F .FF NICQE CRANY YACSE ZABIG WODNI EDDAR 
  ------------- 
-
 ; PUC AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; PUC ILS RWY 1 
-; .PUCI01F .FF COPUK FOSOV SAROE JESKI WEPIV PUC
-
-; PUC LOC RWY 1 
-; .PUCL01F .FF COPUK FOSOV SAROE JESKI WEPIV PUC
-
-; PUC RNAV (GPS) RWY 1 
-; .PUCR01F .FF COPUK ADIBE SAROE JESKI FOSOV PUC
  ------------- 
-
 ; PVU AIRPORT   240717 - .FF cmds removed
  ------------- 
-
-
-; PVU ILS RWY 13 
-; .PVUI13F .FF JETLI JAURN DICOT WAVIT FFU
-
-; PVU LOC RWY 13 
-; .PVUL13F .FF JETLI JAURN DICOT WAVIT FFU
-
-; PVU RNAV (GPS) RWY 13 
-; .PVUR13F .FF ZUXAG JAURN DICOT WAVIT HUNSU SANNO MEDKE 
-
-; PVU VOR/DME RWY 13 
-; .PVUE13F .FF MASIE JETLI FAVUR SUGIE OFWIG ZIPUT FFU PVU
 
 ; PVU PROVO
 .PVUPROVODEL .MSG ZLC_ISR *** PROVO 4 ::: ODP ::: RWY ALL ::: CLEAR TO FFU, NOT DESTINATION ::: Maint 9K ::: CRZ will be issued by CTR ::: DEP FREQ 118.85 
@@ -5479,21 +4649,15 @@
 .TPVUTAYTRCTR .MSG ZLC_ISR *** TAYTR 3 ::: RNAV ::: Cross TAYTR @11k, @ TAYTR cleared RNAV(GPS) 13 or ILS RWY 13 approach ::: A$altim(KPVU)
 ;.TSPKTAYTRAPP .MSG ZLC_ISR *** TAYTR 2 ::: RNAV ::: Cross TAYTR @11k, @ TAYTR cleared RNAV(GPS) Y/Z RWY 12 approach ::: Altim n/a ::: ADV FREQ 122.9
 
+
+ ------------- 
 ; PWD AIRPORT   240717 - .FF cmds removed
  ------------- 
 
-; PWD RNAV (GPS) RWY 12 
-; .PWDR12F .FF RILMY NEGAE ATEYA WODOS OWFEW IHHIB BEYYA ISN
 
-; PWD RNAV (GPS) RWY 30 
-; .PWDR30F .FF RILMY BEYYA QUDUC LOTNE ISN
-
-
+ ------------- 
 ; RIF AIRPORT   240717 - .FF cmds removed
  ------------- 
-
-; RIF RNAV (GPS) RWY 19 
-; .RIFR19F .FF CLOEE ALESH EBOVE CETNA CENOB CEDBO EMCUE GEERY DETAN DTA PUC HVE
 
 ; RIF HAMET
 .RIFHAMETDEL .MSG ZLC_ISR *** HAMET 3 ::: RNAV-ODP ::: RWY 19 :::  ::: Maint 16K ::: CRZ-10min(Listed) ::: DEP FREQ 125.575
@@ -5510,74 +4674,39 @@
 .RIFRIFDEP .MSG ZLC_ISR *** RIF 2 ::: RNAV-ODP ::: Maint 11K issued by DEL ::: CRZ-10min(Listed) ::: TopAlt Not Published ::: Clear to $arr via route. 
 .RIFRIFCTR .MSG ZLC_ISR *** RIF 2 ::: CRZ-10min(Listed) ::: TopAlt Not Published 
 .TCRAFTRIFRIF Cleared to $arr. Depart via the RIF2 Obstacle Departure Procedure. $route. Maintain 11K. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
- ------------- 
 
+
+ ------------- 
 ; RIW AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; RIW ILS RWY 28 
-; .RIWI28F .FF FETIK DONVY HONX LIMNY 
-
-; RIW LOC RWY 28 
-; .RIWL28F .FF FETIK DONVY HONX LIMNY BOY RIW
-
-; RIW RNAV (GPS) RWY 10 
-; .RIWR10F .FF ARUXY TIDHU SAHKA DONVY RIW
-
-; RIW RNAV (GPS) RWY 28 
-; .RIWR28F .FF HUNTZ DONVY LIMNY TIDHU RIW
-
-; RIW VOR RWY 10 
-; .RIWO10F .FF ROWEY SASSY PYLOT WUNIB RIW
-
-; RIW VOR RWY 28 
-; .RIWO28F .FF HUNTZ ALKEY EMAVY KIRBI RIW
  ------------- 
-
 ; RKS AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; RKS ILS RWY 27 
-; .RKSI27F .FF DIGNE EPULE HEBUM WATUM OCS
-
-; RKS LOC RWY 27 
-; .RKSL27F .FF DIGNE EPULE HEBUM WATUM OCS
-
-; RKS RNAV (GPS) RWY 9 
-; .RKSR09F .FF GRIPS REGVE ZEREX SIRNE DIGNE FBR OCS
-
-; RKS RNAV (GPS) RWY 27 
-; .RKSR27F .FF CEBAL ARUTE DIGNE EPULE HEBUM WATUM REGVE OCS
-
-; RKS VOR RWY 9 
-; .RKSO09F .FF FETLI SOPTE TOFBO PUDVY INUXY JORAK OCS FBR
-
-; RKS VOR/DME RWY 27 
-; .RKSE27F .FF OCS
  ------------- 
-
 ; RPX AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; RPX RNAV (GPS) RWY 7 
-; .RPXR07F .FF SWIVL BAYAM KENPE PULAE 
-
-; RPX RNAV (GPS) RWY 25 
-; .RPXR25F .FF PULAE LUNNA SWIVL 
  ------------- 
-
 ; RXE AIRPORT   240717 - .FF cmds removed
  ------------- 
 
+
+ ------------- 
 ; S01 AIRPORT   240717 - .FF cmds removed
  ------------- 
 
+
+ ------------- 
 ; S25 AIRPORT   240717 - .FF cmds removed
  ------------- 
 
+
+ ------------- 
 ; S69 AIRPORT   LINCOLN, MONTANA
  ------------- 
 
@@ -5589,37 +4718,28 @@
 .S69AXLESCTR .MSG ZLC_ISR *** AXLES 1 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFTS69AXLES Cleared to $arr. Depart via the AXLES1 Obstacle Departure Procedure. $route. Maintain 11K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
 
+
+ ------------- 
 ; S87 AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; S87 RNAV (GPS)-A 
-; .S87RAF .FF EMETT WUVOK GACEP ROVAK HOVEL 
  ------------- 
-
 ; SBX AIRPORT  240717 - .FF cmds removed
  ------------- 
 
-; SBX RNAV (GPS) RWY 5 
-; .SBXR05F .FF WEBVO BRADZ PENRY DOTVE CAVBU IXIPE UZOHU YENUP CTB
 
-; SBX RNAV (GPS) RWY 23 
-; .SBXR23F .FF BRADZ WEBVO YENUP JIKBO ZIRTA CTB
  ------------- 
-
 ; SDY AIRPORT   240717 - .FF cmds removed
  ------------- 
 
-; SDY RNAV (GPS) RWY 1 
-; .SDYR01F .FF EXADE CATUM BOSPE JUNEG HAKET 
 
-; SDY RNAV (GPS) RWY 19 
-; .SDYR19F .FF LAMBE GINBE HAKET FANKIX OKAGE CATUM 
  ------------- 
-
 ; SHR AIRPORT   240717 - .FF cmds removed
  ------------- 
 
+
+ -------------
 ; SLC AIRPORT    240717 - .FF cmds removed; 2501 - new STARS added
  ------------- 
 
@@ -5807,16 +4927,10 @@
 .TSLCYUTESCTRN Cross KNOLE @ and maintain 17k. SLC Landing North. Altimeter A$altim(KSLC) 
 .TSLCYUTESAPPN Descend via the YUTES1 arrival. Expect 34L. Altimeter A$altim(KSLC) 
 
+
+ -------------
 ; SMN AIRPORT   240717 - .FF cmds removed
  ------------- 
-; SMN RNAV (GPS) RWY 17 
-; .SMNR17F .FF JUNKA KYTES ILUJU HOBUD FAXON EPIRE GLANS CASBA DIVDE BUTEO AXLED LOWSE MEWLS NUBIE ORELE
-
-; SMN RNAV (GPS)-D 
-; .SMNRDF .FF WABUD YOWLS ZAROD HOSUN JIRBA CAXOD AYASO BOSKS CEGVI REWIN FAXON 
-
-; SMN VOR/DME-B 
-; .SMNEBF .FF BAXGO IRWAY ARAHE LKT
 
 ; SMN AHEHU
 .SMNAHEHUDEL .MSG ZLC_ISR *** AHEHU 3 ::: RNAV-PilotNav ::: RWY 35 ::: FANID_FIPFE ::: Maint 13K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 132.4 
@@ -5825,20 +4939,11 @@
 .SMNAHEHUDEP .MSG ZLC_ISR *** AHEHU 3 ::: RNAV-PilotNav ::: Maint 13K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
 .SMNAHEHUCTR .MSG ZLC_ISR *** AHEHU 3 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFTSMNAHEHU Cleared to $arr, $route. Maintain 13K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
- ------------- 
 
+
+ ------------- 
 ; SPK AIRPORT   240717 - .FF cmds removed
  ------------- 
-
-
-; SPK RNAV (GPS) Y RWY 12 
-; .SPKRY2F .FF VERNE JUKOM JAURN OCACE YALVU 
-
-; SPK RNAV (GPS) Z RWY 12 
-; .SPKRZ2F .FF VERNE JUKOM JAURN OCACE YALVU 
-
-; SPK RNAV (GPS)-A 
-; .SPKRAF .FF FRNZY VERNE UKROY ZAMUX NEVME OGXIB 
 
 ; SPK SPK
 .SPKSPKDEL .MSG ZLC_ISR *** SPK 1 ::: ODP ::: RWY ALL :::  ::: Maint 9K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 118.85 
@@ -5847,20 +4952,11 @@
 .SPKSPKDEP .MSG ZLC_ISR *** SPK 1 ::: ODP ::: Maint 9K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
 .SPKSPKCTR .MSG ZLC_ISR *** SPK 1 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFTSPKSPK Cleared to $arr. Depart via the SPK1 Obstacle Departure Procedure. $route. Maintain 9K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. Hold For Release 
- ------------- 
 
+
+ ------------- 
 ; SUN AIRPORT   240717 - .FF cmds removed; 2504 - YAWNI, FLIYN added
  ------------- 
-
-
-; SUN RNAV (GPS) X RWY 31 
-; .SUNRX1F .FF MENIN OREYE SOLDE PRESN JUNOL GUNKS CAKIR JOTBO WOGAR 
-
-; SUN RNAV (GPS) Y RWY 31 
-; .SUNRY1F .FF MININ OREYE SOLDE PRESN JUNOL MUCID CAKIR 
-
-; SUN NDB/DME-A 
-; .SUNNAF .FF REAPS KINZE SOLDE PUWIR MASDL HLE
 
 ; SUN AUREL
 .SUNAURELDEL .MSG ZLC_ISR *** AUREL 3 ::: RNAV-PilotNav ::: RWY 13 ::: PRESN_REAPS_SOLDE ::: (SOLDE)-CVS Exct Maint 10K. (OTHERS)-CVS ::: CRZ-5min(Not-Listed) ::: DEP FREQ 118.05 
@@ -5882,14 +4978,11 @@
 ; SUN YAWNY 1
 .SUNYAWNYCTR .MSG ZLC_ISR *** YAWNY 1 ::: RNAV ::: YAWNY @10k+ ::: A$altim(KSUN) 
 .TSUNYAWNYCTR Descend via the YAWNY1 arrival. Cross YAWNY @ 10k+. Expect rwy 31. Altimeter A$altim(KSUN) 
- -------------  
 
+
+ -------------  
 ; SVR (was U42) AIRPORT    240717 - .FF cmds removed; 2504 - name change to SVR
  ------------- 
-
-
-; U42 RNAV (GPS) RWY 34 
-; .U42R34F .FF KOCEN LODME ACIPO HOKIT DUYDE KITBE STACO FFU
 
 ; SVR SVALY 2
 .SVRSVALYDEL .MSG ZLC_ISR *** SVALY 2 ::: RNAV-PilotNav ::: RWY ALL :::  ::: Maint 9K ::: CRZ-10min(Listed) ::: DEP FREQ 128.6 ::: Clear to FFU, not destination.
@@ -5898,20 +4991,11 @@
 .SVRSVALYDEP .MSG ZLC_ISR *** SVALY 2 ::: RNAV-PilotNav ::: Maint 9K issued by DEL ::: CRZ-10min(Listed) ::: TopAlt 9K ::: Clear to $arr via route. 
 .SVRSVALYCTR .MSG ZLC_ISR *** SVALY 2 ::: CRZ-5min(Not-Listed) ::: TopAlt 9K 
 .TCRAFTSVRSVALY Cleared to FFU. SVALY2 Departure. Hold as published. Maintain 9K. Expect further clearance within 10min after departure. Departure frequency $freq($1), squawk $squawk. Hold For Release 
- ------------- 
 
+
+ ------------- 
 ; TVY AIRPORT   240717 - .FF cmds removed
  ------------- 
-
-
-; TVY ILS RWY 17 
-; .TVYI17F .FF SALTA EMONT FOGEM WEGET JONEK OGD TCH
-
-; TVY LOC RWY 17 
-; .TVYL17F .FF SALTA EMONT FOGEM WEGET JONEK OGD TCH
-
-; TVY RNAV (GPS) RWY 17 
-; .TVYR17F .FF SALTA EMONT ANEYI WEGET JONEK FOGEM 
 
 ; TVY STACO
 .TVYSTACODEL .MSG ZLC_ISR *** STACO 2 ::: RNAV-PilotNav ::: RWY ALL :::  ::: Maint 9K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 135.5 ::: Clear to STACO, not destination.
@@ -5920,32 +5004,11 @@
 .TVYSTACODEP .MSG ZLC_ISR *** STACO 2 ::: RNAV-PilotNav ::: Maint 9K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt 9K ::: Clear to destination via route. 
 .TVYSTACOCTR .MSG ZLC_ISR *** STACO 2 ::: CRZ-5min(Not-Listed) ::: TopAlt 9K 
 .TCRAFTTVYSTACO Cleared to STACO, STACO2 departure. Maintain 9K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. Hold For Release 
- ------------- 
 
+
+ ------------- 
 ; TWF AIRPORT   240717 - .FF cmds removed
  ------------- 
-
-
-; TWF ILS RW 26 
-; .TWFI26F .FF TOXEE MALTT GABBY SOREE DRYAD ROGET WODEN UJSON BYI
-
-; TWF LOC RWY 26 
-; .TWFL26F .FF TOXEE MALTT GABBY SOREE DRYAD ROGET WODEN UJSON BYI
-
-; TWF RNAV (GPS) RWY 8 
-; .TWFR08F .FF YIKUK JEDBU UYEME KINZE WIDUG YEGUR ZOSIL TWF
-
-; TWF RNAV (GPS) RWY 26 
-; .TWFR26F .FF SAMAN DRYAD ZUROV MALTT GABBY KINZE HAZZL SOREE VUPCU UYEME TWF
-
-; TWF VOR/DME RWY 8 
-; .TWFE08F .FF WALIL YUSUN TIRAE LUVIY ETWED AJHUD TWF
-
-; TWF VOR RWY 8 
-; .TWFO08F .FF CEEDY WODEN IXUVE AZAJI TWF
-
-; TWF VOR RWY 26 
-; .TWFO26F .FF CEEDY WODEN ROGET IXUVE XULXU TWF
 
 ; TWF SNAKO
 .TWFSNAKODEL .MSG ZLC_ISR *** SNAKO 3 ::: PilotNav ::: RWY ALL ::: JACKS_MURTH_ROGET_SAMAN_WODEN ::: Maint 13K ::: CRZ-10min(Listed) ::: DEP FREQ 126.7 
@@ -5955,20 +5018,11 @@
 .TWFSNAKOCTR .MSG ZLC_ISR *** SNAKO 3 ::: CRZ-10min(Listed) ::: TopAlt Not Published 
 .TCRAFTTWFSNAKO Cleared to $arr.  $route. Maintain 13K. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk. .  
 .TCRAFTTWFSNAKOU Cleared to $arr.  $route. Maintain 13K. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk. .  
- ------------- 
 
+
+ ------------- 
 ; U02 AIRPORT   240717 - .FF cmds removed
  ------------- 
-
-
-; U02 RNAV (GPS)-A 
-; .U02RAF .FF AMXOJ YILKO NARBE IDA PIH
-
-; U02 RNAV (GPS)-B 
-; .U02RBF .FF MILMK OHJOJ IDA PIH
-
-; U02 VOR/DME-C 
-; .U02ECF .FF HORUM CASAP AVIPE IDA PIH
 
 ; U02 IDA
 .U02IDADEL .MSG ZLC_ISR *** IDA 3 ::: RNAV-PilotNav ::: RWY 1 ::: (END POINT- JATTS) ::: Maint 7K ::: CRZ-5min(Not-LISTED) ::: DEP FREQ 128.35 
@@ -5985,17 +5039,11 @@
 .U02PIHDEP .MSG ZLC_ISR *** PIH 4 ::: RNAV-PilotNav ::: Maint 10K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt 7K ::: Climb to MIA ASAP 
 .U02PIHCTR .MSG ZLC_ISR *** PIH 4 ::: CRZ-5min(Not-Listed) ::: TopAlt 7K 
 .TCRAFTU02PIH Cleared to $arr, $route. Maintain 10K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
- ------------- 
 
+
+ ------------- 
 ; U14 AIRPORT    240717 - .FF cmds removed
  ------------- 
-
-
-; U14 RNAV (GPS) RWY 17 
-; .U14R17F .FF BUSKE YMONT FEROT CIRNA DANLL ELETE ACAGO PILTE DTA FFU
-
-; U14 RNAV (GPS) RWY 35 
-; .U14R35F .FF RAPPO WASLI PILTE JESTO ACAGO DTA FFU PUC
 
 ; U14 U14
 .U14U14DEL .MSG ZLC_ISR *** U14 2 ::: RNAV-ODP ::: RWY ALL :::  ::: Maint 11K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 127.825
@@ -6004,80 +5052,41 @@
 .U14U14DEP .MSG ZLC_ISR *** U14 2 ::: RNAV-ODP ::: Maint 11K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
 .U14U14CTR .MSG ZLC_ISR *** U14 2 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFTU14U14 Cleared to $arr. Depart via the U142 Obstacle Departure Procedure. $route. Maintain 11K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
- ------------- 
 
+
+ ------------- 
 ; U52 AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; U52 RNAV (GPS)-A 
-; .U52RAF .FF DETAN BERYL CUSAK VOGUY ICIRA CUVSI MLF BCE
  ------------- 
-
 ; U55 AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; U55 RNAV (GPS) RWY 18 
-; .U55R18F .FF EYPUZ HETDE HAMET QAXUG MOJVI NUPSE JEVEP LASIJ MACBI KUTOJ OPOYA POBME 
-
-; U55 RNAV (GPS) RWY 36 
-; .U55R36F .FF CIXAP ETYIR FOBIV HAJWU OSSON IFCIJ DETAN BCE
  ------------- 
-
 ; U68 AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; U68 RNAV (GPS) RWY 9 
-; .U68R09F .FF SEZJI SOLME KODTE YODUS HIMIG 
-
-; U68 NDB RWY 9 
-; .U68N09F .FF COD HCY
  ------------- 
-
 ; U69 AIRPORT    240717 - .FF cmds removed
  ------------- 
 
 
-; U69 VOR/DME-A 
-; .U69EAF .FF IGEHU FECYE EGRIW MTU
  ------------- 
-
 ; U76 AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; U76 RNAV (GPS) RWY 28 
-; .U76R28F .FF ALKAL CAVTA ATETY 
  ------------- 
-
 ; VEL AIRPORT    240717 - .FF cmds removed
  ------------- 
 
 
-; VEL RNAV (GPS) Y RWY 35 
-; .VELRY5F .FF ZIKOS OHAPE RIYAJ WAGUG VEL
-
-; VEL RNAV (GPS) Z RWY 35 
-; .VELRZ5F .FF ZIKOS OHAPE RIYAJ VEL
-
-; VEL VOR RWY 35 
-; .VELO35F .FF BONGO ENSEN VEL
  ------------- 
-
 ; WMC AIRPORT   240717 - .FF cmds removed
  ------------- 
-
-
-; WMC RNAV (GPS) RWY 14 
-; .WMCR14F .FF GOWZE LOKKA BOZJE TOWOD WINQY MUXSU CUTVA SDO
-
-; WMC RNAV (GPS) RWY 32 
-; .WMCR32F .FF FESKO BUNFI DUGDE PUHGI EXATY SDO
-
-; WMC VOR RWY 14 
-; .WMCO14F .FF GODSY VICTR AMAME THUNK WAKLA YEJFA SDO INA
 
 ; WMC INA
 .WMCINADEL .MSG ZLC_ISR *** INA 1 ::: ODP ::: RWY 2, 14, 20, 32 :::  ::: Maint 11K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 132.25 ::: VCOA Avail. Upon Pilot Request
@@ -6086,37 +5095,16 @@
 .WMCINADEP .MSG ZLC_ISR *** INA 1 ::: ODP ::: Maint 11K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
 .WMCINACTR .MSG ZLC_ISR *** INA 1 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFTWMCINA Cleared to $arr. Depart via the INA1 Obstacle Departure Procedure. $route. Maintain 11K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
- ------------- 
 
+
+ ------------- 
 ; WRL AIRPORT   240717 - .FF cmds removed
  ------------- 
 
 
-; WRL RNAV (GPS) RWY 16 
-; .WRLR16F .FF CRANY COVGO PEYIP PITOY WAPSU ZURNA RLY
-
-; WRL RNAV (GPS) RWY 34 
-; .WRLR34F .FF JITIP WUKUX ZURNA HOLUT JUNIV WAPSU IKAME PEYIP CRANY 
-
-; WRL VOR RWY 16 
-; .WRLO16F .FF IKETY RLY
  ------------- 
-
 ; WYS AIRPORT   240717 - .FF cmds removed
  ------------- 
-
-
-; WYS ILS RWY 1 
-; .WYSI01F .FF WAIDE SABAT MUPDE DBS LO DNW
-
-; WYS LOC RWY 1 
-; .WYSL01F .FF WAIDE SABAT MUPDE DBS LO DNW
-
-; WYS RNAV (GPS) RWY 1 
-; .WYSR01F .FF WAIDE SABAT LAMON FEVIP IVAKE HUKET AYOVI QUERY 
-
-; WYS RNAV (GPS) RWY 19 
-; .WYSR19F .FF QUERY RANEY SUBKY JIGVY ZEXUP NASVE HIPEV WAIDE 
 
 ; WYS LOW
 .WYSLOWDEL .MSG ZLC_ISR *** LOW 1 ::: ODP ::: RWY ALL :::  ::: Maint 12K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 132.4 ::: Clear to LO NDB, not Destination.
@@ -6125,42 +5113,11 @@
 .WYSLOWDEP .MSG ZLC_ISR *** LOW 1 ::: ODP ::: Maint 12K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published ::: Clear to $arr via route. 
 .WYSLOWCTR .MSG ZLC_ISR *** LOW 1 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFTWYSLOW Cleared to Targy Radio Beacon (LO NDB). Depart via the LOW1 Obstacle Departure Procedure. Maintain 12K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. Hold For Release 
- ------------- 
 
+
+ ------------- 
 ; XWA AIRPORT   240717 - .FF .FD cmds removed
  ------------- 
-;XWA RNAV (GPS) RWY 4 
- 
-; .XWAR04 .FD XWA_RNAV (GPS) RWY 4 
-; .XWAR04F .FF PACIL MABBI BALYN QASSY 
-
-;XWA RNAV (GPS) RWY 22 
-
-; .XWAR22 .FD XWA_RNAV (GPS) RWY 22 
-; .XWAR22F .FF QASSY MAAXX NECKS PACIL 
-
-;XWA VOR RWY 22 
-
-; .XWAO22 .FD XWA_VOR RWY 22   
-; .XWAO22F .FF ISN 
-
-; XWA ILS RWY 32 
-; .XWAI32F .FF WAULS VUYUC FAVPA XWA ISN
-
-; XWA LOC RWY 32 
-; .XWAL32F .FF WAULS VUYUC FAVPA XWA ISN
-
-; XWA RNAV (GPS) RWY 14 
-; .XWAR14F .FF JOSVA ZERAG TUNOE VUYUC 
-
-; XWA RNAV (GPS) RWY 32 
-; .XWAR32F .FF VUYUC FAVPA JOSVA 
-
-; XWA VOR RWY 14 
-; .XWAO14F .FF JUROX HASIP FOGBA BETKE HUTVI HOXUX ISN
-
-; XWA VOR RWY 32 
-; .XWAO32F .FF HASIP CIDIN JADPA ZOPIV WILAN ISN
 
 ; XWA ISN
 .XWAISNDEL .MSG ZLC_ISR *** ISN 4 ::: PilotNav ::: RWY 14, 32 ::: FONIA_FORBI_GINBE_HASOS_OFEGY ::: Maint 5K ::: CRZ-10min(Listed) ::: DEP FREQ 126.85 
@@ -6169,14 +5126,12 @@
 .XWAISNDEP .MSG ZLC_ISR *** ISN 4 ::: PilotNav ::: Maint 5K issued by DEL ::: CRZ-10min(Listed) ::: TopAlt Not Published :::  
 .XWAISNCTR .MSG ZLC_ISR *** ISN 4 ::: CRZ-10min(Listed) ::: TopAlt Not Published 
 .TCRAFTXWAISN Cleared to $arr.  $route. Maintain 5K. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
- ------------- 
 
+
+ ------------- 
 ; 00U AIRPORT   240717 - .FF cmds removed
  ------------- 
 
-
-; 00U RNAV (GPS) RWY 26 
-; .00UR26F .FF CONUK ZAGHI CIRDI COGON OVIBY WIMEN JADLO 
 
 
 
