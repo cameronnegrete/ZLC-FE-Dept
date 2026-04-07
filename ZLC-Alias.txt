@@ -418,6 +418,10 @@
 .LOAPDX .OPENURL https://cdn.zlcartcc.org/uploads/25-zse-zlc.pdf
 .LOAGEG .OPENURL https://cdn.zlcartcc.org/uploads/25-zse-zlc.pdf
 .LOADEN .OPENURL https://cdn.zlcartcc.org/uploads/21-zdv-zlc.pdf
+.LOAGJT .OPENURL https://cdn.zlcartcc.org/uploads/21-zdv-zlc.pdf
+.LOACPR .OPENURL https://cdn.zlcartcc.org/uploads/21-zdv-zlc.pdf
+.LOACNY .OPENURL https://cdn.zlcartcc.org/uploads/21-zdv-zlc.pdf
+.LOAGCC .OPENURL https://cdn.zlcartcc.org/uploads/21-zdv-zlc.pdf
 .LOASFO .OPENURL https://cdn.zlcartcc.org/uploads/24-zoa-zlc.pdf
 .LOAOAK .OPENURL https://cdn.zlcartcc.org/uploads/24-zoa-zlc.pdf
 .LOAHWD .OPENURL https://cdn.zlcartcc.org/uploads/24-zoa-zlc.pdf
