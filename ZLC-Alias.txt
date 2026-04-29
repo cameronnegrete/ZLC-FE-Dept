@@ -18,6 +18,7 @@
 # Add IDA SIDs - IYEFF1, FAHLZ1 - 22NOC2025 arh
 # AIRAC 2603 updates - 10MAR2026 - arh
 # Alias File Clean-up - validated links, removed VRC cmds, quickreference (old website) - 10APR2026 arh
+# AIRAC 2605 updates - QWENN7, TAYTR4, add NICQE1 - 28apr2026 arh
 
 # ALIAS FILE TABLE OF CONTENTS:
 #    SPECIAL EVENT
@@ -4103,6 +4104,13 @@
 ; COD AIRPORT   240717 - .FF cmds removed
  ------------- 
 
+; COD NICQE
+.CODNICQEDEL .MSG ZLC_ISR *** NICQE 1 ::: RNAV-PilotNav ::: RWY ALL ::: CRANNY_NEEDS_ZURNA ::: CVS Except Maint 10k ::: CRZ-5min(Not-Listed) ::: DEP FREQ 127.75 ::: TopAlt Not Published :::
+.CODNICQEGND .MSG ZLC_ISR *** NICQE 1 ::: RWY ALL ::: Airport is not provided Ground Control Services 
+.CODNICQETWR .MSG ZLC_ISR *** NICQE 1 ::: RNAV-PilotNav ::: Airport is not provided Local (TWR) Control Services ::: DEP FREQ 127.75
+.CODNICQEDEP .MSG ZLC_ISR *** NICQE 1 ::: RNAV-PilotNav ::: CVS Except Maint 10K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
+.CODNICQECTR .MSG ZLC_ISR *** NICQE 1 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::
+.TCRAFTCODNICQE Cleared to $arr, $route.  CVS Except Maint 10K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. Hold for release.
 
  ------------- 
 ; CTB AIRPORT    240717 - .FF cmds removed
@@ -4738,15 +4746,11 @@
 .TCRAFTPVUDITTI Cleared to $arr.  $route. Climb Via SID. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk . 
 .TCRAFTPVUDITTIU Cleared to $arr.  $route. Climb Via SID. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk . 
 
-; PVU TAYTR 3
-.PVUTAYTRCTR .MSG ZLC_ISR *** TAYTR 3 ::: RNAV ::: [ALL OPS] Descend via/Cross TAYTR @11k ::: A$altim(KPVU) 
-;.SPKTAYTRCTR .MSG ZLC_ISR *** TAYTR 3 ::: RNAV ::: [ALL OPS] Descend via/Cross TAYTR @11k ::: Altim n/a 
-.PVUTAYTRAPP .MSG ZLC_ISR *** TAYTR 3 ::: RNAV ::: Descend via/@ TAYTR cleared RNAV(GPS) 13 or ILS RWY 13 ::: A$altim(KPVU) 
-;.SPKTAYTRAPP .MSG ZLC_ISR *** TAYTR 3 ::: RNAV ::: Descend via/@ TAYTR cleared RNAV(GPS) Y/Z RWY 12 ::: Altim n/a ::: ADV FREQ 122.9
-.TPVUTAYTRCTR .MSG ZLC_ISR *** TAYTR 3 ::: RNAV ::: Descend via/Cross TAYTR @11k ::: A$altim(KPVU) 
-;.TSPKTAYTRAPP .MSG ZLC_ISR *** TAYTR 3 ::: RNAV ::: Descend via/Cross TAYTR @11k ::: Altim n/a 
-.TPVUTAYTRCTR .MSG ZLC_ISR *** TAYTR 3 ::: RNAV ::: Cross TAYTR @11k, @ TAYTR cleared RNAV(GPS) 13 or ILS RWY 13 approach ::: A$altim(KPVU)
-;.TSPKTAYTRAPP .MSG ZLC_ISR *** TAYTR 2 ::: RNAV ::: Cross TAYTR @11k, @ TAYTR cleared RNAV(GPS) Y/Z RWY 12 approach ::: Altim n/a ::: ADV FREQ 122.9
+; PVU TAYTR 4
+.PVUTAYTRCTR .MSG ZLC_ISR *** TAYTR 4 ::: RNAV ::: [ALL OPS] Descend via/Cross TAYTR @11k ::: A$altim(KPVU) 
+.PVUTAYTRAPP .MSG ZLC_ISR *** TAYTR 4 ::: RNAV ::: Descend via/@ TAYTR cleared RNAV(GPS) 13 or ILS RWY 13 ::: A$altim(KPVU) 
+.TPVUTAYTRCTR .MSG ZLC_ISR *** TAYTR 4 ::: RNAV ::: Descend via/Cross TAYTR @11k ::: A$altim(KPVU) 
+.TPVUTAYTRCTR .MSG ZLC_ISR *** TAYTR 4 ::: RNAV ::: Cross TAYTR @11k, @ TAYTR cleared RNAV(GPS) 13 or ILS RWY 13 approach ::: A$altim(KPVU)
 
 
  ------------- 
@@ -4996,11 +5000,11 @@
 .TSLCCARTRCTRN Cross CARTR @ and maintain FL190. SLC Landing North. Altimeter A$altim(KSLC) 
 .TSLCCARTRAPPN Descend via the CARTR1 arrival. Expect 34L.. Altimeter A$altim(KSLC) 
 
-; SLC QWENN 6
-.SLCQWENNCTR .MSG ZLC_ISR *** QWENN 6 ::: RNAV ::: FRNZY or NEEBO @14k ::: A$altim(KSLC) 
-.SLCQWENNAPP .MSG ZLC_ISR *** QWENN 6 ::: RNAV ::: Descend Via/@ QWENN Clrd ILS 34R ::: A$altim(KSLC) 
-.TSLCQWENNCTRN (MLF Trans)-Cross FRNZY... (BCE Trans)-Cross NEEBO... @ and maintain 14k. SLC Landing North. Altimeter A$altim(KSLC) 
-.TSLCQWENNAPPN Descend via the QWENN6 arrival. @ QWENN cleared ILS 34R approach. Altimeter A$altim(KSLC) 
+; SLC QWENN 7
+.SLCQWENNCTR .MSG ZLC_ISR *** QWENN 7 ::: RNAV ::: JAMMN @15k ::: A$altim(KSLC) 
+.SLCQWENNAPP .MSG ZLC_ISR *** QWENN 7 ::: RNAV ::: Descend Via/@ QWENN Clrd ILS 34R ::: A$altim(KSLC) 
+.TSLCQWENNCTRN (MLF Trans)-Cross JAMMN... (BCE Trans)-Cross JAMMN... @ and maintain 15k. SLC Landing North. Altimeter A$altim(KSLC) 
+.TSLCQWENNAPPN Descend via the QWENN7 arrival. @ QWENN cleared ILS 34R approach. Altimeter A$altim(KSLC) 
 
 ; SLC SKEES 6
 .SLCSKEESCTR .MSG ZLC_ISR *** SKEES 6 ::: RNAV ::: [SOUTH OPS] BEARR @ 16k ::: [NORTH OPS] BEARR @ 17k ::: A$altim(KSLC) 
