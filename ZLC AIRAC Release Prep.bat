@@ -437,7 +437,7 @@ set "CustomZlcAliasFileLink=https://raw.githubusercontent.com/cameronnegrete/ZLC
 		ECHO ^{^"type^":^"Feature^",^"geometry^":^{^"type^":^"Point^",^"coordinates^":^[90.0,180.0^]^},^"properties^":^{^"isLineDefaults^":true,^"bcg^":1,^"filters^":^[1^],^"style^":^"Solid^",^"thickness^":3^}^},
 		ECHO.
 		ECHO ERAM_FILTER 05_AWY-HIGH_LINES.geojson
-		ECHO ^{^"type^":^"Feature^",^"geometry^":^{^"type^":^"Point^",^"coordinates^":^[90.0,180.0^]^},^"properties^":^{^"isLineDefaults^":true,^"bcg^":5,^"filters^":^[5^],^"style^":^"Solid^",^"thickness^":1^}^},
+		ECHO ^{^"type^":^"Feature^",^"geometry^":^{^"type^":^"Point^",^"coordinates^":^[90.0,180.0^]^},^"properties^":^{^"isLineDefaults^":true,^"bcg^":5,^"filters^":^[5^],^"style^":^"LongDashed^",^"thickness^":1^}^},
 		ECHO.
 		ECHO ERAM_FILTER 05_AWY-HIGH_SYMBOLS.geojson
 		ECHO ^{^"type^":^"Feature^",^"geometry^":^{^"type^":^"Point^",^"coordinates^":^[90.0,180.0^]^},^"properties^":^{^"isSymbolDefaults^":true,^"bcg^":5,^"filters^":^[5^],^"style^":^"airwayIntersections^",^"size^":1^}^},
@@ -467,7 +467,7 @@ set "CustomZlcAliasFileLink=https://raw.githubusercontent.com/cameronnegrete/ZLC
 		ECHO ^{^"type^":^"Feature^",^"geometry^":^{^"type^":^"Point^",^"coordinates^":^[90.0,180.0^]^},^"properties^":^{^"isTextDefaults^":true,^"bcg^":13,^"filters^":^[13^],^"size^":1,^"underline^":false,^"opaque^":false,^"xOffset^":12,^"yOffset^":0^}^},
 		ECHO.
 		ECHO ERAM_FILTER 15_AWY-LOW_LINES.geojson
-		ECHO ^{^"type^":^"Feature^",^"geometry^":^{^"type^":^"Point^",^"coordinates^":^[90.0,180.0^]^},^"properties^":^{^"isLineDefaults^":true,^"bcg^":15,^"filters^":^[15^],^"style^":^"Solid^",^"thickness^":1^}^},
+		ECHO ^{^"type^":^"Feature^",^"geometry^":^{^"type^":^"Point^",^"coordinates^":^[90.0,180.0^]^},^"properties^":^{^"isLineDefaults^":true,^"bcg^":15,^"filters^":^[15^],^"style^":^"ShortDashed^",^"thickness^":1^}^},
 		ECHO.
 		ECHO ERAM_FILTER 15_AWY-LOW_SYMBOLS.geojson
 		ECHO ^{^"type^":^"Feature^",^"geometry^":^{^"type^":^"Point^",^"coordinates^":^[90.0,180.0^]^},^"properties^":^{^"isSymbolDefaults^":true,^"bcg^":15,^"filters^":^[15^],^"style^":^"airwayIntersections^",^"size^":1^}^},
