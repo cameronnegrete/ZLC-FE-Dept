@@ -4446,11 +4446,11 @@
 .TCRAFTIDAIYEFFU Cleared to $arr.  $route. Climb Via SID except maintain 12k. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk . 
 
 ;IDA FAHLZ 1
-.IDAFAHLZDEL .MSG ZLC_ISR ***IYEFF 1 ::: RNAV-PilotNav ::: RWY 03 ::: KAYTT_SABAT_SHAEL ::: CVS except maintain 12k ::: CRZ-10min(Listed) ::: DEP FREQ 128.350 
-.IDAFAHLZGND .MSG ZLC_ISR ***IYEFF 1 ::: RWY 21 :::  
-.IDAFAHLZTWR .MSG ZLC_ISR ***IYEFF 1 ::: RNAV-PilotNav ::: DEP FREQ 128.350
-.IDAFAHLZDEP .MSG ZLC_ISR ***IYEFF 1 ::: RNAV-PilotNav ::: CVS except maintain 12k ::: CRZ-10min(Listed) ::: TopAlt Not Published 
-.IDAFAHLZCTR .MSG ZLC_ISR ***IYEFF 1 ::: CRZ-10min(Listed) ::: TopAlt Not Published 
+.IDAFAHLZDEL .MSG ZLC_ISR ***FAHLZ 1 ::: RNAV-PilotNav ::: RWY 03 ::: KAYTT_SABAT_SHAEL ::: CVS except maintain 12k ::: CRZ-10min(Listed) ::: DEP FREQ 128.350 
+.IDAFAHLZGND .MSG ZLC_ISR ***FAHLZ 1 ::: RWY 21 :::  
+.IDAFAHLZTWR .MSG ZLC_ISR ***FAHLZ 1 ::: RNAV-PilotNav ::: DEP FREQ 128.350
+.IDAFAHLZDEP .MSG ZLC_ISR ***FAHLZ 1 ::: RNAV-PilotNav ::: CVS except maintain 12k ::: CRZ-10min(Listed) ::: TopAlt Not Published 
+.IDAFAHLZCTR .MSG ZLC_ISR ***FAHLZ 1 ::: CRZ-10min(Listed) ::: TopAlt Not Published 
 .TCRAFTIDAFAHLZ Cleared to $arr.  $route. Climb Via SID except maintain 12k. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk . 
 .TCRAFTIDAFAHLZU Cleared to $arr.  $route. Climb Via SID except maintain 12k. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk . 
 
