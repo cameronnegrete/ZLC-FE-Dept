@@ -3804,16 +3804,14 @@
 
 
  ------------- 
-; AOC AIRPORT   240717 - .FF cmds removed
- ------------- 
+; AOC AIRPORT   260721 - JATTS2 update
 
 ; AOC JATTS 
-.AOCJATTSF .FF JOBRO JATTS 
-.AOCJATTSDEL .MSG ZLC_ISR *** JATTS 1 ::: RNAV-ODP ::: RWY 24 ::: (END POINT- JATTS) ::: Maint 8K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 128.35 
-.AOCJATTSGND .MSG ZLC_ISR *** JATTS 1 ::: RWY 24 ::: Airport is not provided Ground Control Services 
-.AOCJATTSTWR .MSG ZLC_ISR *** JATTS 1 ::: RNAV-ODP ::: Airport is not provided Local (TWR) Control Services ::: DEP FREQ 128.35 
-.AOCJATTSDEP .MSG ZLC_ISR *** JATTS 1 ::: RNAV-ODP ::: Maint 8K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
-.AOCJATTSCTR .MSG ZLC_ISR *** JATTS 1 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
+.AOCJATTSDEL .MSG ZLC_ISR *** JATTS 2 ::: RNAV-ODP ::: RWY 24 ::: (END POINT- JATTS) ::: Maint 8K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 128.35 
+.AOCJATTSGND .MSG ZLC_ISR *** JATTS 2 ::: RWY 24 ::: Airport is not provided Ground Control Services 
+.AOCJATTSTWR .MSG ZLC_ISR *** JATTS 2 ::: RNAV-ODP ::: Airport is not provided Local (TWR) Control Services ::: DEP FREQ 128.35 
+.AOCJATTSDEP .MSG ZLC_ISR *** JATTS 2 ::: RNAV-ODP ::: Maint 8K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
+.AOCJATTSCTR .MSG ZLC_ISR *** JATTS 2 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFTAOCJATTS Cleared to $arr, $route. Maintain 8K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk.  Hold For Release 
 
 
