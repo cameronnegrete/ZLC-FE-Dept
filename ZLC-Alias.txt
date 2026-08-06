@@ -4736,10 +4736,10 @@
 
 ;PVU DITTI 1 
 .PVUDITTI .FD PVU_DITTI
-.PVUDITTIDEL .MSG ZLC_ISR ***DITTI 1 ::: RNAV-PilotNav ::: RWY 13, 31 ::: DAHLI_TCH ::: CVS ::: CRZ-10min(Listed) ::: DEP FREQ 118.85
+.PVUDITTIDEL .MSG ZLC_ISR ***DITTI 1 ::: RNAV-PilotNav ::: RWY 13, 31 ::: DAHLI_TCH ::: CVS except maintain 9000 ::: CRZ-10min(Listed) ::: DEP FREQ 118.85
 .PVUDITTIGND .MSG ZLC_ISR ***DITTI 1 ::: RWY 13, 31 :::
 .PVUDITTITWR .MSG ZLC_ISR ***DITTI 1 ::: RNAV-PilotNav ::: (31: RH w/ Turn S; 13: RH w/ turn W) ::: DEP FREQ 118.85
-.PVUDITTIDEP .MSG ZLC_ISR ***DITTI 1 ::: RNAV-PilotNav ::: CVS ::: CRZ-10min(Listed) ::: TopAlt Published
+.PVUDITTIDEP .MSG ZLC_ISR ***DITTI 1 ::: RNAV-PilotNav ::: CVS except maintain 9000 ::: CRZ-10min(Listed) ::: TopAlt Published
 .PVUDITTICTR .MSG ZLC_ISR ***DITTI 1 ::: CRZ-10min(Listed) ::: TopAlt Published
 .TCRAFTPVUDITTI Cleared to $arr.  $route. Climb Via SID. Expect $cruise 10min after departure. Departure frequency $freq($1), squawk $squawk . 
 .TCRAFTPVUDITTIU Cleared to $arr.  $route. Climb Via SID. Expect $cruise 10min after departure. Departure OFFLINE, squawk $squawk . 
