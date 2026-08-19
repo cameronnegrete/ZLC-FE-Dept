@@ -4858,8 +4858,8 @@
 .TPDCSLCARCHZUCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Jets must maintain 240kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
 
 ; SLC CGULL
-.SLCCGULLDEL .MSG ZLC_ISR *** CGULL 1 ::: RNAV-Hybrid ::: RWY All except 14/32 ::: DRYAD_TWF ::: Maint 9K/240kts until advised ::: CRZ-10min(Listed) ::: DEP FREQ 126.25 
-.SLCCGULLGND .MSG ZLC_ISR *** CGULL 1 ::: RWY All except 14/32 ::: PREF-34L/16R 
+.SLCCGULLDEL .MSG ZLC_ISR *** CGULL 1 ::: RNAV-Hybrid ::: RWY 34L/R, 35 ::: DRYAD_TWF ::: Maint 9K/240kts until advised ::: CRZ-10min(Listed) ::: DEP FREQ 126.25 
+.SLCCGULLGND .MSG ZLC_ISR *** CGULL 1 ::: RWY All ::: PREF-34L/16R 
 .SLCCGULLTWR .MSG ZLC_ISR *** CGULL 1 ::: RNAV-Hybrid ::: H280 ::: DEP FREQ 126.25 
 .SLCCGULLDEP .MSG ZLC_ISR *** CGULL 1 ::: RNAV-Hybrid ::: Maint 9K issued by DEL ::: CRZ-10min(Listed) ::: TopAlt FL230 ::: Vector to CORVR, CVS / "Resume Normal SPD"
 .SLCCGULLCTR .MSG ZLC_ISR *** CGULL 1 ::: CRZ-10min(Listed) ::: TopAlt FL230 
@@ -4871,8 +4871,8 @@
 .TPDCSLCCGULLUCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Maintain 240kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
 
 ; SLC DEZRT
-.SLCDEZRTDEL .MSG ZLC_ISR *** DEZRT 2 ::: RNAV-Hybrid ::: RWY All except 14/32 ::: BAM_MVA ::: Maint 9K/240kts until advised ::: CRZ-10min(Listed) ::: DEP FREQ 126.25 
-.SLCDEZRTGND .MSG ZLC_ISR *** DEZRT 2 ::: RWY All except 14/32 ::: PREF-16R/34L 
+.SLCDEZRTDEL .MSG ZLC_ISR *** DEZRT 2 ::: RNAV-Hybrid ::: RWY All ::: BAM_MVA ::: Maint 9K/240kts until advised ::: CRZ-10min(Listed) ::: DEP FREQ 126.25 
+.SLCDEZRTGND .MSG ZLC_ISR *** DEZRT 2 ::: RWY All ::: PREF-16R/34L 
 .SLCDEZRTTWR .MSG ZLC_ISR *** DEZRT 2 ::: RNAV-Hybrid ::: H280 ::: DEP FREQ 126.25 
 .SLCDEZRTDEP .MSG ZLC_ISR *** DEZRT 2 ::: RNAV-Hybrid ::: Maint 9K issued by DEL ::: CRZ-10min(Listed) ::: TopAlt 15K ::: Vector to DURCH, CVS / "Resume Normal SPD"
 .SLCDEZRTCTR .MSG ZLC_ISR *** DEZRT 2 ::: CRZ-10min(Listed) ::: TopAlt 15K 
@@ -4897,8 +4897,8 @@
 .TPDCSLCFFUUCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000. Jets must maintain 240kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
 
 ; SLC RUGGD
-.SLCRUGGDDEL .MSG ZLC_ISR *** RUGGD 3 ::: RNAV-Hybrid ::: RWY All except 14/32 ::: HOLTR_EKR_KIERA_PERTY_OCS ::: Maint 9K/240kts until advised ::: CRZ-10 min(Listed) ::: DEP FREQ 135.5 
-.SLCRUGGDGND .MSG ZLC_ISR *** RUGGD 3 ::: RWY All except 14/32 ::: PREF-16R or 34R
+.SLCRUGGDDEL .MSG ZLC_ISR *** RUGGD 3 ::: RNAV-Hybrid ::: RWY All ::: HOLTR_EKR_KIERA_PERTY_OCS ::: Maint 9K/240kts until advised ::: CRZ-10 min(Listed) ::: DEP FREQ 135.5 
+.SLCRUGGDGND .MSG ZLC_ISR *** RUGGD 3 ::: RWY All ::: PREF-16R or 34R
 .SLCRUGGDTWR .MSG ZLC_ISR *** RUGGD 3 ::: RNAV-Hybrid ::: (NORTH)-H340 __ (SOUTH)-H295 ::: DEP FREQ 135.5 
 .SLCRUGGDDEP .MSG ZLC_ISR *** RUGGD 3 ::: RNAV-Hybrid ::: Maint 9K issued by DEL ::: CRZ-10Kmin(Listed) ::: TopAlt FL230 ::: Vector to BUBBY, CVS / "Resume Normal SPD"
 .SLCRUGGDCTR .MSG ZLC_ISR *** RUGGD 3 ::: CRZ-10Kmin(Listed) ::: TopAlt FL230 
@@ -4923,8 +4923,8 @@
 .TPDCSLCSLCUCHG .msg $aircraft *** WARNING: THIS PDC CONTAINS CHANGES FROM WHAT YOU FILED. PLEASE READ IT THOROUGHLY. *** PRE-DEPARTURE CLEARANCE *** CALLSIGN: $aircraft | DEP APT: $dep | CRUISE ALTITUDE: $cruise | ROUTE: $route | CLEARANCE LIMIT: $arr | DEP INSTRUCTIONS: Maintain 9,000 & IF JET: 240kts until advised. | DEP FREQ: OFFLINE | BEACON: $squawk | REMARKS: EXPECT CLOSEST ACTIVE RWY FOR DEP, ATC MAY CHANGE. DO NOT REPLY UNLESS YOU HAVE QUESTIONS.
 
 ; SLC SEVYR
-.SLCSEVYRDEL .MSG ZLC_ISR *** SEVYR 3 ::: Hybrid ::: RWY 32, 34L/R, 35 ::: OAL_MLF ::: Maint 9K & IF JET: 240kts ::: CRZ-10min(Listed) ::: DEP FREQ 128.1 
-.SLCSEVYRGND .MSG ZLC_ISR *** SEVYR 3 ::: RWY 32, 34L/R, 35 ::: PREF-34L 
+.SLCSEVYRDEL .MSG ZLC_ISR *** SEVYR 3 ::: Hybrid ::: RWY 34L/R, 35 ::: OAL_MLF ::: Maint 9K & IF JET: 240kts ::: CRZ-10min(Listed) ::: DEP FREQ 128.1 
+.SLCSEVYRGND .MSG ZLC_ISR *** SEVYR 3 ::: RWY 34L/R, 35 ::: PREF-34L 
 .SLCSEVYRTWR .MSG ZLC_ISR *** SEVYR 3 ::: Hybrid ::: (H263) ::: DEP FREQ 128.1 
 .SLCSEVYRDEP .MSG ZLC_ISR *** SEVYR 3 ::: Hybrid ::: Maint 9K issued by DEL ::: CRZ-10min(Listed) ::: TopAlt 10K ::: Vector to join TCH193R to EDETH / "Resume Normal SPD"
 .SLCSEVYRCTR .MSG ZLC_ISR *** SEVYR 3 ::: CRZ-10min(Listed) ::: TopAlt 10K 
@@ -4950,7 +4950,7 @@
 
 ; SLC BEARR
 .SLCBEARRCTR .MSG ZLC_ISR ***  BEARR 5 ::: Non-RNAV ::: [SOUTH OPS] BEARR @ 17k(J)__16k(Other) ::: [NORTH OPS] BEARR @ 17k(J)__15k(Other) ::: A$altim(KSLC) 
-.SLCBEARRAPP .MSG ZLC_ISR ***  BEARR 5 ::: Non-RNAV ::: [SOUTH OPS] @OGD Clrd ILS16L __ [NORTH OPS] D/m 12k. Then 210kts. Expt 34L. (11k prior midfield) ::: A$altim(KSLC) 
+.SLCBEARRAPP .MSG ZLC_ISR ***  BEARR 5 ::: Non-RNAV ::: [SOUTH OPS] @OGD Clrd ILS16L __ [NORTH OPS] D/M 12k. Then 210kts. Expt 34L. (11k prior midfield) ::: A$altim(KSLC) 
 .TSLCBEARRCTRS Cross BEARR @ and Maintain 17k if you are a jet. Cross at 16k if you are not a jet.. SLC Landing South. Altimeter A$altim(KSLC) 
 .TSLCBEARRAPPS @ OGD, cleared ILS 16L approach. Altimeter A$altim(KSLC) 
 .TSLCBEARRCTRN Cross BEARR @ and Maintain 17K if you are a jet. Cross at 15k if you are not a jet.. SLC Landing North. Altimeter A$altim(KSLC) 
@@ -4958,7 +4958,7 @@
 
 ; SLC BVL
 .SLCBVLCTR .MSG ZLC_ISR *** BVL 2 ::: Non-RNAV ::: [SOUTH and NORTH OPS]  KNOLE @ 17k(J) __ 16k(Other) ::: A$altim(KSLC) 
-.SLCBVLAPP .MSG ZLC_ISR *** BVL 2 ::: Non-RNAV ::: [SOUTH OPS] D/m 11k. Then 210kts. Expt 16R __ [NORTH OPS] D/m 12k. Then 210kts. Expt 34L ::: A$altim(KSLC) 
+.SLCBVLAPP .MSG ZLC_ISR *** BVL 2 ::: Non-RNAV ::: [SOUTH OPS] D/M 11k. Then 210kts. Expt 16R __ [NORTH OPS] D/M 12k. Then 210kts. Expt 34L ::: A$altim(KSLC) 
 .TSLCBVLCTRS Cross KNOLE @ and maintain 17k if you are a jet. Cross and 16k if not a jet.. SLC Landing South. Altimeter A$altim(KSLC) 
 .TSLCBVLAPPS Descend and maintain 11k. Then reduce speed to 210kts. Expect 16R. Altimeter A$altim(KSLC) 
 .TSLCBVLCTRN Cross KNOLE @ and maintain 17k if you are a jet. Cross at 16k if not a jet.. SLC Landing North. Altimeter A$altim(KSLC) 
