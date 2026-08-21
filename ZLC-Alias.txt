@@ -4284,29 +4284,20 @@
  ------------- 
 
 ; GPI SKOTT
-.GPISKOTTDEL .MSG ZLC_ISR *** SKOTT 2 ::: ODP ::: RWY ALL :::  ::: Maint 12K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 127.075 
-.GPISKOTTGND .MSG ZLC_ISR *** SKOTT 2 ::: RWY ALL :::  
-.GPISKOTTTWR .MSG ZLC_ISR *** SKOTT 2 ::: ODP ::: (South departure) ::: DEP FREQ 127.075 
-.GPISKOTTDEP .MSG ZLC_ISR *** SKOTT 2 ::: ODP ::: Maint 12K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
-.GPISKOTTCTR .MSG ZLC_ISR *** SKOTT 2 ::: CRZ-5min(Not-Listed) ::: TopAlt 12K (not published) :::
-.TCRAFTGPISKOTT Cleared to $arr. Depart via the SKOTT2 Obstacle Departure Procedure. $route. Maintain 12K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. .  
-.TCRAFTGPISKOTTU Cleared to $arr. Depart via the SKOTT2 Obstacle Departure Procedure. $route. Maintain 12K. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk. .  
-
-; GPI GPI - removed 2508
-;.GPIGPIDEL .MSG ZLC_ISR *** GPI 1 ::: RNAV-PilotNav ::: RWY 20 ::: CHOTE_SKOTT ::: CVS Except Maint 12K ::: CRZ-5min(Listed) ::: DEP FREQ 127.075 
-;.GPIGPIGND .MSG ZLC_ISR *** GPI 1 ::: RWY 20 :::  
-;.GPIGPITWR .MSG ZLC_ISR *** GPI 1 ::: RNAV-PilotNav ::: (Staightout) ::: DEP FREQ 127.075
-;.GPIGPIDEP .MSG ZLC_ISR *** GPI 1 ::: RNAV-PilotNav ::: CVS Except Maint 12K issued by DEL ::: CRZ-5min(Listed) ::: TopAlt Not Published :::  
-;.GPIGPICTR .MSG ZLC_ISR *** GPI 1 ::: CRZ-5min(Listed) ::: TopAlt Not Published :::
-;.TCRAFTGPIGPI Cleared to $arr.  $route. Climb Via SID Except Maintain 12K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. .  
-;.TCRAFTGPIGPIU Cleared to $arr.  $route. Climb Via SID Except Maintain 12K. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk. .  
+.GPISKOTTDEL .MSG ZLC_ISR *** SKOTT 3 ::: ODP ::: RWY ALL :::  ::: Maint 12K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 127.075 
+.GPISKOTTGND .MSG ZLC_ISR *** SKOTT 3 ::: RWY ALL :::  
+.GPISKOTTTWR .MSG ZLC_ISR *** SKOTT 3 ::: ODP ::: (South departure) ::: DEP FREQ 127.075 
+.GPISKOTTDEP .MSG ZLC_ISR *** SKOTT 3 ::: ODP ::: Maint 12K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
+.GPISKOTTCTR .MSG ZLC_ISR *** SKOTT 3 ::: CRZ-5min(Not-Listed) ::: TopAlt 12K (not published) :::
+.TCRAFTGPISKOTT Cleared to $arr. Depart via the SKOTT3 Obstacle Departure Procedure. $route. Maintain 12K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. .  
+.TCRAFTGPISKOTTU Cleared to $arr. Depart via the SKOTT3 Obstacle Departure Procedure. $route. Maintain 12K. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk. .  
 
 ;GPI RIDDG 
-.GPIRIDDGDEL .MSG ZLC_ISR ***RIDDG 2 ::: RNAV-PilotNav ::: RWY 20, 02 ::: MSO_MLP_SKOTT ::: CVS Exct Maint 12k ::: CRZ-5min(Listed) ::: DEP FREQ 127.075 
-.GPIRIDDGGND .MSG ZLC_ISR ***RIDDG 2 ::: RWY 20, 02 :::  
-.GPIRIDDGTWR .MSG ZLC_ISR ***RIDDG 2 ::: RNAV-PilotNav ::: (ALL RWYS)-(RH w/ turn to W) ::: DEP FREQ 127.075 
-.GPIRIDDGDEP .MSG ZLC_ISR ***RIDDG 2 ::: RNAV-PilotNav ::: CVS Except Maint 12K issued by DEL ::: CRZ-5min(Listed) ::: TopAlt Not Published :::  
-.GPIRIDDGCTR .MSG ZLC_ISR ***RIDDG 2 ::: CRZ-5min(Listed) ::: TopAlt Not Published :::
+.GPIRIDDGDEL .MSG ZLC_ISR ***RIDDG 3 ::: RNAV-PilotNav ::: RWY 20, 02 ::: MSO_MLP_SKOTT ::: CVS Exct Maint 12k ::: CRZ-5min(Listed) ::: DEP FREQ 127.075 
+.GPIRIDDGGND .MSG ZLC_ISR ***RIDDG 3 ::: RWY 20, 02 :::  
+.GPIRIDDGTWR .MSG ZLC_ISR ***RIDDG 3 ::: RNAV-PilotNav ::: (ALL RWYS)-(RH w/ turn to W) ::: DEP FREQ 127.075 
+.GPIRIDDGDEP .MSG ZLC_ISR ***RIDDG 3 ::: RNAV-PilotNav ::: CVS Except Maint 12K (issued by DEL) ::: CRZ-5min(Listed) ::: TopAlt Not Published :::  
+.GPIRIDDGCTR .MSG ZLC_ISR ***RIDDG 3 ::: CRZ-5min(Listed) ::: TopAlt Not Published :::
 .TCRAFTGPIRIDDG Cleared to $arr.  $route. Climb Via SID Except Maintain 12k. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk . 
 .TCRAFTGPIRIDDGU Cleared to $arr.  $route. Climb Via SID Except Maintain 12k. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk .
 
