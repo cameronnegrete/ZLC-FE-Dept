@@ -393,7 +393,7 @@
 .FDOGD .OPENURL https://cdn.zlcartcc.org/uploads/10-ogd-fct--na.pdf
 .FDPIH .OPENURL https://cdn.zlcartcc.org/uploads/11-pih-fct--na.pdf
 .FDPVU .OPENURL https://cdn.zlcartcc.org/uploads/12-pvu-fct--na.pdf
-.FDSLC .OPENURL https://cdn.zlcartcc.org/uploads/13-slc-atct--71101b.pdf
+.FDSLC .OPENURL https://zlcassets.vsimtech.org/resources/sops/slc-atct-sop---7110.1e---google-docs.pdf
 .FDSUN .OPENURL https://cdn.zlcartcc.org/uploads/15-sun-fct--na.pdf
 .FDTWF .OPENURL https://cdn.zlcartcc.org/uploads/190-twf-atctapproach--711012a.pdf
 
