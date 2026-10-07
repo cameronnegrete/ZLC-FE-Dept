@@ -4378,38 +4378,38 @@
  ------------- 
 
 ; HLN DIVD
-.HLNDIVDDEL .MSG ZLC_ISR *** DIVD 1 ::: ODP ::: RWY 5, 9, 23, 27 :::  ::: Maint 9K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 119.5
-.HLNDIVDGND .MSG ZLC_ISR *** DIVD 1 ::: RWY 5, 9, 23, 27 :::  
-.HLNDIVDTWR .MSG ZLC_ISR *** DIVD 1 ::: ODP ::: (Immediate turn to the north) ::: DEP FREQ 119.5
-.HLNDIVDDEP .MSG ZLC_ISR *** DIVD 1 ::: ODP ::: Maint 9K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
-.HLNDIVDCTR .MSG ZLC_ISR *** DIVD 1 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
+.HLNDIVDDEL .MSG ZLC_ISR *** DIVD 2 ::: ODP ::: RWY 5, 9, 23, 27 :::  ::: Maint 9K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 119.5
+.HLNDIVDGND .MSG ZLC_ISR *** DIVD 2 ::: RWY 5, 9, 23, 27 :::  
+.HLNDIVDTWR .MSG ZLC_ISR *** DIVD 2 ::: ODP ::: (Immediate turn to the north) ::: DEP FREQ 119.5
+.HLNDIVDDEP .MSG ZLC_ISR *** DIVD 2 ::: ODP ::: Maint 9K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
+.HLNDIVDCTR .MSG ZLC_ISR *** DIVD 2 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFTHLNDIVD Cleared to $arr. Depart via the DIVD1 Obstacle Departure Procedure. $route. Maintain 9K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. .  
 .TCRAFTHLNDIVDU Cleared to $arr. Depart via the DIVD1 Obstacle Departure Procedure. $route. Maintain 9K. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk. . 
 
 ; HLN HLN
-.HLNHLNDEL .MSG ZLC_ISR *** HLN 4 ::: PilotNav ::: RWY 5, 9, 27 :::  ::: Maint 9K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 119.5 
-.HLNHLNGND .MSG ZLC_ISR *** HLN 4 ::: RWY 5, 9, 27 :::  
-.HLNHLNTWR .MSG ZLC_ISR *** HLN 4 ::: PilotNav ::: (Immediate northbound turn) ::: DEP FREQ 119.5 
-.HLNHLNDEP .MSG ZLC_ISR *** HLN 4 ::: PilotNav ::: Maint 9K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt 9K :::  
-.HLNHLNCTR .MSG ZLC_ISR *** HLN 4 ::: CRZ-5min(Not-Listed) ::: TopAlt 9K 
+.HLNHLNDEL .MSG ZLC_ISR *** HLN 5 ::: PilotNav ::: RWY 5, 9, 27 :::  ::: Maint 9K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 119.5 
+.HLNHLNGND .MSG ZLC_ISR *** HLN 5 ::: RWY 5, 9, 27 :::  
+.HLNHLNTWR .MSG ZLC_ISR *** HLN 5 ::: PilotNav ::: (Immediate northbound turn) ::: DEP FREQ 119.5 
+.HLNHLNDEP .MSG ZLC_ISR *** HLN 5 ::: PilotNav ::: Maint 9K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt 9K :::  
+.HLNHLNCTR .MSG ZLC_ISR *** HLN 5 ::: CRZ-5min(Not-Listed) ::: TopAlt 9K 
 .TCRAFTHLNHLN Cleared to $arr.  $route. Maintain 9K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. .  
 .TCRAFTHLNHLNU Cleared to $arr.  $route. Maintain 9K. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk. .  
 
 ; HLN SIEBE
-.HLNSIEBEDEL .MSG ZLC_ISR *** SIEBE 3 ::: PilotNav ::: RWY 9, 27 :::  ::: Maint 9K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 119.54 
-.HLNSIEBEGND .MSG ZLC_ISR *** SIEBE 3 ::: RWY 9, 27 :::  
-.HLNSIEBETWR .MSG ZLC_ISR *** SIEBE 3 ::: PilotNav ::: (Immediate Northwestbound turn) ::: DEP FREQ 119.5 
-.HLNSIEBEDEP .MSG ZLC_ISR *** SIEBE 3 ::: PilotNav ::: Maint 9K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
-.HLNSIEBECTR .MSG ZLC_ISR *** SIEBE 3 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
+.HLNSIEBEDEL .MSG ZLC_ISR *** SIEBE 4 ::: PilotNav ::: RWY 9, 27 :::  ::: Maint 9K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 119.54 
+.HLNSIEBEGND .MSG ZLC_ISR *** SIEBE 4 ::: RWY 9, 27 :::  
+.HLNSIEBETWR .MSG ZLC_ISR *** SIEBE 4 ::: PilotNav ::: (Immediate Northwestbound turn) ::: DEP FREQ 119.5 
+.HLNSIEBEDEP .MSG ZLC_ISR *** SIEBE 4 ::: PilotNav ::: Maint 9K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
+.HLNSIEBECTR .MSG ZLC_ISR *** SIEBE 4 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFTHLNSIEBE Cleared to $arr.  $route. Maintain 9K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. .  
 .TCRAFTHLNSIEBEU Cleared to $arr.  $route. Maintain 9K. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk. .  
 
 ; HLN STAKK
-.HLNSTAKKDEL .MSG ZLC_ISR *** STAKK 4 ::: PilotNav ::: RWY 9, 27 ::: BZN_CONNS_GTF_LWT_WAUTS ::: Maint 9K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 119.5 
-.HLNSTAKKGND .MSG ZLC_ISR *** STAKK 4 ::: RWY 9, 27 :::  
-.HLNSTAKKTWR .MSG ZLC_ISR *** STAKK 4 ::: PilotNav ::: (Turn to the northeast) ::: DEP FREQ 119.5 
-.HLNSTAKKDEP .MSG ZLC_ISR *** STAKK 4 ::: PilotNav ::: Maint 9K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
-.HLNSTAKKCTR .MSG ZLC_ISR *** STAKK 4 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
+.HLNSTAKKDEL .MSG ZLC_ISR *** STAKK 5 ::: PilotNav ::: RWY 9, 27 ::: BZN_CONNS_GTF_LWT_WAUTS ::: Maint 9K ::: CRZ-5min(Not-Listed) ::: DEP FREQ 119.5 
+.HLNSTAKKGND .MSG ZLC_ISR *** STAKK 5 ::: RWY 9, 27 :::  
+.HLNSTAKKTWR .MSG ZLC_ISR *** STAKK 5 ::: PilotNav ::: (Turn to the northeast) ::: DEP FREQ 119.5 
+.HLNSTAKKDEP .MSG ZLC_ISR *** STAKK 5 ::: PilotNav ::: Maint 9K issued by DEL ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published :::  
+.HLNSTAKKCTR .MSG ZLC_ISR *** STAKK 5 ::: CRZ-5min(Not-Listed) ::: TopAlt Not Published 
 .TCRAFTHLNSTAKK Cleared to $arr.  $route. Maintain 9K. Expect $cruise 5min after departure. Departure frequency $freq($1), squawk $squawk. .  
 .TCRAFTHLNSTAKKU Cleared to $arr.  $route. Maintain 9K. Expect $cruise 5min after departure. Departure OFFLINE, squawk $squawk. .  
 
