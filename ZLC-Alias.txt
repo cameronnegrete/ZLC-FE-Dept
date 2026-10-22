@@ -19,6 +19,7 @@
 # AIRAC 2603 updates - 10MAR2026 - arh
 # Alias File Clean-up - validated links, removed VRC cmds, quickreference (old website) - 10APR2026 arh
 # AIRAC 2605 updates - QWENN7, TAYTR4, add NICQE1 - 28apr2026 arh
+# AIRAC 2611 updates - SLC STAR rev updates - 21OCT2026 arh
 
 # ALIAS FILE TABLE OF CONTENTS:
 #    SPECIAL EVENT
@@ -4983,19 +4984,19 @@
 .TSLCJAMMNCTR Cross JAMMN @ and maintain 17k if you are a jet. Cross at 15k if you are not a jet.. SLC Landing South. Altimeter A$altim(KSLC) 
 .TSLCJAMMNAPP Descend and maintain 13k. Expect 16R.. Altimeter A$altim(KSLC) 
 
-; SLC PITTT 2
-.SLCPITTTCTR .MSG ZLC_ISR *** PITTT 2 ::: RNAV ::: [SOUTH OPS] SPANE @ FL190(J) _ 17k(other) or JAMMN 17k(J) _ 15k(other) ::: A$altim(KSLC)
-.SLCPITTTAPP .MSG ZLC_ISR *** PITTT 2 ::: RNAV ::: [SOUTH OPS] Descend via/Expt vectrs 16R/L or 17 (210kts midfield prior to HO to Final) ::: A$altim(KSLC) 
+; SLC PITTT 3
+.SLCPITTTCTR .MSG ZLC_ISR *** PITTT 3 ::: RNAV ::: [SOUTH OPS] SPANE @ FL190(J) _ 17k(other) or JAMMN 17k(J) _ 15k(other) ::: A$altim(KSLC)
+.SLCPITTTAPP .MSG ZLC_ISR *** PITTT 3 ::: RNAV ::: [SOUTH OPS] Descend via/Expt vectrs 16R/L or 17 (210kts midfield prior to HO to Final) ::: A$altim(KSLC) 
 .TSLCPITTTCTR (MLF/BCE Trans)-Cross JAMMN @ and maintain 17K; (HELPR/MTU/EKR Trans)-Cross SPANE @ and maintain FL190. SLC Landing South. Altimeter A$altim(KSLC) 
-.TSLCPITTTAPP Descend via the PITTT1 arrival. Expect 16R. Altimeter A$altim(KSLC) 
+.TSLCPITTTAPP Descend via the PITTT3 arrival. Expect 16R. Altimeter A$altim(KSLC) 
 
-; SLC CARTR 1
-.SLCCARTRCTR .MSG ZLC_ISR *** CARTR 1 ::: RNAV ::: [SOUTH OPS] CARTR @ 15k [NORTH OPS] CARTR @ FL190 ::: A$altim(KSLC) 
-.SLCCARTRAPP .MSG ZLC_ISR *** CARTR 1 ::: RNAV ::: [SOUTH OPS] Descend via/@ WEBER expct vectors 16L/R or 17. [NORTH OPS] Descend Via/Expt 34L ::: A$altim(KSLC) 
+; SLC CARTR 2
+.SLCCARTRCTR .MSG ZLC_ISR *** CARTR 2 ::: RNAV ::: [SOUTH OPS] CARTR @ 15k [NORTH OPS] CARTR @ FL190 ::: A$altim(KSLC) 
+.SLCCARTRAPP .MSG ZLC_ISR *** CARTR 2 ::: RNAV ::: [SOUTH OPS] Descend via/@ WEBER expct vectors 16L/R or 17. [NORTH OPS] Descend Via/Expt 34L ::: A$altim(KSLC) 
 .TSLCCARTRCTRS Cross CARTR @ and maintain 15k. SLC Landing South. Altimeter A$altim(KSLC) 
-.TSLCCARTRAPPS Descend via the CARTR1 arrival. @ WEBER, cleared ILS 16L approach. Altimeter A$altim(KSLC) 
+.TSLCCARTRAPPS Descend via the CARTR2 arrival. @ WEBER, cleared ILS 16L approach. Altimeter A$altim(KSLC) 
 .TSLCCARTRCTRN Cross CARTR @ and maintain FL190. SLC Landing North. Altimeter A$altim(KSLC) 
-.TSLCCARTRAPPN Descend via the CARTR1 arrival. Expect 34L.. Altimeter A$altim(KSLC) 
+.TSLCCARTRAPPN Descend via the CARTR2 arrival. Expect 34L.. Altimeter A$altim(KSLC) 
 
 ; SLC QWENN 7
 .SLCQWENNCTR .MSG ZLC_ISR *** QWENN 7 ::: RNAV ::: JAMMN @15k ::: A$altim(KSLC) 
@@ -5003,13 +5004,13 @@
 .TSLCQWENNCTRN (MLF Trans)-Cross JAMMN... (BCE Trans)-Cross JAMMN... @ and maintain 15k. SLC Landing North. Altimeter A$altim(KSLC) 
 .TSLCQWENNAPPN Descend via the QWENN7 arrival. @ QWENN cleared ILS 34R approach. Altimeter A$altim(KSLC) 
 
-; SLC SKEES 6
-.SLCSKEESCTR .MSG ZLC_ISR *** SKEES 6 ::: RNAV ::: [SOUTH OPS] BEARR @ 16k ::: [NORTH OPS] BEARR @ 17k ::: A$altim(KSLC) 
-.SLCSKEESAPP .MSG ZLC_ISR *** SKEES 6 ::: RNAV ::: [SOUTH OPS] Descend via/@ EKKHO expect vectors 16R/L or 17 app [NORTH OPS] Descend via/Expt 34L/R or 35 ::: A$altim(KSLC) 
+; SLC SKEES 7
+.SLCSKEESCTR .MSG ZLC_ISR *** SKEES 7 ::: RNAV ::: [SOUTH OPS] BEARR @ 16k ::: [NORTH OPS] BEARR @ 17k ::: A$altim(KSLC) 
+.SLCSKEESAPP .MSG ZLC_ISR *** SKEES 7 ::: RNAV ::: [SOUTH OPS] Descend via/@ EKKHO expect vectors 16R/L or 17 app [NORTH OPS] Descend via/Expt 34L/R or 35 ::: A$altim(KSLC) 
 .TSLCSKEESCTRS Cross BEARR @ and maintain 16k. SLC Landing South. Altimeter A$altim(KSLC) 
-.TSLCSKEESAPPS Descend via the SKEES6 arrival. @ EKKHO cleared 16R approach. Altimeter A$altim(KSLC) 
+.TSLCSKEESAPPS Descend via the SKEES7 arrival. @ EKKHO cleared 16R approach. Altimeter A$altim(KSLC) 
 .TSLCSKEESCTRN Cross BEARR @ and maintain 17k. SLC Landing North. Altimeter A$altim(KSLC) 
-.TSLCSKEESAPPN Descend via the SKEES6 arrival. Expect 34L approach. Altimeter A$altim(KSLC) 
+.TSLCSKEESAPPN Descend via the SKEES7 arrival. Expect 34L approach. Altimeter A$altim(KSLC) 
 
 ; SLC SPANE 8
 .SLCSPANECTR .MSG ZLC_ISR *** SPANE 8 ::: Non-RNAV ::: [SOUTH OPS] SPANE FL190(J) __ 17k(Other) ::: [NORTH OPS] SPANE 16k ::: A$altim(KSLC) 
@@ -5019,17 +5020,17 @@
 .TSLCSPANECTRN Cross SPANE @ and maintain 16k. SLC Landing North. Altimeter A$altim(KSLC) 
 .TSLCSPANEAPPN Cross FFU at or above 11k. Then cleared ILS 34R approach.. Altimeter A$altim(KSLC) 
 
-; SLC YUTES 2
-.SLCYUTESCTR .MSG ZLC_ISR *** YUTES 2 ::: RNAV ::: KNOLE @17k ::: A$altim(KSLC) 
-.SLCYUTESAPP .MSG ZLC_ISR *** YUTES 2 ::: RNAV ::: [SOUTH OPS] Descend via/Expt 16R. [NORTH OPS] Descend via/Expt 34L ::: A$altim(KSLC) 
+; SLC YUTES 3
+.SLCYUTESCTR .MSG ZLC_ISR *** YUTES 3 ::: RNAV ::: KNOLE @17k ::: A$altim(KSLC) 
+.SLCYUTESAPP .MSG ZLC_ISR *** YUTES 3 ::: RNAV ::: [SOUTH OPS] Descend via/Expt 16R. [NORTH OPS] Descend via/Expt 34L ::: A$altim(KSLC) 
 .TSLCYUTESCTRS Cross KNOLE @ and maintain 17k. SLC Landing South. Altimeter A$altim(KSLC) 
-.TSLCYUTESAPPS Descend via the YUTES1 arrival. Expect 16R. Altimeter A$altim(KSLC) 
+.TSLCYUTESAPPS Descend via the YUTES3 arrival. Expect 16R. Altimeter A$altim(KSLC) 
 .TSLCYUTESCTRN Cross KNOLE @ and maintain 17k. SLC Landing North. Altimeter A$altim(KSLC) 
-.TSLCYUTESAPPN Descend via the YUTES1 arrival. Expect 34L. Altimeter A$altim(KSLC) 
+.TSLCYUTESAPPN Descend via the YUTES3 arrival. Expect 34L. Altimeter A$altim(KSLC) 
 
 
  -------------
-; SMN AIRPORT   240717 - .FF cmds removed
+; SMN AIRPORT   
  ------------- 
 
 ; SMN AHEHU
@@ -5042,7 +5043,7 @@
 
 
  ------------- 
-; SPK AIRPORT   240717 - .FF cmds removed
+; SPK AIRPORT   
  ------------- 
 
 ; SPK SPK
@@ -5055,7 +5056,7 @@
 
 
  ------------- 
-; SUN AIRPORT   240717 - .FF cmds removed; 2504 - YAWNI, FLIYN added
+; SUN AIRPORT   2504 - YAWNI, FLIYN added
  ------------- 
 
 ; SUN AUREL
@@ -5081,7 +5082,7 @@
 
 
  -------------  
-; SVR (was U42) AIRPORT    240717 - .FF cmds removed; 2504 - name change to SVR
+; SVR (was U42) AIRPORT   2504 - name change to SVR
  ------------- 
 
 ; SVR SVALY 2
@@ -5094,7 +5095,7 @@
 
 
  ------------- 
-; TVY AIRPORT   240717 - .FF cmds removed
+; TVY AIRPORT   
  ------------- 
 
 ; TVY STACO
@@ -5107,7 +5108,7 @@
 
 
  ------------- 
-; TWF AIRPORT   240717 - .FF cmds removed
+; TWF AIRPORT   
  ------------- 
 
 ; TWF SNAKO
@@ -5121,7 +5122,7 @@
 
 
  ------------- 
-; U02 AIRPORT   240717 - .FF cmds removed
+; U02 AIRPORT   
  ------------- 
 
 ; U02 IDA
@@ -5142,7 +5143,7 @@
 
 
  ------------- 
-; U14 AIRPORT    240717 - .FF cmds removed
+; U14 AIRPORT   
  ------------- 
 
 ; U14 U14
